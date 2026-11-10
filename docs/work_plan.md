@@ -2,21 +2,21 @@
 
 ## Current tasks
 
-These immediate tasks are proposed; owners and dates await team agreement.
+These tasks build on [Kate's existing proposal](methodology.md#previously-proposed-by-kate); owners and dates await team agreement.
 
 | Task | Owner | Status | Next action |
 | --- | --- | --- | --- |
-| Agree on the prediction scenario | Unassigned | Proposed | Discuss whom to predict for, how far ahead, and what information is available; update the [protocol overview](methodology.md#protocol-overview). |
+| Clarify the prediction scenario | Unassigned | Proposed | Review Kate's plan; confirm the population, horizon, and cutoff, and reconcile the [participant/day split tension](methodology.md#splits-training-and-tuning). |
 | Select the dataset version | Unassigned | Proposed | Agree on a version and record its details in [data/README.md](../data/README.md). |
-| Review the Kaggle references | Unassigned | Proposed | Review the two notebooks identified in Milestone 2 and document the [comparison basis](methodology.md#comparison-with-kaggle-work). |
-| Define a small baseline task | Unassigned | Proposed | After the scenario and source review, agree on the task, owner, reviewer, and completion criterion. |
+| Verify the reviewed Kaggle references | Unassigned | Proposed | Build on Kate's two notebook reviews: verify source versions and refine the [comparison basis](methodology.md#comparison-with-kaggle-work). |
+| Define a small baseline task | Unassigned | Proposed | After clarifying the scenario, confirm or refine the proposed features, models, metrics, and preparation; agree on an implementation task, owner, reviewer, and completion criterion. |
 
 ## Proposed stages
 
 | Stage | Expected output | Depends on | Complete when |
 | --- | --- | --- | --- |
-| 1. Agree on question and scenario | Target, population, horizon, and information cutoff | Team discussion of Milestone 2 | The protocol overview specifies what a prediction means and may use |
-| 2. Audit data and Kaggle references | Version/quality record, eligible features, and comparison basis | Scenario from stage 1 | Data characteristics and quality findings are recorded; reference versions, attribution, and intended extension are clear |
+| 1. Confirm and refine Kate's question and scenario | Confirmed target, population, horizon, and information cutoff | Team review of Milestone 2 | The protocol overview records the agreement and resolves the participant/day split tension |
+| 2. Audit data and verify reviewed Kaggle references | Version/quality record, eligible features, and comparison basis | Scenario from stage 1; Kate's existing reviews | Data characteristics and quality findings are recorded; reference versions, attribution, and intended extension are clear |
 | 3. Build the baseline workflow | Shared preparation/evaluation code and a recorded baseline | Stages 1-2; agreed split and metrics | A teammate reruns the documented baseline; test data has not guided selection |
 | 4. Compare models and feature groups | Experiment records and generated comparisons | Baseline; agreed candidates and tuning budget | Comparisons use identical eligible observations and evaluation rules, with deviations explained |
 | 5. Interpret and write | Evidence-backed LaTeX report | Recorded comparisons; background writing can start earlier | Cross-review checks findings, limitations, attribution, contributions, links, and the 5-8 page length |

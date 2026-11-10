@@ -4,7 +4,7 @@ Record meaningful completed work and supporting links, including prior work once
 
 | Member | Completed work, including coding | Evidence | Report contribution | Presentation contribution |
 | --- | --- | --- | --- | --- |
-| Kate Sazonova | Not recorded | — | Not recorded | Not recorded |
+| Kate Sazonova | Authored Milestone 2: dataset description, review of two Kaggle notebooks, and proposed experimental direction. This documents proposal/review work, not implementation or reproduced results. | [Milestone 2](../Smoking%20Addiction%20Dataset%20Sazonova_Milestone%202.pdf): pp. 1-3 (dataset), 4-13 (reviews), 13-14 (plan) | Milestone 2 writing verified; Milestone 4 report contribution not recorded | Not recorded |
 | Nahreg Rastguelenian | Not recorded | — | Not recorded | Not recorded |
 | Andres Arango Martinez | Not recorded | — | Not recorded | Not recorded |
 

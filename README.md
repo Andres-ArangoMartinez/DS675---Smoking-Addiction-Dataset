@@ -1,10 +1,10 @@
 # DS675 Milestone 4: Smoking Addiction Dataset
 
-**Proposed question:** How much do psychological measurements, daily habits, and historical craving and nicotine-use information contribute to predicting `Overall_Craving_Score`?
+**Question proposed by Kate in Milestone 2:** How much do psychological measurements, daily habits, and historical craving and nicotine-use information contribute to predicting `Overall_Craving_Score`?
 
 **Group members:** Kate Sazonova, Nahreg Rastguelenian, and Andres Arango Martinez.
 
-We plan to compare feature groups and supervised regression models using the Smoking Addiction Dataset. **Status:** planning and report draft; no experimental results yet. Next-day prediction for known participants is a candidate, with the prediction scenario and protocol awaiting team agreement.
+Kate Sazonova's [Milestone 2 proposal, pp. 13-14](Smoking%20Addiction%20Dataset%20Sazonova_Milestone%202.pdf#page=13), already sets out an experimental direction. The next step is to review, confirm, and refine that plan; see the [proposal summary and protocol](docs/methodology.md). **Status:** no group confirmation or experiment evidence is recorded yet. Next-day prediction for known participants is a possible clarification, not an established original contribution.
 
 - [Dataset on Kaggle](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data)
 - [Milestone 2 proposal](Smoking%20Addiction%20Dataset%20Sazonova_Milestone%202.pdf)
@@ -12,7 +12,7 @@ We plan to compare feature groups and supervised regression models using the Smo
 
 ## For teammates
 
-Start with the [next steps and work plan](docs/work_plan.md): first agree whom to predict for, how far ahead, and what information is available. See [CONTRIBUTING.md](CONTRIBUTING.md) for the short collaboration workflow and where to work, and [data/README.md](data/README.md) for dataset access.
+Start with the [current tasks](docs/work_plan.md): review Kate's plan and clarify whom to predict for, how far ahead, and what information is available. See [CONTRIBUTING.md](CONTRIBUTING.md) for the short collaboration workflow and where to work, and [data/README.md](data/README.md) for dataset access.
 
 ## For readers and evaluators
 

@@ -1,12 +1,15 @@
 # Work plan
 
-## What to do next
+## Current tasks
 
-1. Discuss the [proposed scenario](methodology.md#protocol-overview): whom are we predicting for, how far ahead, and using what information? Update the overview with the agreement.
-2. Choose the dataset version and review the two Kaggle notebooks identified in Milestone 2. Capture data details in [data/README.md](../data/README.md) and the comparison basis in [methodology.md](methodology.md#comparison-with-kaggle-work).
-3. Choose one small baseline task, a responsible member, a teammate reviewer, and a completion criterion. Use this page or an existing team discussion to coordinate it; a separate Issue is optional.
+These immediate tasks are proposed; owners and dates await team agreement.
 
-Assignments, reviewers, and dates have not been agreed. Keep active task notes here if useful, linking the branch or shared advance. Plan an equitable workload so every member has meaningful coding, writing, and presentation work.
+| Task | Owner | Status | Next action |
+| --- | --- | --- | --- |
+| Agree on the prediction scenario | Unassigned | Proposed | Discuss whom to predict for, how far ahead, and what information is available; update the [protocol overview](methodology.md#protocol-overview). |
+| Select the dataset version | Unassigned | Proposed | Agree on a version and record its details in [data/README.md](../data/README.md). |
+| Review the Kaggle references | Unassigned | Proposed | Review the two notebooks identified in Milestone 2 and document the [comparison basis](methodology.md#comparison-with-kaggle-work). |
+| Define a small baseline task | Unassigned | Proposed | After the scenario and source review, agree on the task, owner, reviewer, and completion criterion. |
 
 ## Proposed stages
 

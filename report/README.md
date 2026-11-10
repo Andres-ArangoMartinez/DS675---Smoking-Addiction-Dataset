@@ -1,6 +1,14 @@
 # Shared LaTeX report
 
-LaTeX is the official shared report source. Edit the section files, coordinate one editor per section, and ask a teammate to cross-review the complete report. Use `main.tex` for shared formatting; Google Docs is not the official writing location.
+LaTeX is the official shared report source. Use `main.tex` for shared formatting.
+
+## Writing workflow
+
+1. **Choose a section** from the table below and coordinate one editor at a time for that file.
+2. **Edit its text** in any text editor, keeping LaTeX commands intact. Use the comments as writing prompts and replace draft placeholders with agreed methods or verified findings.
+3. **Request teammate review** of your changes using the [collaboration workflow](../CONTRIBUTING.md).
+
+One teammate with LaTeX installed can compile and share the PDF for group review. Everyone can begin writing without installing LaTeX.
 
 ## What to edit
 
@@ -13,7 +21,7 @@ LaTeX is the official shared report source. Edit the section files, coordinate o
 | `05_discussion.tex` | Interpretation, fair Kaggle comparison, attribution, and limitations |
 | `06_conclusions_contributions.tex` | Supported conclusions and actual coding/writing/presentation contributions |
 
-Detailed prompts are LaTeX comments, which do not print. Replace visible draft placeholders with agreed methods and verified findings. Keep the report consistent with [methodology.md](../docs/methodology.md), experiment evidence, and the [contribution record](../docs/contributions.md). Add inspected sources to `references.bib`, using citations such as `\cite{dataset}`; include exact external notebook/method versions and code attribution.
+Keep the report consistent with [methodology.md](../docs/methodology.md), experiment evidence, and the [contribution record](../docs/contributions.md). Add inspected sources to `references.bib`, using citations such as `\cite{dataset}`; include exact external notebook/method versions and code attribution.
 
 ## Compile and review
 

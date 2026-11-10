@@ -1,20 +1,18 @@
 # Dataset instructions
 
-Source: [Smoking Addiction Dataset on Kaggle](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data). No data has been downloaded or fabricated by this setup.
+Source: [Smoking Addiction Dataset on Kaggle](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data). The [Milestone 2 proposal](../Smoking%20Addiction%20Dataset%20Sazonova_Milestone%202.pdf) describes synthetic longitudinal data with 1,000 participants observed over 30 days, 30,000 records, and 35 columns. Verify those reported characteristics against the selected download, including feature types and target meaning, before analysis.
 
 ## Obtain the same version
 
-Before analysis, the team must choose a dataset version and fill in this record. Use that specific Kaggle version, not an unspecified latest download. Check the license and any Kaggle access requirements. Each teammate should download the agreed files once into `data/raw/` and compare filenames and hashes with the shared record. If a recorded version is unavailable, discuss a replacement and record the change rather than silently substituting it.
+Choose a Kaggle version together and record it below. Each teammate should obtain that exact version, check access/license conditions, and place the unchanged files in `data/raw/`. Compare filenames and hashes; discuss any replacement version rather than silently substituting it.
 
-| Item | Agreed value |
+| Shared data record | Value to complete after selection/audit |
 | --- | --- |
-| Kaggle version identifier and exact version link | Pending team agreement |
-| Version/release date and acquisition date | Pending |
-| Original data filenames | Pending |
-| SHA-256 per file | Pending |
-| License / reuse conditions | Pending verification |
-| Schema and audited row/participant counts | Pending audit |
-| Acquisition / extraction steps | Pending |
+| Kaggle version identifier/link and release/acquisition dates | Not recorded |
+| Original filenames and SHA-256 per file | Not recorded |
+| License / reuse conditions | Not verified |
+| Audited schema, feature types, row/participant counts, quality findings, and exclusions | Not recorded |
+| Acquisition / extraction steps | Not recorded |
 
 On Windows, calculate each downloaded file's hash in PowerShell:
 
@@ -22,13 +20,12 @@ On Windows, calculate each downloaded file's hash in PowerShell:
 Get-FileHash -Algorithm SHA256 -LiteralPath 'data/raw/ACTUAL_FILENAME.csv'
 ```
 
-Replace `ACTUAL_FILENAME.csv` with the real filename; this is an example command, not a claim that such a file exists.
+Replace `ACTUAL_FILENAME.csv` with the downloaded filename.
 
 ## Preserve and recreate
 
-- `raw/`: original downloaded data. Leave it unchanged. Do not edit cells, rename columns, or overwrite the original files during preparation.
-- `processed/`: locally generated data. Future reviewed code in `src/` should recreate it from the agreed raw files, using documented commands, settings, and an environment record. No preparation command exists yet.
-- Record quality checks, exclusions, and learned preprocessing in the methodology and each experiment. Fit learned transformations only on training data within the agreed validation procedure.
-- Use this shared local data location from all notebooks and individual work folders; avoid duplicated datasets.
+- `raw/`: unchanged original files; use this one local copy from all analyses.
+- `processed/`: generated data, recreated by shared code in `src/`. Document the preparation command and dependencies there when implemented.
+- Follow the checks and training-only preparation rules in [methodology.md](../docs/methodology.md#data-and-preparation).
 
-Both data directories are ignored except for `.gitkeep`. Instructions and version/hash metadata belong in Git. Do not upload data archives, credentials, or large temporary files; inspect GitHub Desktop's changed-file list before committing. The final environment and regeneration procedure must still be implemented and verified.
+The data folders are ignored except for `.gitkeep`. Track these instructions and metadata, not datasets or archives. See [results/README.md](../results/README.md) for output storage. Data acquisition and processed-data regeneration still need implementation and verification.

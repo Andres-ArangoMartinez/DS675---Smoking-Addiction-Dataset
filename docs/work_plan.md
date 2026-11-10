@@ -1,14 +1,33 @@
-# Proposed work plan
+# Work plan
 
-This is a proposal for discussion, not an agreed schedule. Responsible members, reviewers, deadlines, and assignments for every stage are **pending team agreement**. Every member must contribute to coding, writing, and presentation; record actual work with evidence rather than inferring it from this plan.
+## What to do next
 
-| Stage | Expected output | Dependencies | Completion criterion |
+1. Discuss the [proposed scenario](methodology.md#protocol-overview): whom are we predicting for, how far ahead, and using what information? Update the overview with the agreement.
+2. Choose the dataset version and review the two Kaggle notebooks identified in Milestone 2. Capture data details in [data/README.md](../data/README.md) and the comparison basis in [methodology.md](methodology.md#comparison-with-kaggle-work).
+3. Choose one small baseline task, a responsible member, a teammate reviewer, and a completion criterion. Use this page or an existing team discussion to coordinate it; a separate Issue is optional.
+
+Assignments, reviewers, and dates have not been agreed. Keep active task notes here if useful, linking the branch or shared advance. Plan an equitable workload so every member has meaningful coding, writing, and presentation work.
+
+## Proposed stages
+
+| Stage | Expected output | Depends on | Complete when |
 | --- | --- | --- | --- |
-| 1. Agree on the research question and evaluation scenario | Written target, prediction horizon, evaluation population, and prediction-time information boundary | Read the original Milestone 2 proposal and discuss candidate scenarios | Team records an agreement in the decision log, including what each prediction may use and whom the evaluation represents |
-| 2. Audit the dataset and inspect relevant Kaggle references | Data version record, quality audit, feature availability map, and reference comparison notes | Stage 1 defines the intended scenario; all members can obtain the same data version | Audit checks have recorded findings, references have exact source/version links, leakage concerns are addressed, and the team's proposed difference is explicit |
-| 3. Build a complete baseline workflow | Reviewed shared preparation/evaluation code, a baseline run, and a complete experiment record | Stages 1-2; agreed split, metrics, seed policy, and preprocessing | Another teammate can run the documented workflow on the recorded data version and check the baseline outputs; test data has not guided tuning |
-| 4. Run coordinated model and feature-group comparisons | Consistent experiment records and generated comparison tables | Stage 3; agreed features, candidate models, tuning budget, and validation plan | Planned comparisons use the same eligible observations, split, metrics, and tuning rules; deviations are documented and reviewed |
-| 5. Interpret results and develop the report | LaTeX draft with evidence-backed findings, reference differentiation, limitations, and contributions | Recorded comparisons from Stage 4; writing can start earlier with placeholders | Team cross-reviews claims against experiment records, checks citations and required links, and reviews a readable 5-8 page group report |
-| 6. Review reproducibility and prepare the final presentation | Reproduction check, agreed final report PDF, presentation materials, and 5-10 minute video | Reviewed report and integrated code; contributions documented | A teammate verifies the documented run, all members contribute to coding/writing/presentation, all members participate in the video, and final report/README links are checked |
+| 1. Agree on question and scenario | Target, population, horizon, and information cutoff | Team discussion of Milestone 2 | The protocol overview specifies what a prediction means and may use |
+| 2. Audit data and Kaggle references | Version/quality record, eligible features, and comparison basis | Scenario from stage 1 | Data characteristics and quality findings are recorded; reference versions, attribution, and intended extension are clear |
+| 3. Build the baseline workflow | Shared preparation/evaluation code and a recorded baseline | Stages 1-2; agreed split and metrics | A teammate reruns the documented baseline; test data has not guided selection |
+| 4. Compare models and feature groups | Experiment records and generated comparisons | Baseline; agreed candidates and tuning budget | Comparisons use identical eligible observations and evaluation rules, with deviations explained |
+| 5. Interpret and write | Evidence-backed LaTeX report | Recorded comparisons; background writing can start earlier | Cross-review checks findings, limitations, attribution, contributions, links, and the 5-8 page length |
+| 6. Reproduce and present | Reproduction check, agreed report PDF, and group video | Reviewed code and report | A teammate verifies the documented run; all members participate in a 5-10 minute video; final report and README links work |
 
-Stage outputs are not complete simply because a folder or template exists. Record any change to this plan in [decisions.md](decisions.md). Use [methodology.md](methodology.md) to turn proposed choices into an agreed protocol.
+The report must link to Milestone 2, code, and the final video. Record actual member work in [contributions.md](contributions.md). Log consequential choices or revisions in [decisions.md](decisions.md); keep the current protocol itself in [methodology.md](methodology.md).
+
+## Rubric to evidence
+
+Based on the supplied Milestone 4 rubric (15 points). These are planned evidence locations, not claims of completion.
+
+| Criterion | Evidence the completed project must provide | Main locations |
+| --- | --- | --- |
+| Objectives (3) | Precise supervised task; dataset source, uses, record/feature characteristics, and suitability | Report introduction/data; data version record |
+| Methodology (5) | Justified preparation, models, training/testing, validation/tuning, and fair Kaggle comparison | Report methodology/results; shared code; experiment records |
+| Contributions and Originality (4) | Demonstrable extension beyond relevant Kaggle work; full external/internal attribution; equitable, significant coding/writing/presentation work by each member | Report introduction/discussion/contributions; contribution evidence; reference and code links |
+| Presentation (3) | Clear, concise 5-8 page report with names, contributions, and required links; 5-10 minute group video that complements it with discussion, a demo, or further insight | LaTeX report and final PDF; presentation materials and final video |

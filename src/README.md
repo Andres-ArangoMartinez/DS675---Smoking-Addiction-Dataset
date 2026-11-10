@@ -1,5 +1,7 @@
 # Shared code
 
-Place reviewed, reusable data preparation, feature construction, modeling, and evaluation code here when implemented. Individual exploration belongs in `work/<name>/`; integrated notebooks should call shared code rather than copy it.
+Place reviewed preparation, feature construction, modeling, and evaluation code here. Integrated notebooks should call it rather than copy it. Follow the [scientific protocol](../docs/methodology.md) and attribute adapted external code where used.
 
-No modeling workflow or environment has been implemented yet. Add only dependencies actually needed by the agreed experiments, then document versions and commands so teammates can run them. Keep paths relative to the repository, leave `data/raw/` unchanged, and record external code sources and adaptations.
+## Shared environment and execution
+
+No runnable workflow or dependency specification is recorded yet. As code is implemented, document Python/OS requirements, exact dependency versions, environment setup, preparation/run commands, and configuration paths here (link an environment file if one is introduced). Keep paths relative to the repository and raw data unchanged. Experiment records should link the version used and record only run-specific differences.

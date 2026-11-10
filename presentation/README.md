@@ -1,9 +1,9 @@
 # Group presentation
 
-This folder will hold the presentation outline and supporting materials. No video is created by this setup.
+Keep the presentation outline and supporting materials here.
 
-The final group video must be **5-10 minutes**, and **every member will participate**: Kate Sazonova, Nahreg Rastguelenian, and Andres Arango Martinez. Speaking order, timing, and assignments remain pending team agreement.
+The group video must be **5-10 minutes**, with participation from Kate Sazonova, Nahreg Rastguelenian, and Andres Arango Martinez. Agree on speaking roles and timing together.
 
-Plan to explain the question, differentiation from Kaggle work, data preparation, models, validation/tuning, measured comparisons, limitations, and member contributions. Use only verified results. Keep large video files out of Git.
+Summarize the question, methods, measured comparisons, extension beyond Kaggle work, and limitations. Complement the report with discussion, a demo, or further insight. Keep large video files out of Git.
 
-Final video URL: **pending**. Once available, add the verified link to both the root README and the LaTeX report, then check that teammates and the intended audience can open it. All members must also contribute to coding and writing; record actual contributions in `docs/contributions.md`.
+Once the final video exists, add its verified link to both the root README and the report. Record actual presentation work in [contributions.md](../docs/contributions.md).

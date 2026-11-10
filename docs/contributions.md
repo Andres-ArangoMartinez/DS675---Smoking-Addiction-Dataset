@@ -1,15 +1,11 @@
-# Actual member contributions
+# Member contributions
 
-This record tracks completed work with evidence. It does not assign responsibilities. All members must contribute to coding, writing, and presentation; agree on tasks and reviewers through the [work plan](work_plan.md) and collaboration workflow.
+Record meaningful completed work and supporting links, including prior work once verified. Every member must contribute to coding, writing, and presentation. Assignments belong in the [work plan](work_plan.md); this page records what actually happened.
 
-No completed contributions are asserted by this setup. The original proposal is preserved; the team should review and document prior work with evidence rather than treating these placeholders as a verified history.
-
-| Member | Completed contribution (including coding) | Evidence links | Report contribution | Presentation contribution |
+| Member | Completed work, including coding | Evidence | Report contribution | Presentation contribution |
 | --- | --- | --- | --- | --- |
-| Kate Sazonova | Not recorded yet | Pending | Not recorded yet | Not recorded yet |
-| Nahreg Rastguelenian | Not recorded yet | Pending | Not recorded yet | Not recorded yet |
-| Andres Arango Martinez | Not recorded yet | Pending | Not recorded yet | Not recorded yet |
+| Kate Sazonova | Not recorded | — | Not recorded | Not recorded |
+| Nahreg Rastguelenian | Not recorded | — | Not recorded | Not recorded |
+| Andres Arango Martinez | Not recorded | — | Not recorded | Not recorded |
 
-Add a dated row per completed contribution as needed. Link reviewed changes, experiment records, report sections, review discussions, or presentation materials. Describe the person's work, including collaboration and review. Commit counts alone do not measure contribution: a shared analysis, careful review, writing, and speaking can require substantial work without many commits.
-
-Before final submission, verify that each person's coding, writing, and presentation contributions are documented and reflected accurately in the report.
+Add dates and links to reviewed code, experiments, report sections, reviews, or presentation materials as work is completed. A concise summary can cover related edits; no entry is needed for every commit. Include collaboration and review: commit counts alone do not measure contribution. Use this evidence to write the report's member-contributions section accurately.

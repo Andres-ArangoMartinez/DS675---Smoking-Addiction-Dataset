@@ -1,0 +1,14 @@
+# Proposed work plan
+
+This is a proposal for discussion, not an agreed schedule. Responsible members, reviewers, deadlines, and assignments for every stage are **pending team agreement**. Every member must contribute to coding, writing, and presentation; record actual work with evidence rather than inferring it from this plan.
+
+| Stage | Expected output | Dependencies | Completion criterion |
+| --- | --- | --- | --- |
+| 1. Agree on the research question and evaluation scenario | Written target, prediction horizon, evaluation population, and prediction-time information boundary | Read the original Milestone 2 proposal and discuss candidate scenarios | Team records an agreement in the decision log, including what each prediction may use and whom the evaluation represents |
+| 2. Audit the dataset and inspect relevant Kaggle references | Data version record, quality audit, feature availability map, and reference comparison notes | Stage 1 defines the intended scenario; all members can obtain the same data version | Audit checks have recorded findings, references have exact source/version links, leakage concerns are addressed, and the team's proposed difference is explicit |
+| 3. Build a complete baseline workflow | Reviewed shared preparation/evaluation code, a baseline run, and a complete experiment record | Stages 1-2; agreed split, metrics, seed policy, and preprocessing | Another teammate can run the documented workflow on the recorded data version and check the baseline outputs; test data has not guided tuning |
+| 4. Run coordinated model and feature-group comparisons | Consistent experiment records and generated comparison tables | Stage 3; agreed features, candidate models, tuning budget, and validation plan | Planned comparisons use the same eligible observations, split, metrics, and tuning rules; deviations are documented and reviewed |
+| 5. Interpret results and develop the report | LaTeX draft with evidence-backed findings, reference differentiation, limitations, and contributions | Recorded comparisons from Stage 4; writing can start earlier with placeholders | Team cross-reviews claims against experiment records, checks citations and required links, and reviews a readable 5-8 page group report |
+| 6. Review reproducibility and prepare the final presentation | Reproduction check, agreed final report PDF, presentation materials, and 5-10 minute video | Reviewed report and integrated code; contributions documented | A teammate verifies the documented run, all members contribute to coding/writing/presentation, all members participate in the video, and final report/README links are checked |
+
+Stage outputs are not complete simply because a folder or template exists. Record any change to this plan in [decisions.md](decisions.md). Use [methodology.md](methodology.md) to turn proposed choices into an agreed protocol.

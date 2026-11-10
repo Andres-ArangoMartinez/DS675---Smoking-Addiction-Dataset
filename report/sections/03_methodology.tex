@@ -1,0 +1,26 @@
+\section{Methodology}
+All choices in this section are pending team agreement. The editable planning
+template is in \texttt{docs/methodology.md} in the repository~\cite{repository}.
+
+\subsection{Prediction Scenario and Features}
+\draft{Specify the target, horizon, population, prediction cutoff, and exact
+feature groups. Identify when each measurement is available. Explain lag/window
+construction within participants, missing-history handling, and protection
+against target leakage. Historical target scores may be candidates only when
+available in the agreed scenario.}
+
+\subsection{Splitting, Baselines, and Models}
+\draft{Explain how the scenario determines participant and temporal separation.
+Predicting future days for known participants and evaluating new participants
+answer different questions. Define train, validation, and held-out test data and
+check overlap. Justify a simple constant baseline and, if applicable, a
+persistence baseline. Discuss candidate models such as Ridge regression,
+Random Forest, or XGBoost only if selected and implemented; none is finalized.}
+
+\subsection{Validation, Tuning, and Fair Comparison}
+\draft{Specify fold construction, training-only preprocessing, model settings,
+search spaces, tuning budgets, seeds, and model-selection rules. Reserve test
+data for final evaluation. Select and justify a primary metric and supporting
+metrics; MAE, RMSE, and R-squared are candidates. Define participant/row
+weighting and any uncertainty calculation. Compare models and feature groups on
+the same eligible evaluation observations and record deviations.}

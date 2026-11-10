@@ -1,0 +1,80 @@
+# Local datasets: keep instructions and directory markers, not copies of data.
+/data/raw/*
+!/data/raw/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Local secrets; an intentionally sanitized example may be tracked.
+.env
+.env.*
+!.env.example
+credentials.json
+secrets.json
+*.pem
+*.key
+
+# Local editors and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.swp
+*.swo
+*.tmp
+*.bak
+*.log
+tmp/
+temp/
+
+# LaTeX intermediate files and local preview build
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+*.nav
+*.snm
+/report/build/
+/report/main.pdf
+
+# Large generated artifacts; selected compact records/tables/figures remain eligible.
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+*.parquet
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.mp4
+*.mov
+*.avi
+*.zip
+/results/**/scratch/
+/results/**/cache/
+
+# Deliberately no blanket PDF rule: the original proposal and
+# report/final_report.pdf must remain eligible for version control.

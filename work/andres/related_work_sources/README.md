@@ -14,6 +14,8 @@ The project's proposal describes synthetic longitudinal data with 1,000 particip
 - [2. Similar datasets](#2-similar-datasets)
 - [3. Related literature](#3-related-literature)
 
+**Team reading library:** [PDFs, official full-text links, and citation files](library/README.md) · [PDF index](library/Indice.pdf). The library deduplicates 16 publications and includes 8 original PDFs whose redistribution licenses were verified; the other publications link to their official full texts.
+
 ## 1. Work using our exact dataset
 
 **Exact-dataset identity remains unconfirmed for the candidate analysis below.** Its filename, topic, and reported structure closely match the project, but the inspected README and notebook did not cite the Kaggle URL. A comparison of the original files, records, or hashes is still needed. No scientific paper using the exact Kaggle file was verified in the searches conducted; this does not establish that none exists.

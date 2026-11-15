@@ -1,0 +1,65 @@
+{
+  "checked_on": "2026-11-15",
+  "unique_publication_dois": 16,
+  "included_pdfs": 8,
+  "official_link_only_publications": 8,
+  "original_pdf_bytes_preserved": true,
+  "included_files": [
+    {
+      "file": "papers/Lee_2026_Daily_smoking_prediction.pdf",
+      "doi": "10.1038/s41386-026-02448-5",
+      "sha256": "d1fee89b12c04b28c1ffcbb37a7975bc77227508b2ad41988f40a283a8a1ca70",
+      "bytes": 2618343,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Perski_2024_EMASENS.pdf",
+      "doi": "10.1371/journal.pdig.0000594",
+      "sha256": "b81c7e6d643f640f4713b4f0125fd5543d4059f727d0344a2fd7ef2efec17ea6",
+      "bytes": 2029691,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Leppin_2026_Optimising_cravings_lapses.pdf",
+      "doi": "10.1371/journal.pone.0349028",
+      "sha256": "85d80176f394dc4d7622b62a17e68519fc42db1bf16f6b9a9e3dd44834d2c62b",
+      "bytes": 956710,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Perski_2023_Smoke_Free.pdf",
+      "doi": "10.1093/ntr/ntad051",
+      "sha256": "60742cc348488a83ed849950cd6e17aeb1f4650a87d82efb7543c59b44ad4ca3",
+      "bytes": 6558068,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Ra_2025_Sleep_smoking_protocol.pdf",
+      "doi": "10.1371/journal.pone.0334129",
+      "sha256": "6e98944b55e69a4b543c2fd6f42040fa6663c272bde30c8811982acbbcca4220",
+      "bytes": 434287,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Chapman_2022_Nicotine_pouches.pdf",
+      "doi": "10.1007/s00213-022-06178-6",
+      "sha256": "0d53420edca38f3fafc6d6d1c48d60372e0f6e902eb61a693b2616e4ccc27e53",
+      "bytes": 904453,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Kapoor_Narayanan_2023_Leakage.pdf",
+      "doi": "10.1016/j.patter.2023.100804",
+      "sha256": "3d367f74dd82e70b5491655d50470898db4ce20e16148a9e43dc01b249a7e273",
+      "bytes": 2905915,
+      "license": "CC BY 4.0"
+    },
+    {
+      "file": "papers/Adams_2025_Synthetic_data.pdf",
+      "doi": "10.1016/j.isci.2025.112382",
+      "sha256": "4d885319892e93734ef1c396122ad02c55c7ca470f010a421ea0abff9cb06c10",
+      "bytes": 3970599,
+      "license": "CC BY-NC-ND 4.0"
+    }
+  ]
+}

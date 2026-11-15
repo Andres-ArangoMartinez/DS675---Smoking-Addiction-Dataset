@@ -1,0 +1,11 @@
+# Local reading copies without verified public-redistribution permission.
+/local_only/
+/papers/*.pdf
+!/papers/Adams_2025_Synthetic_data.pdf
+!/papers/Chapman_2022_Nicotine_pouches.pdf
+!/papers/Kapoor_Narayanan_2023_Leakage.pdf
+!/papers/Lee_2026_Daily_smoking_prediction.pdf
+!/papers/Leppin_2026_Optimising_cravings_lapses.pdf
+!/papers/Perski_2023_Smoke_Free.pdf
+!/papers/Perski_2024_EMASENS.pdf
+!/papers/Ra_2025_Sleep_smoking_protocol.pdf

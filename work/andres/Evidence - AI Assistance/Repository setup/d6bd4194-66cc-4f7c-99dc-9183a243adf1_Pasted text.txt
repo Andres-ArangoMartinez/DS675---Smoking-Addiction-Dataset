@@ -1,0 +1,310 @@
+Set up a simple, beginner-friendly repository structure for our
+DS675 Milestone 4 group project.
+
+REPOSITORY
+
+Remote:
+https://github.com/Andres-ArangoMartinez/DS675---Smoking-Addiction-Dataset
+
+Existing local clone:
+D:\GitHub\ML NJIT\MiniProject\DS675 - Smoking Addiction Dataset
+
+GROUP MEMBERS
+
+Preserve these names exactly:
+- Kate Sazonova
+- Nahreg Rastguelenian
+- Andres Arango Martinez
+
+DATASET SOURCE
+
+https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data
+
+PROJECT CONTEXT
+
+We are developing a supervised machine learning project using the
+Smoking Addiction Dataset described in our existing Milestone 2
+proposal.
+
+Our proposed research direction is to compare how psychological
+measurements, daily habits, and historical craving and nicotine-use
+information contribute to predicting Overall_Craving_Score.
+
+Next-day prediction for known participants is a candidate scenario,
+but the team has not yet finalized the prediction horizon,
+evaluation population, feature groups, or experimental protocol.
+
+Clearly distinguish proposed choices from agreed decisions.
+
+MILESTONE 4 REQUIREMENTS
+
+- One group report of 5–8 pages.
+- One group video presentation of 5–10 minutes.
+- A supervised prediction task.
+- Clear differentiation from relevant Kaggle work.
+- Justified data preparation, modeling, validation, tuning,
+  and performance comparisons.
+- Clear attribution of external methods and code.
+- Documented contributions from every group member.
+- All members contribute to coding, writing, and presentation.
+- The report links to the Milestone 2 proposal, code, and video.
+
+Use LaTeX in the repository as the shared source for the report.
+Do not use Google Docs as the official report-writing location.
+
+FIRST INSPECT THE EXISTING WORK
+
+Before editing:
+1. Read applicable AGENTS.md instructions.
+2. Inspect the repository, current branch, remote, existing files,
+   and uncommitted changes.
+3. Confirm that the remote matches the repository above.
+4. Preserve existing work and do not discard local changes.
+5. Keep the original Milestone 2 PDF at its current location.
+   Link to it rather than moving or duplicating it.
+
+If a minor tool is unavailable, use an available equivalent.
+Do not install software or dependencies without an actual need
+within this setup task.
+
+IMPLEMENT THIS STRUCTURE LOCALLY
+
+Adapt the structure to existing content:
+
+README.md
+CONTRIBUTING.md
+.gitignore
+docs/
+    methodology.md
+    work_plan.md
+    decisions.md
+    contributions.md
+    experiment_template.md
+data/
+    README.md
+    raw/
+    processed/
+src/
+    README.md
+notebooks/
+    README.md
+work/
+    README.md
+    kate/
+    nahreg/
+    andres/
+results/
+    README.md
+    experiments/
+    tables/
+    figures/
+report/
+    README.md
+    main.tex
+    references.bib
+    sections/
+        01_introduction.tex
+        02_data.tex
+        03_methodology.tex
+        04_results.tex
+        05_discussion.tex
+        06_conclusions_contributions.tex
+presentation/
+    README.md
+
+Use short README files or .gitkeep files where needed so that
+the directories are tracked by Git.
+
+Write documentation in clear, natural English for classmates
+who may have little experience with GitHub or LaTeX.
+
+ROOT README
+
+Make the README the main entry point for the project. Include:
+- Project purpose and current status.
+- All three group members.
+- The proposed research direction, marked as pending agreement.
+- Links to the dataset and existing Milestone 2 proposal.
+- A short repository navigation guide.
+- Links to the work plan, methodology, and contribution record.
+- Instructions for finding and compiling the LaTeX report.
+- Clearly marked placeholders for results, the final report,
+  and the final video.
+
+Do not create links that appear to point to completed deliverables
+when those files or URLs do not exist.
+
+COLLABORATION WORKFLOW
+
+In CONTRIBUTING.md, explain this lightweight workflow:
+1. Define a small task in a GitHub Issue.
+2. Identify a responsible member, a reviewer, and a completion
+   criterion.
+3. Create a short-lived branch named after the task.
+4. Make focused changes.
+5. Open a pull request explaining the changes and verification.
+6. Have another teammate review before merging into main.
+
+Explain these conventions:
+- work/<name>/ is for individual exploration.
+- Reviewed reusable code belongs in src/.
+- Integrated analyses belong in notebooks/.
+- Recorded experiment outputs belong in results/.
+- Report writing takes place in the LaTeX section files.
+- Main contains the reviewed, integrated project.
+- Avoid editing the same notebook simultaneously.
+- Avoid duplicated datasets and competing copies of shared
+  preparation and evaluation code.
+
+Describe Issues and pull requests, but do not create any remotely.
+
+WORK PLAN
+
+Create a proposed plan with these stages:
+1. Agree on the research question and evaluation scenario.
+2. Audit the dataset and inspect relevant Kaggle references.
+3. Build a complete baseline workflow.
+4. Run coordinated model and feature-group comparisons.
+5. Interpret results and develop the report.
+6. Review reproducibility and prepare the final presentation.
+
+For each stage, state:
+- Expected output.
+- Dependencies.
+- A clear completion criterion.
+
+Leave names, deadlines, and assignments pending team agreement.
+Do not invent calendar dates or agreed responsibilities.
+
+METHODOLOGY DOCUMENT
+
+Provide an editable planning template covering:
+- Research question and target.
+- Prediction horizon and evaluation population.
+- Dataset source and version.
+- Data quality checks and preparation.
+- Feature groups and availability at prediction time.
+- Participant and temporal splitting considerations.
+- Baselines and candidate learning models.
+- Validation and hyperparameter tuning.
+- Primary and supporting evaluation metrics.
+- Fair comparison with Kaggle references.
+- Synthetic-data limitations.
+- Unresolved questions requiring team agreement.
+
+Do not present candidate methods or splits as finalized.
+
+TRACEABILITY
+
+Provide simple templates for:
+
+1. A dated decision log:
+   decision, reason, participants, and supporting links.
+
+2. Actual member contributions:
+   member, completed contribution, evidence links, report
+   contribution, and presentation contribution.
+   Include all three names but do not invent completed work.
+   Explain that commit counts alone do not measure contribution.
+
+3. An experiment record:
+   experiment ID, question, author, date, data version,
+   code version, environment, features, split, random seed,
+   model settings, metrics, output paths, findings, and limitations.
+
+Explain that each experiment should have its own output location
+under results/experiments/<experiment-id>/.
+Shared comparison tables should be generated from those records
+when the experimental workflow is implemented.
+
+DATA AND GENERATED OUTPUTS
+
+Document:
+- How teammates will obtain the same dataset version.
+- How the original data will remain unchanged.
+- How processed data will be recreated.
+- Which outputs belong in Git and which should be ignored.
+- How to avoid uploading large temporary files.
+
+Do not download or fabricate data.
+
+Add a suitable .gitignore for environments, Python caches,
+credentials, notebook checkpoints, LaTeX temporary files,
+and other temporary outputs.
+
+Do not ignore all PDFs: the original proposal and the eventual
+agreed final report must remain eligible for version control.
+
+LATEX REPORT
+
+Create a minimal compilable report template.
+
+Use main.tex for formatting and load the section files with
+\input so teammates can edit separate sections.
+
+Use a readable academic layout with standard margins and font
+sizes. Support the 5–8 page requirement through concise writing
+and sensible space allocation, rather than compressed formatting.
+
+Include:
+- Project title and all three group members.
+- The section structure listed above.
+- Clearly marked drafting placeholders.
+- A member-contributions table with responsibilities pending.
+- A references setup.
+- The verified repository and dataset links.
+- A link to the existing Milestone 2 proposal.
+- A clearly marked pending video link.
+
+Do not invent experiments, results, references, completed
+contributions, or team decisions.
+
+Reference shared figures and tables from results/ where practical.
+Do not include missing assets that prevent compilation.
+
+In report/README.md, explain:
+- Which files teammates should edit.
+- How to compile the complete report.
+- How to review the PDF and check its page count.
+- How to coordinate section editing and cross-review.
+- How to keep temporary build files out of Git.
+- Where to store the agreed final report.
+
+Once a real final report exists, its agreed PDF should be stored
+at report/final_report.pdf. Do not create a fake final deliverable
+during this setup.
+
+PRESENTATION
+
+Provide a short README explaining that:
+- Every member will participate.
+- The video will be 5–10 minutes.
+- The folder will hold the presentation outline and materials.
+- The final video link must also appear in the report and README.
+
+Do not create or render a video.
+
+VALIDATION AND BOUNDARIES
+
+Keep the setup minimal. Do not add unnecessary frameworks,
+dependencies, or complex automation.
+
+Do not train models, invent outputs, assign responsibilities,
+or claim that the project is already reproducible.
+
+Check local Markdown links and LaTeX file references.
+If a suitable LaTeX compiler is available, compile the template
+and inspect the PDF for layout problems and errors.
+Distinguish template validation from validation of a completed
+scientific report.
+
+Review the final diff for unintended changes.
+
+Do not commit, push, publish, or create remote Issues or pull
+requests. Do not change repository settings.
+
+Finish by reporting:
+- Files created or updated.
+- Checks actually performed.
+- Any missing tools or setup requirements.
+- Decisions still requiring team agreement.

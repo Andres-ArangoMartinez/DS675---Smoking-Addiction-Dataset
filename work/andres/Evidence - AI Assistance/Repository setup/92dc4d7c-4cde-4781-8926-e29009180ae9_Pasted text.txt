@@ -1,0 +1,275 @@
+Review and improve our existing DS675 Milestone 4 repository.
+
+The main goal is to simplify cooperative work and make the project
+easy to understand for teammates, the lecturer, and evaluators.
+
+Improve the existing repository rather than creating a new scaffold.
+
+REPOSITORY
+
+https://github.com/Andres-ArangoMartinez/DS675---Smoking-Addiction-Dataset
+
+Local clone:
+D:\GitHub\ML NJIT\MiniProject\DS675 - Smoking Addiction Dataset
+
+Team members:
+- Kate Sazonova
+- Nahreg Rastguelenian
+- Andres Arango Martinez
+
+Dataset:
+https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data
+
+PRIMARY DESIGN PRINCIPLE
+
+Make the repository easier to use, not more elaborate.
+
+Keep the current folder structure unless a specific change clearly
+reduces confusion. Prefer editing, shortening, and linking existing
+documents over adding new files.
+
+Do not introduce additional management tools, mandatory forms,
+complex automation, or unnecessary procedures.
+
+REVIEW PERSPECTIVES
+
+Apply these four perspectives within this task:
+
+1. Collaboration designer
+Help a teammate understand what to do next, where to work, and how
+to share an advance with minimal friction.
+
+2. Machine learning methodology reviewer
+Preserve the scientific requirements needed for valid preparation,
+training, validation, tuning, and fair comparisons.
+
+3. Academic editor
+Improve clarity, consistency, tone, conciseness, and the distinction
+between writing guidance and academic content.
+
+4. Lecturer and evaluator
+Make the question, contribution, evidence, limitations, and member
+contributions easy to find.
+
+These are review perspectives, not new team positions or additional
+approval stages. Do not assign them to the group members.
+
+INSPECT BEFORE EDITING
+
+Read applicable AGENTS.md instructions and inspect:
+- The remote, current branch, and uncommitted changes.
+- README.md and CONTRIBUTING.md.
+- All existing documentation under docs/.
+- The folder guides.
+- The complete LaTeX source and bibliography.
+
+Confirm that the local remote matches the repository above.
+
+Preserve existing work, the original Milestone 2 PDF, and any real
+data, code, or results that may have appeared since this prompt
+was written. Do not overwrite unrelated changes.
+
+IDENTIFIED AREAS TO IMPROVE
+
+The current documentation:
+- Repeats status statements and “pending” notices across files.
+- Includes setup-history language in team-facing documentation.
+- Duplicates LaTeX build instructions.
+- Has a long experiment form with repeated shared information.
+- Prints extensive writing instructions inside the report.
+- Requires readers to navigate several planning documents before
+  they can identify a practical next step.
+
+Address these issues without removing necessary scientific detail.
+
+README: A CLEAR FRONT DOOR
+
+Make the README a concise overview containing:
+- The project question and purpose.
+- The three member names.
+- A short, accurate status statement.
+- Dataset and Milestone 2 proposal links.
+- A short “For teammates” route.
+- A short “For readers and evaluators” route.
+- Links to the LaTeX report source and relevant evidence locations.
+- Final report and video links only when those deliverables exist.
+
+Do not repeat detailed workflow or compilation instructions.
+Do not add decorative badges or empty result tables.
+
+COLLABORATION: FEW STEPS
+
+Rewrite CONTRIBUTING.md around:
+Agree on a task → work on it → share it → teammate review → integrate.
+
+Explain branches and pull requests briefly in everyday language.
+Keep review for substantive shared changes.
+
+Do not require a separate Issue, formal decision entry, and
+contribution-log update for every small edit.
+
+Keep:
+- work/kate/
+- work/nahreg/
+- work/andres/
+
+Explain that these support exploration while reviewed shared work
+belongs in src/, notebooks/, results/, and report/.
+
+Avoid simultaneous editing of the same notebook. Do not require
+everyone to become a Git expert before contributing.
+
+PLANNING AND DOCUMENT OWNERSHIP
+
+Give each existing document one clear purpose:
+- work_plan.md: stages, immediate next steps, and task coordination.
+- methodology.md: the current proposed or agreed scientific protocol.
+- decisions.md: brief records of consequential decisions or changes.
+- contributions.md: actual contributions and supporting evidence.
+- experiment_template.md: a short record of an individual experiment.
+
+Keep shared information in one primary location and link to it.
+Do not repeat full procedures across these documents.
+
+Leave assignments and dates undecided unless there is evidence
+that the team agreed to them.
+
+METHODOLOGY: READABLE AND SOUND
+
+Present a concise overview before implementation details:
+- What are we predicting?
+- For whom and how far ahead?
+- What information is available when predicting?
+- How will models be trained and evaluated?
+- What comparison will demonstrate the group’s contribution?
+
+Retain the necessary details on:
+- Dataset version, characteristics, and quality checks.
+- Target definition and feature groups.
+- Participant and temporal separation.
+- Training-only fitting of preprocessing.
+- Baselines and a small justified model selection.
+- Validation and hyperparameter tuning.
+- Metrics and identical eligible evaluation observations.
+- Fair comparison with relevant Kaggle work.
+- Attribution and synthetic-data limitations.
+
+Explain technical terms briefly when first introduced.
+
+Next-day prediction for known participants remains a candidate
+until the team agrees. Do not invent an approved protocol.
+
+Do not automatically label correlated or same-day measurements
+as leakage. Explain that eligibility depends on target construction
+and what would be available at the prediction cutoff.
+
+EXPERIMENT RECORDS: RECORD WHAT CHANGES
+
+Simplify the experiment template.
+
+Keep shared dataset, protocol, and environment information in their
+existing primary locations. Individual records should link to those
+versions rather than requiring manual repetition.
+
+A record should make it easy to identify:
+- Experiment ID, author, and question.
+- Code and shared protocol/configuration used.
+- What changed: features, model, or settings.
+- How it was run.
+- Results and output locations.
+- Interpretation, limitations, and deviations.
+
+Preserve enough information to reproduce a run, including seeds,
+splits, settings, dependencies, and data versions through linked
+configuration or records.
+
+Do not implement an experiment system or fabricate sample results.
+
+LATEX: A REPORT, NOT AN INSTRUCTION MANUAL
+
+Keep LaTeX as the official report source and retain the separate
+section files.
+
+Move extensive drafting instructions into LaTeX comments or the
+existing report guide. Use short visible placeholders where needed,
+clearly identifying the document as a draft.
+
+Remove administrative setup language from the academic narrative.
+Keep editorial instructions out of bibliography entries.
+
+Maintain readable typography, consistent terminology, meaningful
+captions, and working citations and links.
+
+Keep one compilation procedure in report/README.md and link to it
+from elsewhere.
+
+Do not pad the template to reach 5–8 pages. That requirement applies
+to the completed report. Do not fabricate a final PDF or video.
+
+RUBRIC ALIGNMENT
+
+Use the provided Milestone 4 instructions and rubric.
+
+If available, read the original rubric attachment:
+C:\Users\Andres\.codex\attachments\64f2abc0-b99a-488e-9f01-53da0947de85\Pasted text.txt
+
+The rubric categories are:
+- Objectives: 3 points.
+- Methodology: 5 points.
+- Contributions and Originality: 4 points.
+- Presentation: 3 points.
+
+Ensure the existing plan supports:
+- A precise supervised prediction task.
+- Sufficient dataset description.
+- Justified preparation, models, validation, and tuning.
+- Fair comparison with Kaggle references.
+- A demonstrable original extension and full attribution.
+- Meaningful coding, writing, and presentation contributions from
+  every member.
+- One 5–8 page report and one 5–10 minute group video.
+- Report links to the Milestone 2 proposal, code, and video.
+
+Add only a compact rubric-to-evidence mapping within an existing
+planning document. Do not create another checklist document.
+Do not claim that a template satisfies completed-project criteria.
+
+EDITORIAL STANDARD
+
+Use natural, clear English.
+Prefer short explanations and concrete next steps.
+Remove repetition, boilerplate, and obsolete setup commentary.
+State uncertainty where it matters without repeating disclaimers.
+Keep terminology and paths consistent across documents.
+Preserve all member names exactly.
+
+VALIDATE THE IMPROVEMENTS
+
+Check:
+- Local links and file references.
+- Consistency across planning documents and report sections.
+- Preservation of substantive methodology requirements.
+- Whether a new teammate can identify a next step easily.
+- Whether an evaluator can locate the intended deliverables and
+  supporting evidence without reading internal instructions.
+
+If LaTeX is available, compile and visually inspect the revised
+template. Report only checks actually performed.
+
+Review the final diff for unintended changes.
+
+BOUNDARIES AND FINAL RESPONSE
+
+Make local edits only.
+Do not commit, push, publish, create remote Issues or pull requests,
+or change repository settings.
+Do not download data, train models, or create a video.
+
+Finish with a concise summary:
+- What became simpler.
+- Which files changed.
+- What scientific requirements were preserved.
+- Checks performed and any remaining limitations.
+- The few decisions the team still needs to make.
+
+Do not add a long audit report or new management layer.

@@ -1,0 +1,229 @@
+Act as a research librarian, systematic literature reviewer, data scientist,
+and machine learning researcher. Conduct a broad, rigorous, and reproducible
+investigation of prior work relevant to the following dataset and project:
+
+Dataset:
+“The Nicotine Craving and Anxiety Dynamics Dataset”
+Kaggle URL:
+https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data
+
+Project context:
+We are working on a graduate-level supervised machine learning mini-project.
+The dataset describes nicotine use, craving, anxiety, stress, sleep, mood, and
+other behavioral or contextual variables across repeated participant-day
+observations. We want to understand the existing work before defining a
+well-supported predictive task and an original contribution.
+
+The dataset appears to include variables such as participant ID, day number,
+demographics, nicotine pouch use and strength, craving, anxiety, stress,
+irritability, restlessness, sleep, caffeine consumption, exercise, screen time,
+work, stressful events, and social interaction. Verify the dataset’s actual
+contents and provenance rather than assuming this description is complete or
+accurate.
+
+Your goal is to identify and critically assess:
+
+1. Repositories, notebooks, articles, or other projects that use the exact
+   Kaggle dataset.
+
+2. Related datasets, particularly those containing overlapping variables about
+   nicotine or tobacco use, craving, anxiety, stress, sleep, mood, withdrawal,
+   behavior, or environmental and social context.
+
+3. Scientific papers and other credible research that use the exact dataset,
+   use related datasets, or address closely related prediction problems.
+
+4. Existing predictive tasks, modeling methods, validation designs, and research
+   contributions that may overlap with our proposed project.
+
+Do not limit your search to Kaggle. Search, where accessible and appropriate,
+GitHub, GitLab, Zenodo, OSF, Hugging Face, Figshare, institutional repositories,
+PubMed, Europe PMC, Crossref, OpenAlex, Google Scholar, Semantic Scholar,
+publisher websites, and other relevant sources.
+
+Research questions
+------------------
+
+A. Exact-dataset prior work
+
+- Which public repositories, notebooks, papers, reports, or other projects
+  explicitly use this dataset?
+- Can the connection to the exact dataset be verified through a dataset URL,
+  citation, filename, schema, matching records, file hash, or another reliable
+  identifier?
+- What predictive tasks do they address?
+- What are their target variables, predictors, models, preprocessing steps,
+  train/test splits, validation strategies, and reported metrics?
+- Do they account for repeated observations from the same participant and the
+  temporal order of observations?
+- Are there potential data-leakage problems or other important limitations?
+- Is the work executed and documented, or merely proposed?
+
+Investigate the following known repository as a starting point, but continue
+searching beyond it:
+
+https://github.com/NumiKun/Smoking-Addiction
+
+B. Related datasets
+
+Identify datasets that overlap with the Kaggle dataset in their variables,
+population, research question, or longitudinal structure. Give particular
+attention to real-world observational studies, ecological momentary assessment
+(EMA) datasets, smoking cessation studies, nicotine pouch studies, vaping
+studies, and repeated-measures studies.
+
+For each relevant dataset, report when verifiable:
+
+- Dataset name, authors or institution, publication year, and direct link.
+- Population, setting, sample size, number of records, follow-up period, and
+  sampling frequency.
+- Whether the data are real, synthetic, simulated, or unclear.
+- Unit of observation: person, person-day, momentary survey, event, etc.
+- Variables that overlap with the Kaggle dataset.
+- Important differences in instruments, scales, units, time horizons, nicotine
+  products, and outcome definitions.
+- Whether data, a codebook, and analysis code are publicly accessible.
+- File formats, license, access restrictions, and any limitations on reuse.
+- Relevant publications and repositories linked to that dataset.
+
+Investigate these known candidates as starting points, not as an exhaustive list:
+
+- Fisher (2019), harmonized by openESM:
+  https://openesmdata.org/datasets/0037_fisher/
+
+- EMASENS:
+  https://zenodo.org/records/12532026
+  https://github.com/OlgaPerski/EMASENS_ML
+
+C. Scientific literature and related work
+
+Search for peer-reviewed papers, preprints, dissertations, and other credible
+work on topics such as:
+
+- Predicting nicotine craving, smoking, vaping, nicotine pouch use, lapse,
+  relapse, or withdrawal.
+- Relationships among craving, anxiety, stress, sleep, mood, irritability,
+  restlessness, and nicotine consumption.
+- Longitudinal, time-series, EMA, personalized, and just-in-time prediction.
+- Group-level versus participant-specific or hybrid models.
+- Feature selection, feature-group comparisons, ablation studies, and
+  interpretable prediction.
+
+For each important paper, identify:
+
+- Full citation, DOI or stable link, publication status, and year.
+- Research question and dataset or cohort.
+- Variables, outcome, sample size, and study design.
+- Predictive methods and evaluation approach, if applicable.
+- Main findings and limitations.
+- How directly it relates to our project.
+- Whether data and code are available, with links.
+
+Distinguish studies that examine associations from studies that actually train
+and evaluate predictive models. Identify papers that reuse the same cohort so
+they are not counted as independent datasets.
+
+D. Critical comparison and potential contribution
+
+Construct a comparison matrix for the strongest sources covering:
+
+- Exact dataset versus related dataset.
+- Real versus synthetic data.
+- Population and nicotine product.
+- Shared variables and important measurement differences.
+- Prediction target and forecast horizon.
+- Algorithms, validation design, and reported metrics.
+- Accessibility of data and code.
+- Relevance to our proposed work.
+
+Then assess:
+
+- Which existing projects are the most relevant precedents for our Milestone 2?
+- What has already been done on the exact Kaggle dataset?
+- Which similar ideas have already been explored in related research?
+- What weaknesses, limitations, or open questions remain?
+- What possible supervised-learning contributions could be investigated using
+  our dataset?
+- What additional verification would be required before claiming any proposed
+  contribution is novel?
+
+Consider, where appropriate, temporal leakage, participant overlap between
+training and test sets, same-day information unavailable at prediction time,
+class imbalance, missingness, synthetic-data artifacts, small sample sizes,
+external validity, interpretability, and the difference between prediction and
+causal inference.
+
+Do not assume that a method is novel merely because you did not find it.
+Describe candidate contributions as preliminary until the relevant prior work
+has been checked.
+
+Evidence and search standards
+-----------------------------
+
+1. Start by verifying the Kaggle dataset’s identity, provenance, structure,
+   variable definitions, and whether it is synthetic.
+
+2. Use multiple search strategies: the exact title and URL, author names,
+   distinctive filenames and column names, synonyms, related predictive tasks,
+   citation chaining, and dataset or repository references.
+
+3. Record the databases and platforms searched, example queries, date of search,
+   inclusion criteria, and practical search limitations.
+
+4. Prioritize primary sources: original papers, dataset records, codebooks,
+   repositories, and study documentation. Use secondary sources to discover or
+   contextualize evidence, and label them accordingly.
+
+5. Provide direct links for every substantive finding. When feasible, inspect
+   actual code, metadata, data dictionaries, or files rather than relying only
+   on search snippets or repository descriptions.
+
+6. Clearly label each finding as:
+   - Verified directly;
+   - Reported by a source but not independently verified;
+   - Inferred; or
+   - Unverified / not found.
+
+7. Do not treat matching topic names as proof that two datasets are the same.
+   Do not imply that a related real-world study was the source used to generate
+   the Kaggle data unless the evidence establishes that connection.
+
+8. Do not equate similar constructs without discussing differences. For
+   example, momentary nervousness is not automatically equivalent to a daily
+   anxiety score, and cigarette counts are not interchangeable with nicotine
+   pouch use.
+
+9. Be explicit when a file, article, repository, or full text could not be
+   accessed. Do not invent variables, results, citations, or links.
+
+10. Report negative findings with appropriate limits. “No source was found in
+    the searches conducted” is different from proving that no source exists.
+
+11. If a quantitative comparison is useful, report the denominator, unit of
+    analysis, outcome, time horizon, and evaluation procedure. Do not compare
+    metrics across incompatible tasks as though they measured the same thing.
+
+Required output
+---------------
+
+Write the main report in Spanish, while retaining original English titles,
+variable names, and technical terms when useful.
+
+Organize the response as follows:
+
+1. Executive summary of the most important findings.
+2. Verified description and provenance of the Kaggle dataset.
+3. Exact-dataset repositories and projects, ranked by relevance.
+4. Related datasets, ranked by relevance and accessibility.
+5. Related scientific papers and predictive-learning studies.
+6. Variable-by-variable comparison matrix for the strongest datasets.
+7. Critical assessment of prior methods and evaluation designs.
+8. Implications for Milestone 2 and possible project contributions.
+9. Search methodology, limitations, and unresolved questions.
+10. Linked bibliography, separating primary sources, repositories, datasets,
+    and secondary sources when useful.
+
+For the most relevant sources, include enough detail for a reader to assess
+whether they truly use the same data, comparable variables, and a comparable
+prediction task. Be comprehensive, but prioritize the strength and relevance
+of evidence over the number of results.

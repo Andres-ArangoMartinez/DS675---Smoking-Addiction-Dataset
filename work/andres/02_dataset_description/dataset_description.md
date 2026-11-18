@@ -6,7 +6,7 @@
 
 **Scope.** Describe and assess the dataset.
 
-**Evidence.** The counts and statistics below come from inspecting all **30,000 records in a public CSV copy** in [NumiKun/Smoking-Addiction](https://github.com/NumiKun/Smoking-Addiction/blob/main/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv). The audit covered the full file on GitHub. These findings are distinguished from the information on the [Kaggle dataset page](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data).
+**Evidence.** The counts and statistics below come from inspecting all **30,000 records in a public CSV copy** in [NumiKun/Smoking-Addiction](https://github.com/NumiKun/Smoking-Addiction/blob/main/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv). The initial audit covered the full file on GitHub. The common [local CSV](../../../data/raw/Nicotine_Craving_Anxiety_Dynamics_30Days.csv) has the same byte size, SHA-256, and Git blob identifier. The [statistical audit](dataset_audit_AI_assisted/README.md) reproduces the numerical findings; the complementary [provenance verifier](../../../data/provenance_AI_assisted/README.md) checks source metadata and file identity. Their scope and evidence are summarized in section 1.9 and [data/README.md](../../../data/README.md). The [Kaggle dataset page](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data) remains the publication reference.
 
 ### Review framework
 
@@ -189,7 +189,7 @@ Its suitability has six qualifications:
 3. **Incomplete measurements:** 349 overall craving scores are missing, as are values in 13 additional columns.
 4. **Incomplete field definitions:** without the generator or a formal dictionary, flags involving `Pouches_Per_Day`, `First_Pouch_Time`, `Overall_Craving_Score`, and `Craving_Intensity_Peak` remain unresolved, and mechanical relationships among same-day scores cannot be ruled out.
 5. **Dependence and heterogeneity:** a participant's 30 records are not statistically independent observations; pooled correlation differs from within-participant correlation.
-6. **Provenance and versioning:** the audited copy is public, but its exact equivalence to the group's selected official download remains unproven.
+6. **Provenance and versioning:** the common CSV matches Kaggle version 1 and the GitHub copy pinned in the source record; section 1.9 links the reproducible checks and recorded comparison. Version, file identity, and the publisher-reported license are documented. These checks do not validate the simulation or its score construction.
 
 The resource should therefore be presented as **synthetic longitudinal data for examining ML techniques and relationships within the simulation**, not evidence of prevalence, clinical efficacy, or causality.
 
@@ -203,11 +203,13 @@ The resource should therefore be presented as **synthetic longitudinal data for 
 | Inspected file size | **4,286,125 bytes** |
 | Inspected file SHA-256 | `7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907` |
 | Git blob identifier | `80bbba4a3289940698a2926618bf0f5f1525e69f` |
-| Content audit | **Complete for this copy:** structure, inferred types, missingness, ranges, duplicates, profiles, statistics, and preliminary semantic checks |
-| Exact Kaggle file version and license | **Not verified:** the page was available as a reference, but the download/metadata were not retrieved |
-| Byte-for-byte identity between Kaggle and the audited copy | **Not established:** requires the original file from the selected version |
+| Content audit | **Complete for this copy:** structure, inferred types, missingness, ranges, duplicates, profiles, statistics, and preliminary semantic checks. The [AI-assisted reproduction](dataset_audit_AI_assisted/README.md) matches **299/299 numerical and structural assertions** at the published precision |
+| Exact Kaggle file version and license | The bundled [publisher metadata snapshot](../../../data/provenance_AI_assisted/evidence/kaggle_metadata_20261116.json), recorded on 2026-11-16, identifies dataset `11749711`, version 1, and reports **CC0: Public Domain**. The [source record](../../../data/provenance_AI_assisted/sources.json) pins the version-specific download URL and metadata snapshot hash |
+| Byte-for-byte identity between Kaggle and the audited copy | **Verified by direct source comparison:** the [recorded online run](../../../data/provenance_AI_assisted/results/verification_20261118.json) on 2026-11-18 confirms identical bytes between the common raw CSV, the version-1 Kaggle archive member, and the GitHub CSV at commit `aa3faf512362f941721a85793e65baf5c3c7d760` |
 
-SHA-256 identifies the audited content; it **does not prove Kaggle provenance**. Compare the official download's hash when available. If it differs, recalculate all results on the adopted file. The CSV structure alone also does not establish a reuse license.
+The initial content audit measured the CSV; the complementary [provenance verifier](../../../data/provenance_AI_assisted/README.md) supplies executable source comparisons and bundled metadata. Its recorded online run passed **27 checks**, including direct byte comparisons with both public sources and verification of Kaggle metadata. These are provenance and storage assertions, separate from the statistical audit's 299 comparisons. Offline runs check the local CSV and historical metadata and explicitly mark external comparisons as not performed.
+
+The snapshot records the publisher's statements at retrieval time. CC0 is the license reported by that metadata, not a conclusion inferred from the CSV; a matching hash identifies content without independently authenticating download origin. Online verification can detect subsequent source changes. A different adopted CSV requires recalculating the results. The common raw CSV is tracked in Git; [data/README.md](../../../data/README.md) explains access, verification commands, and the rules for additional raw or processed files.
 
 ---
 
@@ -257,4 +259,6 @@ Types reflect ordinary pandas CSV inference. Units suggested by field names are 
 
 Results use the full CSV associated with the Git object above. Checks covered record and participant counts, missing fields, formats, distributions, and valid consecutive-day pairs. Types reflect inference compatible with a common CSV reader such as pandas; **no type declarations are attributed to Kaggle**. The file is comma-delimited text with one row per observation.
 
-The additional correlation calculations are **descriptive**, not causal inference or validation of human behavior. No predictive model was fitted, and the correlations were not used to declare an experimental objective. Exact provenance, licensing, and the generation formula remain beyond what the CSV alone can establish.
+The [statistical audit guide](dataset_audit_AI_assisted/README.md) provides commands for a fresh reproduction in a separate output directory and independent validation. It also explains why the historical audit fingerprints the earlier Spanish source, while the English document and subsequent editorial revisions have a different document hash. This source-version difference does not alter the verified numerical findings; historical outputs and reference expectations remain preserved.
+
+The additional correlation calculations are **descriptive**, not causal inference or validation of human behavior. No predictive model was fitted, and the correlations were not used to declare an experimental objective. Version and license statements rely on the bundled publisher metadata and executable provenance checks linked in section 1.9; the CSV alone establishes neither download origin nor licensing. The generation formula remains unverified.

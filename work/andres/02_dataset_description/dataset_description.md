@@ -1,88 +1,85 @@
-# DS675 — Descripción y validación del conjunto de datos
+# DS675 — Dataset Description and Validation
 
-*Documento de apoyo para la sección «Dataset Description and Learning Objective» del Milestone 4.*
+*Supporting document for the Milestone 4 “Dataset Description and Learning Objective” section.*
 
-## 1. Descripción del dataset
+## 1. Dataset description
 
-**Alcance.**  **Desarrollo de la descripción y evaluación del dataset** 
+**Scope.** Describe and assess the dataset.
 
-**Base de evidencia.** Los recuentos y estadísticos que siguen proceden de la inspección de los **30,000 registros completos de una copia CSV pública** del repositorio [NumiKun/Smoking-Addiction](https://github.com/NumiKun/Smoking-Addiction/blob/main/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv), auditada a través de su contenido íntegro en GitHub. Se distingue esta evidencia de las características publicadas en la [página del dataset en Kaggle](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data). 
+**Evidence.** The counts and statistics below come from inspecting all **30,000 records in a public CSV copy** in [NumiKun/Smoking-Addiction](https://github.com/NumiKun/Smoking-Addiction/blob/main/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv). The audit covered the full file on GitHub. These findings are distinguished from the information on the [Kaggle dataset page](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data).
 
+### Review framework
 
-### Enfoque de revisión y responsabilidades analíticas
+The review used five analytical perspectives to **describe the available resource accurately**.
 
-La revisión se realizó aplicando cinco perspectivas de análisis.
-
-| Perspectiva | Pregunta que guía la revisión | Evidencia examinada |
+| Perspective | Guiding question | Evidence examined |
 | --- | --- | --- |
-| **Auditoría de datos / ingeniería de datos** | ¿El CSV es legible, íntegro y consistente en sus claves y tipos? | Filas, columnas, duplicados, rangos, formatos y ausencias |
-| **Estadística descriptiva** | ¿Cómo se distribuyen los registros y las mediciones? | Frecuencias, cuartiles, dispersión y distribución del craving |
-| **Análisis longitudinal** | ¿Qué significan las mediciones repetidas y cómo varían dentro de cada participante? | Panel participante–día, constancia del perfil, variación intrapersonal y correlación temporal descriptiva |
-| **Validez científica y de datos sintéticos** | ¿Qué interpretaciones son legítimas y cuáles necesitan definiciones del generador? | Coherencia semántica de campos, ausencia de instrumento clínico y límites de generalización |
-| **Revisión académica de la rúbrica** | ¿La descripción ofrece datos suficientes para juzgar la idoneidad del recurso? | Fuente, usos posibles, clase de información, tamaños, tipos, integridad, limitaciones y trazabilidad |
+| **Data auditing / engineering** | Is the CSV readable, intact, and consistent in its keys and types? | Rows, columns, duplicates, ranges, formats, and missing values |
+| **Descriptive statistics** | How are the records and measurements distributed? | Frequencies, quartiles, dispersion, and craving distribution |
+| **Longitudinal analysis** | What do repeated measurements represent, and how do they vary within participants? | Participant–day panel, profile stability, within-person variation, and descriptive temporal correlation |
+| **Scientific and synthetic-data validity** | Which interpretations are warranted, and which require the generator's definitions? | Field semantics, lack of a clinical instrument, and limits to generalization |
+| **Academic rubric review** | Does the description provide enough information to assess the resource? | Source, potential uses, information types, dimensions, data types, integrity, limitations, and traceability |
 
-El objetivo de estas perspectivas es **describir correctamente el recurso disponible**.
+### 1.1 Identification, provenance, and nature
 
-### 1.1 Identificación, procedencia y naturaleza
+- **Kaggle name:** *Smoking Addiction Dataset / The Nicotine Craving and Anxiety Dynamics Dataset*.
+- **Publisher identified by the official URL:** `datascikhan` (DataSciKhan). [Kaggle listing](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data).
+- **Inspected format:** a tabular CSV with a header, named `Nicotine_Craving_Anxiety_Dynamics_30Days.csv`.
+- **Nature:** **synthetic data** simulating oral nicotine pouch use, craving intensity (desire to use), psychological states, and daily habits. These are not clinical records from 1,000 real people.
+- **Observation unit:** one **simulated participant on one day**, identified by `Participant_ID`–`Day_Number`.
+- **Potential academic uses:** exploring repeated measurements; describing associations among craving, anxiety, consumption, and habits; and illustrating supervised regression or classification after explicitly choosing an outcome. **The dataset has no single predefined class label**: it contains both numeric scores and categorical indicators.
 
-- **Nombre mostrado por Kaggle:** *Smoking Addiction Dataset / The Nicotine Craving and Anxiety Dynamics Dataset*.
-- **Publicador indicado por la URL oficial:** cuenta `datascikhan` (DataSciKhan). [Ficha de Kaggle](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data).
-- **Formato inspeccionado:** CSV tabular con cabecera, denominado `Nicotine_Craving_Anxiety_Dynamics_30Days.csv`.
-- **Naturaleza:** datos **sintéticos** que simulan conductas de consumo de bolsas orales de nicotina (*nicotine pouches*), intensidad de craving (deseo de consumir), condiciones psicológicas y hábitos cotidianos. No son expedientes clínicos de 1,000 personas reales.
-- **Unidad de observación:** un **participante simulado en un día**. Cada combinación `Participant_ID`–`Day_Number` identifica una observación.
-- **Posibles usos académicos:** análisis exploratorio de mediciones repetidas; descripción de relaciones estadísticas entre craving, ansiedad, consumo y hábitos; ilustración de problemas de regresión o clasificación supervisada si se selecciona expresamente una variable resultado. **No hay una etiqueta de clase predefinida para todo el conjunto**, ya que contiene simultáneamente puntuaciones numéricas e indicadores categóricos.
+Although the fields refer to constructs used in nicotine research, a simulation cannot be assumed to reproduce real human magnitudes, associations, or responses faithfully. The 30 days are **consecutive indices within each participant**. The CSV provides neither a calendar start date nor complete assessment timestamps. `First_Pouch_Time` is a time of day (HH:MM), not a timestamp that independently identifies the observation date.
 
-Esta procedencia importa para interpretar cualquier análisis: aunque las columnas aluden a constructos empleados en investigación sobre uso de nicotina, no puede presumirse que las magnitudes, asociaciones o respuestas humanas reales se reproduzcan fielmente en una simulación. Los 30 días representan **índices consecutivos dentro de cada participante**; el CSV no proporciona una fecha de calendario de inicio ni marcas temporales completas de cada evaluación. `First_Pouch_Time` es una hora de la jornada (HH:MM), no un timestamp que determine por sí solo la fecha de observación.
+### 1.2 Size and longitudinal structure
 
-### 1.2 Tamaño y estructura longitudinal de los registros
-
-| Característica examinada | Resultado en el CSV |
+| Characteristic | CSV result |
 | --- | ---: |
-| Filas de datos | **30,000** |
-| Columnas | **35** |
-| Participantes distintos | **1,000** |
-| Valores distintos de `Day_Number` | **30 (1–30)** |
-| Observaciones por participante | **30 para todos** |
-| Observaciones por día de la serie | **1,000 para cada día** |
-| Combinaciones participante-día duplicadas | **0** |
-| Filas completas duplicadas | **0** |
-| Filas con un número incorrecto de campos | **0** |
-| Participantes con atributos de perfil inconsistentes entre sus días | **0** (en las cuatro variables comprobadas) |
+| Data rows | **30,000** |
+| Columns | **35** |
+| Distinct participants | **1,000** |
+| Distinct `Day_Number` values | **30 (1–30)** |
+| Observations per participant | **30 for every participant** |
+| Observations per day index | **1,000 for every day** |
+| Duplicate participant–day keys | **0** |
+| Duplicate full rows | **0** |
+| Rows with an incorrect field count | **0** |
+| Participants with inconsistent profiles across days | **0** (across the four fields checked) |
 
-La estructura es un **panel balanceado en las claves**: aparecen los 30 días de todos los participantes. Esto **no** significa que todas las celdas estén presentes. Los registros pertenecientes a un mismo participante están relacionados entre sí; no deben describirse como 30,000 sujetos independientes. Los campos de perfil `Age_Group`, `Gender`, `Occupation_Status` y `Nicotine_Use_Duration_Months` son constantes dentro de cada participante a lo largo de los 30 días examinados.
+The **keys form a balanced panel**: all participants have all 30 days. This does **not** mean every cell is observed. Rows from the same participant are related and must not be described as 30,000 independent subjects. `Age_Group`, `Gender`, `Occupation_Status`, and `Nicotine_Use_Duration_Months` remain constant within each participant across the 30 days.
 
-### 1.3 Inventario y organización conceptual de las 35 columnas
+### 1.3 Inventory and conceptual grouping of the 35 columns
 
-La agrupación siguiente es una **clasificación analítica de los campos**, congruente con la revisión del curso; no se presenta como una ontología formal o un diccionario de datos publicado por el generador.
+These **analytical groupings** align with the course review; they are not a formal ontology or a data dictionary published by the generator.
 
-| Grupo temático | Columnas | Contenido representado |
+| Thematic group | Columns | Content |
 | --- | ---: | --- |
-| Identificación temporal y de sujetos | **2** | Clave del participante e índice del día |
-| Características demográficas | **3** | Intervalo de edad, género y ocupación |
-| Consumo de nicotina y craving | **15** | Antigüedad de uso, pouches, dosis, tiempos de uso, puntuaciones y resistencia |
-| Estados psicológicos | **7** | Ansiedad, estrés, ánimo, irritabilidad e inquietud |
-| Hábitos y actividades | **8** | Sueño, cafeína, ejercicio, pantalla, trabajo/estudio, eventos estresantes e interacción social |
+| Participant and temporal identification | **2** | Participant key and day index |
+| Demographics | **3** | Age group, gender, and occupation |
+| Nicotine use and craving | **15** | Use duration, pouches, dose, use timing, scores, and resistance |
+| Psychological states | **7** | Anxiety, stress, mood, irritability, and restlessness |
+| Habits and activities | **8** | Sleep, caffeine, exercise, screen time, work/study, stressful events, and social interaction |
 | **Total** | **35** | |
 
-**Tipos de datos observados.** La inspección de valores y celdas vacías indica: **20 columnas `float64`**, **6 `int64`** y **9 `object`**. Las columnas categóricas e indicadores binarios `Yes`/`No` se guardan como texto. `First_Pouch_Time` se almacena como cadena horaria. Algunas cantidades conceptualmente enteras (`Exercise_Minutes`, `Time_Since_Last_Pouch_Minutes`) se inferirían como `float64` cuando se cargan con `NaN`.
+**Observed data types:** **20 `float64`**, **6 `int64`**, and **9 `object`** columns. Categories and `Yes`/`No` indicators are stored as text; `First_Pouch_Time` is a time string. Conceptually integer quantities such as `Exercise_Minutes` and `Time_Since_Last_Pouch_Minutes` may be inferred as `float64` when loaded with `NaN`.
 
-### 1.4 Perfil de los participantes simulados
+### 1.4 Simulated participant profiles
 
-Las siguientes frecuencias se calculan **una sola vez por `Participant_ID`** (base = 1,000), no sobre las 30 filas repetidas por participante.
+Frequencies count **each `Participant_ID` once** (base = 1,000), rather than its 30 repeated rows.
 
-| Variable | Categorías y participantes |
+| Variable | Categories and participant counts |
 | --- | --- |
 | `Age_Group` | 18–24: **239**; 25–34: **353**; 35–44: **203**; 45–54: **122**; 55+: **83** |
 | `Gender` | Female: **482**; Male: **453**; Non-binary: **41**; Prefer_not_to_say: **24** |
 | `Occupation_Status` | Employed: **488**; Student: **156**; Self_Employed: **123**; Unemployed: **88**; Retired: **82**; Homemaker: **63** |
 
-El archivo recoge grupos de edad y no edad exacta; las categorías de género se reproducen con sus valores de archivo, sin asignarles interpretaciones adicionales. La distribución describe **el universo simulado en esta copia**, no la composición demográfica del consumo real de nicotina.
+The file records age groups, not exact ages. Gender categories retain the file's labels without further interpretation. These distributions describe **the simulated population in this copy**, not the demographics of real nicotine use.
 
-### 1.5 Características descriptivas de las mediciones
+### 1.5 Descriptive measurement statistics
 
-Los rangos son **mínimos y máximos observados**. Los ejemplos muestran tanto variables de intensidad como cantidades y duración.
+Ranges are **observed minima and maxima**. The examples cover intensity, quantity, and duration.
 
-| Campo | N observado | Mínimo–máximo | Media | Mediana |
+| Field | Observed N | Minimum–maximum | Mean | Median |
 | --- | ---: | ---: | ---: | ---: |
 | `Pouches_Per_Day` | 30,000 | 0–24 | 7.431 | 7 |
 | `Pouch_Strength_mg` | 30,000 | 4–15 | 7.859 | 8 |
@@ -96,28 +93,28 @@ Los rangos son **mínimos y máximos observados**. Los ejemplos muestran tanto v
 | `Screen_Time_Hours` | 29,627 | 1–14 | 4.025 | 3.4 |
 | `Social_Interaction_Hours` | 29,647 | 0–10 | 2.250 | 1.8 |
 
-Hay **12 categorías observadas** en `Craving_Triggers`; las más frecuentes son `Stress` (**6,077 registros**) y `Boredom` (**3,505**), contabilizadas entre las celdas no vacías. En `Major_Stress_Event_Today`, **1,476** registros contienen `Yes` y **28,524** contienen `No`. Esto caracteriza la codificación, sin interpretar los desencadenantes o eventos como causas demostradas de craving.
+`Craving_Triggers` has **12 observed categories**; the most frequent are `Stress` (**6,077 records**) and `Boredom` (**3,505**), counted among nonempty cells. `Major_Stress_Event_Today` contains **1,476** `Yes` and **28,524** `No` records. These counts describe the coding; they do not establish that triggers or events cause craving.
 
-### 1.6 Variable numérica de craving y su distribución
+### 1.6 Overall craving score and distribution
 
-`Overall_Craving_Score` es una puntuación numérica de craving global; es **una posible variable de resultado** que contiene el CSV. Aquí se la describe como dato disponible, **sin definir todavía una tarea de predicción**. Su fórmula de cálculo, validación psicométrica y origen de simulación no pudieron establecerse con los valores del CSV solamente.
+`Overall_Craving_Score` is a numeric score and **one possible outcome**. It is described here **without defining a prediction task**. Its formula, psychometric validation, and simulation origin could not be established from the CSV alone.
 
-| Indicador | Valor calculado |
+| Indicator | Calculated value |
 | --- | ---: |
-| Registros totales | 30,000 |
-| Valores observados | **29,651 (98.84%)** |
-| Valores ausentes | **349 (1.16%)** |
-| Mínimo / máximo | **0 / 10** |
-| Media | **5.994904** |
-| Mediana | **6.0** |
-| Desviación estándar muestral | **1.684405** |
-| Cuartil inferior (Q1) / superior (Q3) | **4.8 / 7.2** |
-| Variación de la puntuación entre días dentro del mismo participante | **1,000 de 1,000** participantes con más de un valor distinto observado |
-| Cantidad de mediciones no faltantes de esta variable por participante | **27–30** |
+| Total records | 30,000 |
+| Observed values | **29,651 (98.84%)** |
+| Missing values | **349 (1.16%)** |
+| Minimum / maximum | **0 / 10** |
+| Mean | **5.994904** |
+| Median | **6.0** |
+| Sample standard deviation | **1.684405** |
+| Lower quartile (Q1) / upper quartile (Q3) | **4.8 / 7.2** |
+| Within-participant variation across days | **1,000 of 1,000** participants have more than one distinct observed value |
+| Observed measurements per participant | **27–30** |
 
-**Distribución de frecuencias** (se usa un extremo superior exclusivo en cada intervalo, salvo el último, que incluye 10):
+**Frequency distribution.** Each interval excludes its upper endpoint, except the final interval, which includes 10.
 
-| Intervalo | Registros | Intervalo | Registros |
+| Interval | Records | Interval | Records |
 | --- | ---: | --- | ---: |
 | [0, 1) | 28 | [5, 6) | 6,659 |
 | [1, 2) | 163 | [6, 7) | 6,404 |
@@ -125,27 +122,27 @@ Hay **12 categorías observadas** en `Craving_Triggers`; las más frecuentes son
 | [3, 4) | 2,405 | [8, 9) | 2,704 |
 | [4, 5) | 4,601 | [9, 10] | 1,240 |
 
-La distribución se concentra en valores intermedios: el 50% central está entre **4.8 y 7.2**. Los promedios diarios observados oscilan aproximadamente entre **5.957 y 6.044**; esa estabilidad del promedio agregado no prueba independencia temporal ni ausencia de patrones individuales. Las puntuaciones de mañana, tarde y noche son columnas del registro diario; **no** deben describirse como una secuencia EMA de alta frecuencia sin un esquema temporal de mediciones independientes que lo respalde.
+Scores concentrate in the middle: the central 50% lies between **4.8 and 7.2**. Observed daily means range from approximately **5.957 to 6.044**. Stable aggregate means do not establish temporal independence or rule out individual patterns. Morning, afternoon, and evening scores are columns in a daily record; they must **not** be described as a high-frequency EMA sequence without a documented schedule of independent measurements.
 
-### 1.6.1 Estructura temporal: variación dentro y entre participantes
+### 1.6.1 Temporal structure: within- and between-participant variation
 
-Las **30 observaciones de cada sujeto** permiten distinguir dos fuentes diferentes de variabilidad. Los 1,000 participantes presentan al menos dos valores distintos de `Overall_Craving_Score` entre sus mediciones observadas, mientras que sus **medias individuales** oscilan aproximadamente entre **1.49 y 9.84**. Esta heterogeneidad entre sujetos es importante para interpretar cualquier estadística que agrupe todas las filas.
+The **30 observations per participant** distinguish two sources of variation. All 1,000 participants have at least two distinct observed `Overall_Craving_Score` values, while their **individual means** range from approximately **1.49 to 9.84**. This between-participant heterogeneity matters when interpreting pooled statistics.
 
-En **28,338 pares de días consecutivos** donde se observaron ambos valores de craving global, la correlación de Pearson agrupando participantes y días es aproximadamente **0.859**. Sin embargo, al restar a cada valor la media observada de su propio participante, la correlación entre desviaciones de días consecutivos es aproximadamente **−0.035**. Este contraste **no es una evaluación predictiva**: muestra que la correlación agrupada recoge en gran medida diferencias estables entre participantes y no debe confundirse con autocorrelación de las fluctuaciones dentro de cada sujeto. El segundo valor es descriptivo y depende, entre otras cosas, de cómo se centran los datos; por sí solo tampoco demuestra ausencia de información temporal ni independencia estadística.
+Across **28,338 consecutive-day pairs** with both scores observed, Pearson correlation pooled across participants and days is approximately **0.859**. After subtracting each participant's observed mean from their scores, the correlation between consecutive-day deviations is approximately **−0.035**. This comparison is **not a predictive evaluation**: the pooled coefficient largely reflects stable differences between participants and must not be equated with autocorrelation of within-person fluctuations. The centered coefficient is descriptive and depends partly on the centering method; it does not by itself establish statistical independence or a lack of temporal information.
 
-El archivo usa un índice de días de **1 a 30**, pero carece de fechas calendario y de marcas de tiempo completas para cada evaluación diaria. No debe describirse como una serie de EMA a intervalos horarios o como 30 días compartidos de un mismo calendario poblacional.
+Day indices **1–30** provide neither calendar dates nor complete daily assessment timestamps. They do not establish hourly EMA or 30 days on a shared population calendar.
 
-### 1.7 Integridad, datos ausentes y consistencia
+### 1.7 Integrity, missingness, and consistency
 
-El CSV conserva la estructura longitudinal de las claves, pero contiene valores faltantes en **14 de las 35 columnas**:
+The longitudinal keys are complete, but **14 of 35 columns** contain missing values:
 
-- **4,982 celdas vacías** sobre 1,050,000 celdas (aproximadamente **0.47%** del total).
-- **4,630 filas** con al menos una ausencia (**15.43%** de los 30,000 registros).
-- **21 columnas completas** y **14 incompletas**.
-- Las proporciones de faltantes por columna incompleta oscilan entre **1.08% y 1.27%**.
-- La variable `Overall_Craving_Score` tiene **349 valores faltantes**, que no deben confundirse con registros inexistentes ni sustituirse automáticamente por ceros.
+- **4,982 empty cells** out of 1,050,000 (**approximately 0.47%**).
+- **4,630 rows** with at least one missing value (**15.43%** of 30,000).
+- **21 complete columns** and **14 incomplete columns**.
+- Missingness of **1.08%–1.27%** in incomplete columns.
+- **349 missing `Overall_Craving_Score` values**, which are neither absent records nor values to replace automatically with zero.
 
-| Columna con ausencias | Faltantes | % de 30,000 |
+| Incomplete column | Missing | % of 30,000 |
 | --- | ---: | ---: |
 | `Longest_Nicotine_Free_Period_Hours` | 380 | 1.27% |
 | `Afternoon_Cravings_Score` | 373 | 1.24% |
@@ -161,104 +158,103 @@ El CSV conserva la estructura longitudinal de las claves, pero contiene valores 
 | `Attempted_To_Resist_Craving` | 345 | 1.15% |
 | `Mood_Score` | 342 | 1.14% |
 | `Craving_Triggers` | 323 | 1.08% |
-| **Total** | **4,982** | **0.47% de todas las celdas** |
+| **Total** | **4,982** | **0.47% of all cells** |
 
-Los controles de validez sintáctica y de rangos no detectaron: **(a)** puntuaciones fuera de [0,10] en las 13 variables de tipo *score* evaluadas; **(b)** valores negativos en 13 campos seleccionados de cantidades y duraciones; **(c)** valores de `First_Pouch_Time` fuera de formato válido `HH:MM`; **(d)** categorías distintas de `Yes` o `No` en los tres indicadores binarios; ni **(e)** cambios intraparticipante en las cuatro variables de perfil estable examinadas.
+Syntax and range checks detected none of the following: scores outside [0,10] in the 13 score fields checked; negative values in 13 selected quantity and duration fields; invalid `HH:MM` values in `First_Pouch_Time`; categories other than `Yes` or `No` in the three binary indicators; or within-participant changes in the four stable profile fields.
 
-Estos controles documentan **consistencia interna básica**, no verifican que las cifras sean fisiológicamente plausibles, que las ausencias sean aleatorias, que las mediciones sean independientes o que el simulador reproduzca comportamientos humanos. Tampoco hay una fórmula auditada que explique cómo se derivó `Overall_Craving_Score` a partir de otras variables.
+These checks establish **basic internal consistency**, not physiological plausibility, random missingness, measurement independence, or realistic human behavior in the simulator. No audited formula explains how `Overall_Craving_Score` was derived from other fields.
 
-### 1.7.1 Comprobaciones de coherencia semántica: casos que requieren definición
+### 1.7.1 Semantic checks requiring field definitions
 
-Además de verificar formatos y rangos, se analizaron **relaciones entre campos**. Surgieron observaciones que **no deben etiquetarse automáticamente como errores** sin disponer del diccionario de variables o del procedimiento que generó los registros:
+Cross-field checks identified observations that **must not be classified automatically as errors** without the data dictionary or generation procedure.
 
-| Comprobación entre campos | Resultado observado | Lectura correcta |
+| Cross-field check | Observed result | Interpretation |
 | --- | ---: | --- |
-| `Pouches_Per_Day = 0`, pero `First_Pouch_Time` contiene una hora | **358 registros** | Sería llamativo si la hora significara necesariamente el primer pouch consumido *ese mismo día*; también podría representar una hora habitual o programada. Requiere definición. |
-| `Pouches_Per_Day = 0`, con `Time_Since_Last_Pouch_Minutes` informado | **355 registros** | No demuestra inconsistencia si el último pouch ocurrió antes del día registrado; la semántica del intervalo es desconocida. |
-| `Overall_Craving_Score` superior a `Craving_Intensity_Peak` | **7,078 registros** con objetivo observado | Bajo una interpretación literal de «pico diario» y «promedio diario» sería sorprendente; los nombres por sí solos no prueban que ambas escalas sean componentes comparables. |
-| `Successfully_Resisted = Yes` y `Attempted_To_Resist_Craving = No` | **0 registros** | No se observó esta incompatibilidad aparente en los campos informados. |
-| `Overall_Craving_Score` ausente y las tres puntuaciones de mañana/tarde/noche presentes | **339 registros** | La existencia de componentes observados no justifica reconstruir automáticamente el valor global, cuya fórmula no está verificada. |
+| `Pouches_Per_Day = 0` with a `First_Pouch_Time` value | **358 records** | Unexpected if the time necessarily denotes the first pouch consumed *that day*, but it could be a habitual or scheduled time. A definition is needed. |
+| `Pouches_Per_Day = 0` with `Time_Since_Last_Pouch_Minutes` observed | **355 records** | Not necessarily inconsistent if the last pouch preceded the recorded day; the interval's meaning is unknown. |
+| `Overall_Craving_Score` exceeds `Craving_Intensity_Peak` | **7,078 records** with an observed outcome | Unexpected under literal “daily peak” and “daily average” definitions, but field names do not establish comparable score components. |
+| `Successfully_Resisted = Yes` and `Attempted_To_Resist_Craving = No` | **0 records** | This apparent incompatibility was not observed in the reported fields. |
+| `Overall_Craving_Score` missing with all three morning/afternoon/evening scores observed | **339 records** | Observed components do not justify reconstructing the overall score without its verified formula. |
 
-Estas comprobaciones aportan **advertencias sobre definición y calidad semántica**, no pruebas de mala generación o de falsedad clínica. El CSV permite verificar valores y relaciones lógicas propuestas, pero no la intención de su autor. Es especialmente importante no asumir que las distintas puntuaciones de craving proceden de una escala clínica validada o que el `Overall_Craving_Score` sea una media algebraica de mañana, tarde y noche.
+These are **field-definition and semantic-quality flags**, not evidence of faulty generation or clinical invalidity. The CSV supports checks of values and proposed logical relationships, not the author's intent. Neither a validated clinical scale nor an overall score equal to the arithmetic mean of morning, afternoon, and evening scores should be assumed.
 
-### 1.8 Idoneidad y límites como fuente de datos para un curso de aprendizaje supervisado
+### 1.8 Suitability and limitations for supervised learning coursework
 
-El conjunto es **estructuralmente apto** para un trabajo de aprendizaje supervisado porque reúne una variable numérica de resultado susceptible de ser elegida, distintos campos predictivos numéricos y categóricos, 1,000 series individuales con orden diario y un tamaño de archivo manejable. También contiene indicadores binarios que, si se definiera otra tarea, podrían ser variables objetivo; **el archivo no trae por sí mismo una única clasificación de clases para todo el dataset**.
+The dataset is **structurally suitable** for supervised learning coursework: it offers a potential numeric outcome, numeric and categorical predictors, 1,000 ordered individual series, and a manageable file size. Binary indicators could serve as outcomes for other tasks; **the file has no single predefined class assignment**.
 
-Su idoneidad debe interpretarse con las siguientes reservas:
+Its suitability has six qualifications:
 
-1. **Simulación, no cohorte clínica:** el tamaño aparente no equivale a 1,000 personas reales ni permite extrapolaciones médicas.
-2. **Horizonte corto y sin fechas reales:** hay solo 30 posiciones diarias; no se documentan tendencias de calendario, estacionalidad anual ni zonas horarias.
-3. **Campos parcialmente ausentes:** 349 valores de craving global faltantes y 13 columnas adicionales incompletas.
-4. **Definiciones semánticas incompletas:** sin generador ni diccionario formal no pueden resolverse las alertas entre `Pouches_Per_Day`, `First_Pouch_Time`, `Overall_Craving_Score` y `Craving_Intensity_Peak`, ni descartarse relaciones mecánicas entre puntuaciones del mismo día.
-5. **Dependencia y heterogeneidad entre filas:** 30 registros del mismo participante no son 30 observaciones estadísticamente independientes; la correlación agrupada no equivale a la correlación dentro del participante.
-6. **Procedencia/versionado:** la copia auditada es pública, pero su equivalencia exacta con la descarga oficial seleccionada por el grupo permanece sin demostrar.
+1. **Simulation, not a clinical cohort:** the apparent sample does not represent 1,000 real people or support medical extrapolation.
+2. **Short horizon without calendar dates:** 30 day positions do not document calendar trends, annual seasonality, or time zones.
+3. **Incomplete measurements:** 349 overall craving scores are missing, as are values in 13 additional columns.
+4. **Incomplete field definitions:** without the generator or a formal dictionary, flags involving `Pouches_Per_Day`, `First_Pouch_Time`, `Overall_Craving_Score`, and `Craving_Intensity_Peak` remain unresolved, and mechanical relationships among same-day scores cannot be ruled out.
+5. **Dependence and heterogeneity:** a participant's 30 records are not statistically independent observations; pooled correlation differs from within-participant correlation.
+6. **Provenance and versioning:** the audited copy is public, but its exact equivalence to the group's selected official download remains unproven.
 
-Por tanto, una descripción académica correcta debe presentar este recurso como **datos longitudinales sintéticos útiles para examinar técnicas de ML y relaciones dentro de la simulación**, no como evidencia de prevalencia, eficacia clínica o causalidad.
+The resource should therefore be presented as **synthetic longitudinal data for examining ML techniques and relationships within the simulation**, not evidence of prevalence, clinical efficacy, or causality.
 
-### 1.9 Registro de procedencia y verificabilidad
+### 1.9 Provenance and verification record
 
-| Elemento | Estado y evidencia |
+| Item | Status and evidence |
 | --- | --- |
-| Página de publicación | [Kaggle — DataSciKhan](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data) |
-| Copia CSV leída y auditada | [GitHub — NumiKun/Smoking-Addiction](https://github.com/NumiKun/Smoking-Addiction/blob/main/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv) |
-| Archivo | `Nicotine_Craving_Anxiety_Dynamics_30Days.csv` |
-| Tamaño de la copia leída | **4,286,125 bytes** |
-| SHA-256 de la copia leída | `7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907` |
-| Identificador Git del blob | `80bbba4a3289940698a2926618bf0f5f1525e69f` |
-| Auditoría de contenido | **Completada para esta copia**: estructura, tipos inferidos, faltantes, rangos, duplicados, perfiles, estadísticos y controles semánticos preliminares |
-| Versión exacta y licencia del archivo en Kaggle | **No verificadas** (página disponible como referencia, descarga/metadata no recuperadas) |
-| Igualdad byte a byte entre Kaggle y copia auditada | **No demostrada**; requiere el archivo original de la versión elegida |
+| Publication page | [Kaggle — DataSciKhan](https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/data) |
+| CSV copy inspected and audited | [GitHub — NumiKun/Smoking-Addiction](https://github.com/NumiKun/Smoking-Addiction/blob/main/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv) |
+| File | `Nicotine_Craving_Anxiety_Dynamics_30Days.csv` |
+| Inspected file size | **4,286,125 bytes** |
+| Inspected file SHA-256 | `7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907` |
+| Git blob identifier | `80bbba4a3289940698a2926618bf0f5f1525e69f` |
+| Content audit | **Complete for this copy:** structure, inferred types, missingness, ranges, duplicates, profiles, statistics, and preliminary semantic checks |
+| Exact Kaggle file version and license | **Not verified:** the page was available as a reference, but the download/metadata were not retrieved |
+| Byte-for-byte identity between Kaggle and the audited copy | **Not established:** requires the original file from the selected version |
 
-La cadena SHA-256 identifica el contenido auditado, **no constituye prueba de que proceda de Kaggle**. Cuando se obtenga la descarga oficial, su hash puede compararse con esta cadena; si difiere, todos los resultados deberán verificarse nuevamente sobre el archivo adoptado. Asimismo, la estructura del CSV por sí sola no acredita una licencia de reutilización.
+SHA-256 identifies the audited content; it **does not prove Kaggle provenance**. Compare the official download's hash when available. If it differs, recalculate all results on the adopted file. The CSV structure alone also does not establish a reuse license.
 
 ---
 
-## Anexo A. Inventario exhaustivo de variables auditadas
+## Annex A. Complete inventory of audited variables
 
-Los tipos se indican como inferencia de lectura habitual de CSV en pandas; las unidades semánticas que aparecen en los nombres son orientativas y no sustituyen un diccionario de datos validado.
+Types reflect ordinary pandas CSV inference. Units suggested by field names are indicative, not a substitute for a validated data dictionary.
 
-| Grupo | Columna | Tipo esperado | Faltantes | Rango o categorías observadas | Interpretación del campo |
+| Group | Column | Expected type | Missing | Observed range or categories | Field meaning |
 | --- | --- | --- | ---: | --- | --- |
-| Identificación | `Participant_ID` | `object` | 0 | 1,000 IDs | Clave del participante simulado |
-| Identificación | `Day_Number` | `int64` | 0 | 1–30 | Índice de día dentro del participante |
-| Demografía | `Age_Group` | `object` | 0 | 5 categorías | Edad por intervalos, no edad exacta |
-| Demografía | `Gender` | `object` | 0 | 4 categorías | Género categórico |
-| Demografía | `Occupation_Status` | `object` | 0 | 6 categorías | Situación ocupacional |
-| Nicotina y craving | `Nicotine_Use_Duration_Months` | `int64` | 0 | 3–120 | Antigüedad declarada del consumo, en meses |
-| Nicotina y craving | `Pouches_Per_Day` | `int64` | 0 | 0–24 | Número diario de bolsas de nicotina |
-| Nicotina y craving | `Pouch_Strength_mg` | `int64` | 0 | 4–15 | Concentración por bolsa, en mg según el nombre |
-| Nicotina y craving | `First_Pouch_Time` | `object` | 0 | 37 valores HH:MM | Hora de la primera bolsa; texto horario |
-| Nicotina y craving | `Time_Since_Last_Pouch_Minutes` | `float64` | 355 | 5–716 | Minutos desde el último uso |
-| Nicotina y craving | `Longest_Nicotine_Free_Period_Hours` | `float64` | 380 | 1–23.9 | Intervalo máximo sin nicotina, horas |
-| Nicotina y craving | `Morning_Cravings_Score` | `float64` | 369 | 0–10 | Puntuación de craving en la mañana |
-| Nicotina y craving | `Afternoon_Cravings_Score` | `float64` | 373 | 0–10 | Puntuación de craving en la tarde |
-| Nicotina y craving | `Evening_Cravings_Score` | `float64` | 346 | 0.4–10 | Puntuación de craving en la noche |
-| Nicotina y craving | `Overall_Craving_Score` | `float64` | 349 | 0–10 | Puntuación global de craving |
-| Nicotina y craving | `Craving_Triggers` | `object` | 323 | 12 categorías | Desencadenante categórico del craving |
-| Nicotina y craving | `Craving_Intensity_Peak` | `float64` | 0 | 0–10 | Puntuación de máxima intensidad |
-| Nicotina y craving | `Craving_Duration_Minutes` | `int64` | 0 | 3–180 | Duración del craving, minutos |
-| Nicotina y craving | `Attempted_To_Resist_Craving` | `object` | 345 | Yes / No | Indicador declarado de intento de resistencia |
-| Nicotina y craving | `Successfully_Resisted` | `object` | 357 | Yes / No | Indicador declarado de resistencia exitosa |
-| Psicología | `Daily_Anxiety_Score` | `float64` | 0 | 0–10 | Ansiedad diaria |
-| Psicología | `Morning_Anxiety_Score` | `float64` | 0 | 0–10 | Ansiedad matutina |
-| Psicología | `Evening_Anxiety_Score` | `float64` | 347 | 0–10 | Ansiedad nocturna |
-| Psicología | `Perceived_Stress_Score` | `float64` | 0 | 0–10 | Estrés percibido |
-| Psicología | `Mood_Score` | `float64` | 342 | 0–10 | Estado de ánimo |
-| Psicología | `Irritability_Score` | `float64` | 0 | 1–9.3 | Irritabilidad |
-| Psicología | `Restlessness_Score` | `float64` | 0 | 1.4–9 | Inquietud |
-| Hábitos y actividades | `Sleep_Duration_Hours` | `float64` | 0 | 3.5–11 | Horas de sueño |
-| Hábitos y actividades | `Sleep_Quality_Score` | `float64` | 0 | 3–10 | Calidad del sueño, puntuación |
-| Hábitos y actividades | `Caffeine_Intake_mg` | `int64` | 0 | 0–600 | Ingesta diaria de cafeína, mg |
-| Hábitos y actividades | `Exercise_Minutes` | `float64` | 370 | 0–180 | Minutos de ejercicio |
-| Hábitos y actividades | `Screen_Time_Hours` | `float64` | 373 | 1–14 | Horas de pantalla |
-| Hábitos y actividades | `Work_Or_Study_Hours` | `float64` | 0 | 0–18 | Horas de trabajo o estudio |
-| Hábitos y actividades | `Major_Stress_Event_Today` | `object` | 0 | Yes / No | Indicador de evento estresante ese día |
-| Hábitos y actividades | `Social_Interaction_Hours` | `float64` | 353 | 0–10 | Horas de interacción social |
+| Identification | `Participant_ID` | `object` | 0 | 1,000 IDs | Simulated participant key |
+| Identification | `Day_Number` | `int64` | 0 | 1–30 | Within-participant day index |
+| Demographics | `Age_Group` | `object` | 0 | 5 categories | Age group, not exact age |
+| Demographics | `Gender` | `object` | 0 | 4 categories | Categorical gender |
+| Demographics | `Occupation_Status` | `object` | 0 | 6 categories | Occupational status |
+| Nicotine and craving | `Nicotine_Use_Duration_Months` | `int64` | 0 | 3–120 | Reported nicotine use duration, in months |
+| Nicotine and craving | `Pouches_Per_Day` | `int64` | 0 | 0–24 | Daily nicotine pouch count |
+| Nicotine and craving | `Pouch_Strength_mg` | `int64` | 0 | 4–15 | Concentration per pouch, in mg according to the name |
+| Nicotine and craving | `First_Pouch_Time` | `object` | 0 | 37 HH:MM values | First pouch time, stored as text |
+| Nicotine and craving | `Time_Since_Last_Pouch_Minutes` | `float64` | 355 | 5–716 | Minutes since last use |
+| Nicotine and craving | `Longest_Nicotine_Free_Period_Hours` | `float64` | 380 | 1–23.9 | Longest nicotine-free interval, in hours |
+| Nicotine and craving | `Morning_Cravings_Score` | `float64` | 369 | 0–10 | Morning craving score |
+| Nicotine and craving | `Afternoon_Cravings_Score` | `float64` | 373 | 0–10 | Afternoon craving score |
+| Nicotine and craving | `Evening_Cravings_Score` | `float64` | 346 | 0.4–10 | Evening craving score |
+| Nicotine and craving | `Overall_Craving_Score` | `float64` | 349 | 0–10 | Overall craving score |
+| Nicotine and craving | `Craving_Triggers` | `object` | 323 | 12 categories | Categorical craving trigger |
+| Nicotine and craving | `Craving_Intensity_Peak` | `float64` | 0 | 0–10 | Peak intensity score |
+| Nicotine and craving | `Craving_Duration_Minutes` | `int64` | 0 | 3–180 | Craving duration, in minutes |
+| Nicotine and craving | `Attempted_To_Resist_Craving` | `object` | 345 | Yes / No | Reported attempt to resist craving |
+| Nicotine and craving | `Successfully_Resisted` | `object` | 357 | Yes / No | Reported successful resistance |
+| Psychology | `Daily_Anxiety_Score` | `float64` | 0 | 0–10 | Daily anxiety |
+| Psychology | `Morning_Anxiety_Score` | `float64` | 0 | 0–10 | Morning anxiety |
+| Psychology | `Evening_Anxiety_Score` | `float64` | 347 | 0–10 | Evening anxiety |
+| Psychology | `Perceived_Stress_Score` | `float64` | 0 | 0–10 | Perceived stress |
+| Psychology | `Mood_Score` | `float64` | 342 | 0–10 | Mood |
+| Psychology | `Irritability_Score` | `float64` | 0 | 1–9.3 | Irritability |
+| Psychology | `Restlessness_Score` | `float64` | 0 | 1.4–9 | Restlessness |
+| Habits and activities | `Sleep_Duration_Hours` | `float64` | 0 | 3.5–11 | Hours of sleep |
+| Habits and activities | `Sleep_Quality_Score` | `float64` | 0 | 3–10 | Sleep quality score |
+| Habits and activities | `Caffeine_Intake_mg` | `int64` | 0 | 0–600 | Daily caffeine intake, in mg |
+| Habits and activities | `Exercise_Minutes` | `float64` | 370 | 0–180 | Minutes of exercise |
+| Habits and activities | `Screen_Time_Hours` | `float64` | 373 | 1–14 | Hours of screen time |
+| Habits and activities | `Work_Or_Study_Hours` | `float64` | 0 | 0–18 | Hours of work or study |
+| Habits and activities | `Major_Stress_Event_Today` | `object` | 0 | Yes / No | Indicator of a stressful event that day |
+| Habits and activities | `Social_Interaction_Hours` | `float64` | 353 | 0–10 | Hours of social interaction |
 
-### Notas de interpretación y reproducibilidad
+### Interpretation and reproducibility notes
 
-Los resultados numéricos proceden del contenido íntegro del CSV asociado al objeto Git señalado arriba. Se verificaron conteos por registro y participante, campos faltantes, restricciones de formato, distribuciones y pares válidos de días consecutivos. Para los tipos numéricos se ha consignado la inferencia compatible con un cargador CSV común (por ejemplo, pandas); **no se han inventado tipos declarados por Kaggle**. La muestra es un archivo de texto con una fila por observación y valores separados por comas.
+Results use the full CSV associated with the Git object above. Checks covered record and participant counts, missing fields, formats, distributions, and valid consecutive-day pairs. Types reflect inference compatible with a common CSV reader such as pandas; **no type declarations are attributed to Kaggle**. The file is comma-delimited text with one row per observation.
 
-Los cálculos nuevos de correlación son **descriptivos**, no inferencia causal ni validación del comportamiento humano. No se ha estimado ningún modelo predictivo ni se ha usado el resultado de correlación para declarar un objetivo experimental. La procedencia exacta, la licencia y la fórmula de generación continúan fuera de lo que puede establecer el propio contenido del CSV.
-
+The additional correlation calculations are **descriptive**, not causal inference or validation of human behavior. No predictive model was fitted, and the correlations were not used to declare an experimental objective. Exact provenance, licensing, and the generation formula remain beyond what the CSV alone can establish.

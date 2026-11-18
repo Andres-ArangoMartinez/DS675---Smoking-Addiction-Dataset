@@ -18,16 +18,16 @@ Evaluate how much psychological and lifestyle measurements contribute to **predi
 
 Formally, the intended prediction is
 
-\[
+$$
 \widehat{y}_{i,t+1}=f\!\left(\text{profile}_i,\ \text{history}_{i,\leq t},\ \text{psychology}_{i,t},\ \text{lifestyle}_{i,t}\right),
 \qquad y_{i,t+1}=\texttt{Overall\_Craving\_Score}_{i,t+1}.
-\]
+$$
 
 **Information boundary.** No measurements from day *t + 1* may enter the prediction for that day. `Participant_ID` identifies the sequence for assembling observations; it is not, by itself, a proposed predictive feature. Missing target values must not be treated as observed scores or assigned an invented label. Exact eligible features, missing-data rules, split dates, and model choices belong in the [scientific protocol](../../../docs/methodology.md), not in this objective statement.
 
 ## Scope and documentary basis
 
-This task uses the dataset's daily participant-level structure to distinguish **forecasting a later craving score** from estimating craving with contemporaneous measurements. It is a prediction problem within **synthetic** records; it does not establish clinical validity, causality, or performance on real nicotine users. The [dataset description and audit](dataset_description.md) document the data characteristics and limitations; the [related-work review](../01_related_work_sources/Background.md) discusses relevant empirical and methodological precedents. Data version and provenance are tracked in the [data record](../../../data/README.md).
+This task uses the dataset's daily participant-level structure to distinguish **forecasting a later craving score** from estimating craving with contemporaneous measurements. It is a prediction problem within **synthetic** records; it does not establish clinical validity, causality, or performance on real nicotine users. The [dataset description and audit](../02_dataset_description/dataset_description.md) document the data characteristics and limitations; the [related-work review](../01_related_work_sources/Background.md) discusses relevant empirical and methodological precedents. Data version and provenance are tracked in the [data record](../../../data/README.md).
 
 ## Comparison with Kate's Milestone 2 proposal
 

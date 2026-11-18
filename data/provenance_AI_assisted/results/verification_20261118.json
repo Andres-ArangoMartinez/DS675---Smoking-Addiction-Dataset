@@ -1,0 +1,187 @@
+{
+  "status": "all_checks_passed",
+  "mode": "online",
+  "summary": {
+    "passed": 27,
+    "failed": 0,
+    "error": 0,
+    "not_checked": 0
+  },
+  "sources": {
+    "kaggle_version_page": "https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/versions/1",
+    "metadata_url": "https://www.kaggle.com/api/v1/datasets/view/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset",
+    "archive_url": "https://www.kaggle.com/api/v1/datasets/download/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset?datasetVersionNumber=1",
+    "github_commit": "aa3faf512362f941721a85793e65baf5c3c7d760",
+    "github_csv_url": "https://raw.githubusercontent.com/NumiKun/Smoking-Addiction/aa3faf512362f941721a85793e65baf5c3c7d760/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv"
+  },
+  "checks": [
+    {
+      "name": "csv_bytes",
+      "status": "passed",
+      "actual": 4286125,
+      "expected": 4286125
+    },
+    {
+      "name": "csv_sha256",
+      "status": "passed",
+      "actual": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907",
+      "expected": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907"
+    },
+    {
+      "name": "csv_git_blob_sha1",
+      "status": "passed",
+      "actual": "80bbba4a3289940698a2926618bf0f5f1525e69f",
+      "expected": "80bbba4a3289940698a2926618bf0f5f1525e69f"
+    },
+    {
+      "name": "rows",
+      "status": "passed",
+      "actual": 30000,
+      "expected": 30000
+    },
+    {
+      "name": "columns",
+      "status": "passed",
+      "actual": 35,
+      "expected": 35
+    },
+    {
+      "name": "participants",
+      "status": "passed",
+      "actual": 1000,
+      "expected": 1000
+    },
+    {
+      "name": "duplicate_participant_day_keys",
+      "status": "passed",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "missing_Overall_Craving_Score",
+      "status": "passed",
+      "actual": 349,
+      "expected": 349
+    },
+    {
+      "name": "every_participant_has_exact_day_coverage",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "saved_metadata/sha256",
+      "status": "passed",
+      "actual": "90dd993341f84c9f44bd513265efebf777c91e694438a393954f034cc6b05c1c",
+      "expected": "90dd993341f84c9f44bd513265efebf777c91e694438a393954f034cc6b05c1c"
+    },
+    {
+      "name": "saved_metadata/id",
+      "status": "passed",
+      "actual": 11749711,
+      "expected": 11749711
+    },
+    {
+      "name": "saved_metadata/ref",
+      "status": "passed",
+      "actual": "datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset",
+      "expected": "datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset"
+    },
+    {
+      "name": "saved_metadata/currentVersionNumber",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "saved_metadata/licenseName",
+      "status": "passed",
+      "actual": "CC0: Public Domain",
+      "expected": "CC0: Public Domain"
+    },
+    {
+      "name": "git/repository_root",
+      "status": "passed",
+      "actual": "D:\\GitHub\\ML NJIT\\MiniProject\\DS675 - Smoking Addiction Dataset",
+      "expected": "D:\\GitHub\\ML NJIT\\MiniProject\\DS675 - Smoking Addiction Dataset"
+    },
+    {
+      "name": "git/raw_csv_tracked",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "git/raw_rule_ignores_new_files",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "git/processed_csv_tracked",
+      "status": "passed",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "git/processed_rule_ignores_new_files",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "kaggle_csv/download/byte_identical",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "kaggle_csv/download/sha256",
+      "status": "passed",
+      "actual": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907",
+      "expected": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907"
+    },
+    {
+      "name": "github_csv/download/byte_identical",
+      "status": "passed",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "github_csv/download/sha256",
+      "status": "passed",
+      "actual": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907",
+      "expected": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907"
+    },
+    {
+      "name": "live_metadata/id",
+      "status": "passed",
+      "actual": 11749711,
+      "expected": 11749711
+    },
+    {
+      "name": "live_metadata/ref",
+      "status": "passed",
+      "actual": "datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset",
+      "expected": "datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset"
+    },
+    {
+      "name": "live_metadata/currentVersionNumber",
+      "status": "passed",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "live_metadata/licenseName",
+      "status": "passed",
+      "actual": "CC0: Public Domain",
+      "expected": "CC0: Public Domain"
+    }
+  ],
+  "limits": [
+    "The snapshot hash detects changes relative to this record; it is not a publisher signature.",
+    "Offline checks do not establish an authenticated download origin.",
+    "CC0 is reported publisher metadata, not a conclusion derived from CSV contents.",
+    "Online requests inspect the sources at execution time and may detect later metadata changes."
+  ]
+}

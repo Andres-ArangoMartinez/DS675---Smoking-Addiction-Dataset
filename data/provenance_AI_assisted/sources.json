@@ -1,0 +1,71 @@
+{
+  "scope": "Dataset provenance and the measurable claims in data/README.md; no model or temporal-protocol validation.",
+  "dataset": {
+    "id": 11749711,
+    "ref": "datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset",
+    "version": 1,
+    "reported_license": "CC0: Public Domain"
+  },
+  "csv": {
+    "path": "data/raw/Nicotine_Craving_Anxiety_Dynamics_30Days.csv",
+    "bytes": 4286125,
+    "sha256": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907",
+    "git_blob_sha1": "80bbba4a3289940698a2926618bf0f5f1525e69f",
+    "rows": 30000,
+    "columns": 35,
+    "participants": 1000,
+    "days_per_participant": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "duplicate_participant_day_keys": 0,
+    "missing_Overall_Craving_Score": 349
+  },
+  "sources": {
+    "kaggle_version_page": "https://www.kaggle.com/datasets/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset/versions/1",
+    "metadata_url": "https://www.kaggle.com/api/v1/datasets/view/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset",
+    "archive_url": "https://www.kaggle.com/api/v1/datasets/download/datascikhan/the-nicotine-craving-and-anxiety-dynamics-dataset?datasetVersionNumber=1",
+    "github_commit": "aa3faf512362f941721a85793e65baf5c3c7d760",
+    "github_csv_url": "https://raw.githubusercontent.com/NumiKun/Smoking-Addiction/aa3faf512362f941721a85793e65baf5c3c7d760/Dataset/Nicotine_Craving_Anxiety_Dynamics_30Days.csv"
+  },
+  "metadata_snapshot": {
+    "path": "evidence/kaggle_metadata_20261116.json",
+    "sha256": "90dd993341f84c9f44bd513265efebf777c91e694438a393954f034cc6b05c1c",
+    "recorded_on": "2026-11-16",
+    "origin_note": "Unchanged copy of the previously saved local Kaggle metadata response. The date is from the existing provenance record; it was not downloaded again when this folder was created."
+  },
+  "evidence_limits": [
+    "The snapshot hash detects changes relative to this record; it is not a publisher signature.",
+    "Offline checks do not establish an authenticated download origin.",
+    "CC0 is reported publisher metadata, not a conclusion derived from CSV contents.",
+    "Online requests inspect the sources at execution time and may detect later metadata changes."
+  ]
+}

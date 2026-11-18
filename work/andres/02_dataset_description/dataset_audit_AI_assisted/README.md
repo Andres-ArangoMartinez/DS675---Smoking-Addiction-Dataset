@@ -40,12 +40,7 @@ of `0.0005`; the six-decimal target mean permits `0.0000005`. The files retain
 full calculated precision. Qualitative assertions about source, license, clinical
 validity, and data generation are outside this numerical comparison.
 
-**Source versions and prior review.** The
-[earlier editorial review](../../evidence%20_%20AI_assistance/Dataset%20audit/dataset_description_suggested_updates_AI_assisted.md)
-already reported 299/299 numerical matches and preservation of table values in
-the English translation. It is a review and set of proposed additions, rather
-than evidence that every proposed change was adopted.
-
+**Source versions and prior review.** 
 The historical audit fingerprints the Spanish source at commit `3ed5900`, with
 SHA-256 `22b299ed236c40024d40835a1fdc972f537a8fd39506b1352303da9b71b46e68`.
 The current description is an English version with later documentary revisions,

@@ -1,26 +1,35 @@
 # Dataset audit — AI-assisted reproduction
 
-This separate working folder reproduces the measurable claims in the original
-[dataset_description.md](../dataset_description.md), which is preserved unchanged.
-All code comments and notebook explanations are in English. The work remains an
-individual analysis rather than an integrated team protocol or model experiment.
+This folder reproduces the numerical and structural claims in
+[dataset_description.md](../dataset_description.md). Its scientific findings are
+preserved through the documentation updates. The work remains an individual descriptive analysis
+rather than an integrated team protocol or model experiment.
+
+The complementary [dataset provenance verifier](../../../../data/provenance_AI_assisted/README.md)
+checks publisher metadata, source-file identity, and Git storage. This folder
+provides the full statistical audit and conceptual explanations. Both use the
+same common raw CSV; provenance records and executable checks are now available
+in `data/provenance_AI_assisted/`.
 
 Start with the executed [conceptual notebook](dataset_audit_AI_assisted.ipynb).
 It explains each concept, formula, denominator, calculation, and interpretation
 before displaying the results. The [generated report](results/audit_report_AI_assisted.md)
 provides a readable summary. [audit.py](audit.py) contains the reusable calculations.
 
-## Verified reproduction
+## Recorded reproduction
 
 - **299/299 published numerical and structural claims match**, using exact counts
   and the precision of rounded values in the source. These are individual
   assertions, not 299 distinct statistical techniques.
-- **323/323 independent checks pass**, recalculating from CSV strings with Python's
-  standard-library `csv`, `statistics`, arithmetic, and keyed day lookups.
+- **323/323 independent checks passed in the recorded run**, recalculating from
+  CSV strings with Python's standard-library `csv`, `statistics`, arithmetic,
+  and keyed day lookups. This count includes the exact source-document hash;
+  see the source-version explanation below.
 - **Five edge-case tests pass**: shuffled rows/gaps/missing targets, duplicate keys,
   missing keys, a different input hash, and malformed CSV widths.
 - **All 14 notebook code cells executed without errors**; all three figures were
-  visually inspected. The source CSV and original description remain unchanged.
+  visually inspected during that audit. The source CSV remains unchanged.
+  Recorded results retain the source-description fingerprint from that run.
 - Input: **4,286,125 bytes**, SHA-256
   `7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907`.
 
@@ -31,68 +40,142 @@ of `0.0005`; the six-decimal target mean permits `0.0000005`. The files retain
 full calculated precision. Qualitative assertions about source, license, clinical
 validity, and data generation are outside this numerical comparison.
 
-## Run from the repository root
+**Source versions and prior review.** The
+[earlier editorial review](../../evidence%20_%20AI_assistance/Dataset%20audit/dataset_description_suggested_updates_AI_assisted.md)
+already reported 299/299 numerical matches and preservation of table values in
+the English translation. It is a review and set of proposed additions, rather
+than evidence that every proposed change was adopted.
 
-The common raw CSV must already exist at
-`data/raw/Nicotine_Craving_Anxiety_Dynamics_30Days.csv`; see
-[data/README.md](../../../../data/README.md) for the project's acquisition
-instructions. The audit does not download, clean, impute, or overwrite it.
+The historical audit fingerprints the Spanish source at commit `3ed5900`, with
+SHA-256 `22b299ed236c40024d40835a1fdc972f537a8fd39506b1352303da9b71b46e68`.
+The current description is an English version with later documentary revisions,
+so its byte fingerprint differs. Rechecking preserved historical results against
+the current text passes **322/323 checks**; only `original_description_sha256`
+differs. This is a source-version difference, not a numerical disagreement.
+A fresh reproduction on November 18, 2026 passed **299/299 reference comparisons**
+and **323/323 independent checks** using the current document fingerprint.
+Historical outputs and reference expectations are preserved.
+
+## Reproduce without replacing recorded results
+
+Run the following commands from the repository root. The common CSV must already
+exist at `data/raw/Nicotine_Craving_Anxiety_Dynamics_30Days.csv`; see
+[data/README.md](../../../../data/README.md) for access and file verification.
+The audit does not download, clean, impute, or overwrite the raw CSV.
 
 The recorded environment uses Python 3.14.4; exact package versions are in
-[requirements.txt](requirements.txt). Use a local environment if dependencies are
-needed:
+[requirements.txt](requirements.txt). If dependencies are needed, create a local
+environment and use its interpreter for the subsequent commands:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r work/andres/dataset_description/dataset_audit_AI_assisted/requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r work/andres/02_dataset_description/dataset_audit_AI_assisted/requirements.txt
 ```
 
-With that interpreter or an environment containing those packages:
+The audit script needs only NumPy and pandas beyond the standard library. Other
+listed dependencies support the notebook, figures, and notebook execution.
+
+### Fresh numerical reproduction
+
+Export a new run to a separate review directory:
 
 ```powershell
-python work/andres/dataset_description/dataset_audit_AI_assisted/audit.py
+python work/andres/02_dataset_description/dataset_audit_AI_assisted/audit.py --output tmp/dataset_audit_review
 ```
 
-The audit script needs only NumPy and pandas beyond the Python standard library.
-The remaining dependencies support the notebook, plots, and notebook execution.
-Open `dataset_audit_AI_assisted.ipynb` with a Python kernel and **Run All** to
-recreate the explained calculations and figures. The notebook can run from its
-own folder or the repository root. To execute it programmatically from the root:
+Choose an unused output directory for each run. Unlike the provenance verifier's
+JSON output option, `audit.py --output` can overwrite files in an existing output
+directory. Omitting `--output` writes into this folder's recorded `results/`.
+
+Independently check the fresh report without invoking the validator's
+result-writing entry point:
 
 ```powershell
 @'
 from pathlib import Path
-import nbformat
-from nbclient import NotebookClient
+import json
+import sys
 
-p = Path("work/andres/dataset_description/dataset_audit_AI_assisted/dataset_audit_AI_assisted.ipynb")
-nb = nbformat.read(p, as_version=4)
-NotebookClient(nb, timeout=180, kernel_name="python3", resources={"metadata": {"path": str(p.parent.resolve())}}).execute()
-nbformat.write(nb, p)
+folder = Path("work/andres/02_dataset_description/dataset_audit_AI_assisted").resolve()
+sys.path.insert(0, str(folder))
+import audit
+from validate_audit import independent_checks
+
+result = independent_checks(audit.DEFAULT_CSV, Path("tmp/dataset_audit_review/audit_results.json"))
+print(json.dumps(result, indent=2))
+raise SystemExit(1 if result["failed"] else 0)
 '@ | python -
 ```
 
-After executing the notebook, independently validate the exported results:
+Run the five existing edge-case tests without rewriting validation results:
 
 ```powershell
-python work/andres/dataset_description/dataset_audit_AI_assisted/validate_audit.py
+python -m unittest discover -s work/andres/02_dataset_description/dataset_audit_AI_assisted -p validate_audit.py -v
 ```
 
 Exit codes for `audit.py`: `0` means all reference comparisons passed, `1` means
-calculations completed with reference disagreements, and `2` means input/configuration
-prevented execution. A different raw hash is rejected by default. To deliberately
-audit an alternative with the same schema, preserve the reference results by
-choosing a separate output directory:
+calculations completed with reference disagreements, and `2` means an input or
+configuration issue prevented execution. A different raw hash is rejected by
+default. To inspect an alternative CSV with the same schema, use a separate output:
 
 ```powershell
-python work/andres/dataset_description/dataset_audit_AI_assisted/audit.py --csv 'path/to/alternative.csv' --allow-different-input --output 'tmp/alternative_audit'
+python work/andres/02_dataset_description/dataset_audit_AI_assisted/audit.py --csv 'path/to/alternative.csv' --allow-different-input --output tmp/alternative_audit
 ```
 
-`validate_audit.py` validates the recorded reference run at the default paths.
-Notebook results and its strict reproduction assertions also target the reference
-CSV. An alternative-file CLI run does not automatically execute that notebook or
-produce its figures. No source claims or expected values are rewritten to make an
-alternative pass.
+The expected values remain those of the reference CSV. An alternative-file run
+does not execute the notebook, produce its figures, or change reference claims.
+
+### Provenance and source comparison
+
+Run the complementary verifier for local file identity, the bundled historical
+metadata, and actual Git tracking/ignore behavior:
+
+```powershell
+python data/provenance_AI_assisted/verify.py
+```
+
+To retrieve the version-specific Kaggle archive, pinned GitHub CSV, and current
+Kaggle metadata again:
+
+```powershell
+python data/provenance_AI_assisted/verify.py --online
+```
+
+The [verification guide](../../../../data/provenance_AI_assisted/README.md)
+describes external-check status, optional JSON reports, and six separate
+regression tests. Its [recorded online run](../../../../data/provenance_AI_assisted/results/verification_20261118.json)
+passed 27 checks on November 18, 2026. Those assertions belong to the provenance
+verifier and are separate from this audit's 299 reference comparisons and 323
+independent checks.
+
+### Recorded notebook and full regeneration
+
+The executed notebook contains the conceptual explanations and saved figures.
+The earlier editorial review also identified an obsolete audit-directory path in
+its setup cell. That path is still present in the current notebook: **Run All
+requires correcting `AUDIT_DIR` to the current location first**:
+
+```python
+AUDIT_DIR = ROOT / "work/andres/02_dataset_description/dataset_audit_AI_assisted"
+```
+
+The notebook is preserved unchanged in this documentation update. Use the
+standalone reproduction commands above for the current checkout. After a future
+setup correction, an intentional notebook rebuild will write this folder's
+`results/`, including figures, and saving it will replace its execution outputs.
+
+For a complete recorded-output rebuild, the full validator checks the default
+paths, runs the five edge-case tests, inspects saved notebook execution, and
+writes `results/validation_results.json`:
+
+```powershell
+python work/andres/02_dataset_description/dataset_audit_AI_assisted/validate_audit.py
+```
+
+This command includes the saved run's source-document fingerprint. Updating the
+recorded source hash alone would not reproduce the audit; regenerate the complete
+run only when intentionally replacing its artifacts. For a separate fresh run,
+use the read-only independent check above.
 
 ## Conceptual map
 
@@ -153,11 +236,17 @@ Explicitly requesting `object` for those nine columns reproduces the historical
 both retained, with the policy disclosed rather than hiding the version difference.
 See the [pandas string migration guide](https://pandas.pydata.org/docs/user_guide/migration-3-strings.html).
 
-**Provenance boundaries.** The local CSV matches the initial audit's hash. That
-does not independently establish its download origin or license. Other project
-documents mention later provenance work, but some linked artifacts are absent
-from this checkout. This work neither recreates those claims nor edits them.
-The CSV does not establish a validated score formula or data-generation mechanism.
+**Provenance boundaries.** The local CSV matches the initial audit's hash.
+The complementary [source record](../../../../data/provenance_AI_assisted/sources.json)
+pins the selected Kaggle version, public URLs, GitHub commit, and expected hashes.
+The bundled [metadata snapshot](../../../../data/provenance_AI_assisted/evidence/kaggle_metadata_20261116.json)
+records publisher statements about version and license. The provenance verifier
+can repeat direct byte comparisons with both public CSV sources; offline runs
+explicitly identify external checks that were not performed. These materials
+provide reproducible evidence alongside the statistical audit. A matching hash
+identifies content; it does not authenticate download origin. CC0 is attributed
+to publisher metadata. The CSV does not establish a validated score formula or
+data-generation mechanism.
 
 ## Output inventory
 
@@ -179,5 +268,7 @@ The CSV does not establish a validated score formula or data-generation mechanis
 | `results/validation_results.json` | Independent checks, edge cases, executed notebook state and hash |
 
 The standalone script exports tables/report; the notebook additionally generates
-figures. Raw and processed project data stay under the existing common data policy.
-No commit or publication is part of this work.
+figures. These are the default output paths; a fresh `audit.py --output` run uses
+the selected directory instead. The common raw CSV is tracked, while ignore rules
+apply to new raw/processed files as explained in [data/README.md](../../../../data/README.md).
+This audit and the provenance verifier leave the raw dataset unchanged.

@@ -1,0 +1,1550 @@
+{
+  "provenance": {
+    "file_name": "Nicotine_Craving_Anxiety_Dynamics_30Days.csv",
+    "size_bytes": 4286125,
+    "sha256": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907",
+    "git_blob_sha1": "80bbba4a3289940698a2926618bf0f5f1525e69f",
+    "matches_reference_sha256": true,
+    "reference_document_sha256": "22b299ed236c40024d40835a1fdc972f537a8fd39506b1352303da9b71b46e68",
+    "audit_code_sha256": "1204aef66e476349fd40fb3cc557c5c1514b1dff1106d97b5e40926fcddb6742",
+    "reference_values_sha256": "55137001720f9a6eaeeab232ed48ee8a72b19482b6147b9be10bcefd8b5fee1c",
+    "source_claim_scope": "Byte identity verified locally; origin, license, and generator are not established by this calculation."
+  },
+  "environment": {
+    "python": "3.14.4",
+    "pandas": "3.0.6",
+    "numpy": "2.4.4"
+  },
+  "reading_policy": {
+    "encoding": "utf-8-sig",
+    "missing_values": "pandas default NA tokens; raw empty strings also counted separately",
+    "text_types": "Explicit object dtype for the nine known text columns; numeric types inferred",
+    "std_ddof": 1,
+    "quantile_interpolation": "linear",
+    "imputation": "none",
+    "native_dtype_counts": {
+      "float64": 20,
+      "str": 9,
+      "int64": 6
+    },
+    "audit_dtype_counts": {
+      "float64": 20,
+      "object": 9,
+      "int64": 6
+    },
+    "native_dtypes": {
+      "Participant_ID": "str",
+      "Day_Number": "int64",
+      "Age_Group": "str",
+      "Gender": "str",
+      "Occupation_Status": "str",
+      "Nicotine_Use_Duration_Months": "int64",
+      "Pouches_Per_Day": "int64",
+      "Pouch_Strength_mg": "int64",
+      "First_Pouch_Time": "str",
+      "Time_Since_Last_Pouch_Minutes": "float64",
+      "Longest_Nicotine_Free_Period_Hours": "float64",
+      "Morning_Cravings_Score": "float64",
+      "Afternoon_Cravings_Score": "float64",
+      "Evening_Cravings_Score": "float64",
+      "Overall_Craving_Score": "float64",
+      "Craving_Triggers": "str",
+      "Craving_Intensity_Peak": "float64",
+      "Craving_Duration_Minutes": "int64",
+      "Attempted_To_Resist_Craving": "str",
+      "Successfully_Resisted": "str",
+      "Daily_Anxiety_Score": "float64",
+      "Morning_Anxiety_Score": "float64",
+      "Evening_Anxiety_Score": "float64",
+      "Perceived_Stress_Score": "float64",
+      "Mood_Score": "float64",
+      "Irritability_Score": "float64",
+      "Restlessness_Score": "float64",
+      "Sleep_Duration_Hours": "float64",
+      "Sleep_Quality_Score": "float64",
+      "Caffeine_Intake_mg": "int64",
+      "Exercise_Minutes": "float64",
+      "Screen_Time_Hours": "float64",
+      "Work_Or_Study_Hours": "float64",
+      "Major_Stress_Event_Today": "str",
+      "Social_Interaction_Hours": "float64"
+    }
+  },
+  "csv_syntax": {
+    "header": [
+      "Participant_ID",
+      "Day_Number",
+      "Age_Group",
+      "Gender",
+      "Occupation_Status",
+      "Nicotine_Use_Duration_Months",
+      "Pouches_Per_Day",
+      "Pouch_Strength_mg",
+      "First_Pouch_Time",
+      "Time_Since_Last_Pouch_Minutes",
+      "Longest_Nicotine_Free_Period_Hours",
+      "Morning_Cravings_Score",
+      "Afternoon_Cravings_Score",
+      "Evening_Cravings_Score",
+      "Overall_Craving_Score",
+      "Craving_Triggers",
+      "Craving_Intensity_Peak",
+      "Craving_Duration_Minutes",
+      "Attempted_To_Resist_Craving",
+      "Successfully_Resisted",
+      "Daily_Anxiety_Score",
+      "Morning_Anxiety_Score",
+      "Evening_Anxiety_Score",
+      "Perceived_Stress_Score",
+      "Mood_Score",
+      "Irritability_Score",
+      "Restlessness_Score",
+      "Sleep_Duration_Hours",
+      "Sleep_Quality_Score",
+      "Caffeine_Intake_mg",
+      "Exercise_Minutes",
+      "Screen_Time_Hours",
+      "Work_Or_Study_Hours",
+      "Major_Stress_Event_Today",
+      "Social_Interaction_Hours"
+    ],
+    "header_fields": 35,
+    "duplicate_header_names": [],
+    "data_records": 30000,
+    "field_count_frequencies": {
+      "35": 30000
+    },
+    "malformed_records": 0,
+    "malformed_examples": [],
+    "literal_empty_cells": 4982
+  },
+  "structure": {
+    "rows": 30000,
+    "columns": 35,
+    "participants": 1000,
+    "distinct_days": 30,
+    "day_min": 1,
+    "day_max": 30,
+    "rows_per_person_min": 30,
+    "rows_per_person_max": 30,
+    "rows_per_day_min": 1000,
+    "rows_per_day_max": 1000,
+    "duplicate_keys_excess": 0,
+    "rows_in_duplicate_keys": 0,
+    "duplicate_rows_excess": 0,
+    "missing_key_cells": 0,
+    "participants_with_profile_changes": 0,
+    "profile_changes_by_column": {
+      "Age_Group": 0,
+      "Gender": 0,
+      "Occupation_Status": 0,
+      "Nicotine_Use_Duration_Months": 0
+    },
+    "participants_without_exact_days_1_to_30": 0,
+    "balanced_keys_days_1_to_30": true,
+    "group_column_counts": {
+      "Identification": 2,
+      "Demographics": 3,
+      "Nicotine and craving": 15,
+      "Psychology": 7,
+      "Habits and activities": 8
+    }
+  },
+  "inventory": {
+    "Participant_ID": {
+      "column": "Participant_ID",
+      "group": "Identification",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 1000,
+      "min": null,
+      "max": null,
+      "categories": null
+    },
+    "Day_Number": {
+      "column": "Day_Number",
+      "group": "Identification",
+      "dtype": "int64",
+      "native_dtype": "int64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 30,
+      "min": 1,
+      "max": 30,
+      "categories": null
+    },
+    "Age_Group": {
+      "column": "Age_Group",
+      "group": "Demographics",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 5,
+      "min": null,
+      "max": null,
+      "categories": [
+        "18-24",
+        "25-34",
+        "35-44",
+        "45-54",
+        "55+"
+      ]
+    },
+    "Gender": {
+      "column": "Gender",
+      "group": "Demographics",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 4,
+      "min": null,
+      "max": null,
+      "categories": [
+        "Female",
+        "Male",
+        "Non-binary",
+        "Prefer_not_to_say"
+      ]
+    },
+    "Occupation_Status": {
+      "column": "Occupation_Status",
+      "group": "Demographics",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 6,
+      "min": null,
+      "max": null,
+      "categories": [
+        "Employed",
+        "Homemaker",
+        "Retired",
+        "Self_Employed",
+        "Student",
+        "Unemployed"
+      ]
+    },
+    "Nicotine_Use_Duration_Months": {
+      "column": "Nicotine_Use_Duration_Months",
+      "group": "Nicotine and craving",
+      "dtype": "int64",
+      "native_dtype": "int64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 86,
+      "min": 3,
+      "max": 120,
+      "categories": null
+    },
+    "Pouches_Per_Day": {
+      "column": "Pouches_Per_Day",
+      "group": "Nicotine and craving",
+      "dtype": "int64",
+      "native_dtype": "int64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 25,
+      "min": 0,
+      "max": 24,
+      "categories": null
+    },
+    "Pouch_Strength_mg": {
+      "column": "Pouch_Strength_mg",
+      "group": "Nicotine and craving",
+      "dtype": "int64",
+      "native_dtype": "int64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 6,
+      "min": 4,
+      "max": 15,
+      "categories": null
+    },
+    "First_Pouch_Time": {
+      "column": "First_Pouch_Time",
+      "group": "Nicotine and craving",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 37,
+      "min": null,
+      "max": null,
+      "categories": [
+        "05:00",
+        "05:15",
+        "05:30",
+        "05:45",
+        "06:00",
+        "06:15",
+        "06:30",
+        "06:45",
+        "07:00",
+        "07:15",
+        "07:30",
+        "07:45",
+        "08:00",
+        "08:15",
+        "08:30",
+        "08:45",
+        "09:00",
+        "09:15",
+        "09:30",
+        "09:45",
+        "10:00",
+        "10:15",
+        "10:30",
+        "10:45",
+        "11:00",
+        "11:15",
+        "11:30",
+        "11:45",
+        "12:00",
+        "12:15",
+        "12:30",
+        "12:45",
+        "13:00",
+        "13:15",
+        "13:30",
+        "13:45",
+        "14:00"
+      ]
+    },
+    "Time_Since_Last_Pouch_Minutes": {
+      "column": "Time_Since_Last_Pouch_Minutes",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29645,
+      "missing": 355,
+      "unique_observed": 554,
+      "min": 5.0,
+      "max": 716.0,
+      "categories": null
+    },
+    "Longest_Nicotine_Free_Period_Hours": {
+      "column": "Longest_Nicotine_Free_Period_Hours",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29620,
+      "missing": 380,
+      "unique_observed": 223,
+      "min": 1.0,
+      "max": 23.9,
+      "categories": null
+    },
+    "Morning_Cravings_Score": {
+      "column": "Morning_Cravings_Score",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29631,
+      "missing": 369,
+      "unique_observed": 98,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Afternoon_Cravings_Score": {
+      "column": "Afternoon_Cravings_Score",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29627,
+      "missing": 373,
+      "unique_observed": 96,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Evening_Cravings_Score": {
+      "column": "Evening_Cravings_Score",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29654,
+      "missing": 346,
+      "unique_observed": 95,
+      "min": 0.4,
+      "max": 10.0,
+      "categories": null
+    },
+    "Overall_Craving_Score": {
+      "column": "Overall_Craving_Score",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29651,
+      "missing": 349,
+      "unique_observed": 98,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Craving_Triggers": {
+      "column": "Craving_Triggers",
+      "group": "Nicotine and craving",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 29677,
+      "missing": 323,
+      "unique_observed": 12,
+      "min": null,
+      "max": null,
+      "categories": [
+        "After_Meal",
+        "Alcohol",
+        "Boredom",
+        "Caffeine",
+        "Habit",
+        "Morning",
+        "Other",
+        "Social_Situation",
+        "Stress",
+        "Study",
+        "Withdrawal",
+        "Work"
+      ]
+    },
+    "Craving_Intensity_Peak": {
+      "column": "Craving_Intensity_Peak",
+      "group": "Nicotine and craving",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 97,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Craving_Duration_Minutes": {
+      "column": "Craving_Duration_Minutes",
+      "group": "Nicotine and craving",
+      "dtype": "int64",
+      "native_dtype": "int64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 163,
+      "min": 3,
+      "max": 180,
+      "categories": null
+    },
+    "Attempted_To_Resist_Craving": {
+      "column": "Attempted_To_Resist_Craving",
+      "group": "Nicotine and craving",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 29655,
+      "missing": 345,
+      "unique_observed": 2,
+      "min": null,
+      "max": null,
+      "categories": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Successfully_Resisted": {
+      "column": "Successfully_Resisted",
+      "group": "Nicotine and craving",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 29643,
+      "missing": 357,
+      "unique_observed": 2,
+      "min": null,
+      "max": null,
+      "categories": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Daily_Anxiety_Score": {
+      "column": "Daily_Anxiety_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 101,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Morning_Anxiety_Score": {
+      "column": "Morning_Anxiety_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 101,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Evening_Anxiety_Score": {
+      "column": "Evening_Anxiety_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29653,
+      "missing": 347,
+      "unique_observed": 101,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Perceived_Stress_Score": {
+      "column": "Perceived_Stress_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 101,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Mood_Score": {
+      "column": "Mood_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29658,
+      "missing": 342,
+      "unique_observed": 101,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Irritability_Score": {
+      "column": "Irritability_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 80,
+      "min": 1.0,
+      "max": 9.3,
+      "categories": null
+    },
+    "Restlessness_Score": {
+      "column": "Restlessness_Score",
+      "group": "Psychology",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 75,
+      "min": 1.4,
+      "max": 9.0,
+      "categories": null
+    },
+    "Sleep_Duration_Hours": {
+      "column": "Sleep_Duration_Hours",
+      "group": "Habits and activities",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 76,
+      "min": 3.5,
+      "max": 11.0,
+      "categories": null
+    },
+    "Sleep_Quality_Score": {
+      "column": "Sleep_Quality_Score",
+      "group": "Habits and activities",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 71,
+      "min": 3.0,
+      "max": 10.0,
+      "categories": null
+    },
+    "Caffeine_Intake_mg": {
+      "column": "Caffeine_Intake_mg",
+      "group": "Habits and activities",
+      "dtype": "int64",
+      "native_dtype": "int64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 61,
+      "min": 0,
+      "max": 600,
+      "categories": null
+    },
+    "Exercise_Minutes": {
+      "column": "Exercise_Minutes",
+      "group": "Habits and activities",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29630,
+      "missing": 370,
+      "unique_observed": 155,
+      "min": 0.0,
+      "max": 180.0,
+      "categories": null
+    },
+    "Screen_Time_Hours": {
+      "column": "Screen_Time_Hours",
+      "group": "Habits and activities",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29627,
+      "missing": 373,
+      "unique_observed": 131,
+      "min": 1.0,
+      "max": 14.0,
+      "categories": null
+    },
+    "Work_Or_Study_Hours": {
+      "column": "Work_Or_Study_Hours",
+      "group": "Habits and activities",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 179,
+      "min": 0.0,
+      "max": 18.0,
+      "categories": null
+    },
+    "Major_Stress_Event_Today": {
+      "column": "Major_Stress_Event_Today",
+      "group": "Habits and activities",
+      "dtype": "object",
+      "native_dtype": "str",
+      "observed": 30000,
+      "missing": 0,
+      "unique_observed": 2,
+      "min": null,
+      "max": null,
+      "categories": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Social_Interaction_Hours": {
+      "column": "Social_Interaction_Hours",
+      "group": "Habits and activities",
+      "dtype": "float64",
+      "native_dtype": "float64",
+      "observed": 29647,
+      "missing": 353,
+      "unique_observed": 101,
+      "min": 0.0,
+      "max": 10.0,
+      "categories": null
+    }
+  },
+  "numeric": {
+    "Day_Number": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 1.0,
+      "max": 30.0,
+      "mean": 15.5,
+      "median": 15.5,
+      "sample_variance": 74.91916397213241,
+      "sample_std": 8.655585709363198,
+      "q1": 8.0,
+      "q3": 23.0,
+      "iqr": 15.0
+    },
+    "Nicotine_Use_Duration_Months": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 3.0,
+      "max": 120.0,
+      "mean": 21.592,
+      "median": 16.0,
+      "sample_variance": 330.71655988532956,
+      "sample_std": 18.185614091510068,
+      "q1": 9.0,
+      "q3": 29.0,
+      "iqr": 20.0
+    },
+    "Pouches_Per_Day": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 24.0,
+      "mean": 7.4309,
+      "median": 7.0,
+      "sample_variance": 18.813785649521645,
+      "sample_std": 4.3374860979052885,
+      "q1": 4.0,
+      "q3": 10.0,
+      "iqr": 6.0
+    },
+    "Pouch_Strength_mg": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 4.0,
+      "max": 15.0,
+      "mean": 7.859366666666666,
+      "median": 8.0,
+      "sample_variance": 7.288031866617777,
+      "sample_std": 2.6996355062522377,
+      "q1": 6.0,
+      "q3": 10.0,
+      "iqr": 4.0
+    },
+    "Time_Since_Last_Pouch_Minutes": {
+      "observed": 29645,
+      "missing": 355,
+      "min": 5.0,
+      "max": 716.0,
+      "mean": 73.51276775172879,
+      "median": 43.0,
+      "sample_variance": 9212.61059294987,
+      "sample_std": 95.98234521488767,
+      "q1": 11.0,
+      "q3": 95.0,
+      "iqr": 84.0
+    },
+    "Longest_Nicotine_Free_Period_Hours": {
+      "observed": 29620,
+      "missing": 380,
+      "min": 1.0,
+      "max": 23.9,
+      "mean": 6.202464550979069,
+      "median": 6.0,
+      "sample_variance": 10.002089877706151,
+      "sample_std": 3.1626080815849047,
+      "q1": 4.0,
+      "q3": 8.1,
+      "iqr": 4.1
+    },
+    "Morning_Cravings_Score": {
+      "observed": 29631,
+      "missing": 369,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 5.542610779251459,
+      "median": 5.5,
+      "sample_variance": 2.563614567334361,
+      "sample_std": 1.6011291538581018,
+      "q1": 4.5,
+      "q3": 6.6,
+      "iqr": 2.0999999999999996
+    },
+    "Afternoon_Cravings_Score": {
+      "observed": 29627,
+      "missing": 373,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 6.333121814561043,
+      "median": 6.3,
+      "sample_variance": 2.9426405037254857,
+      "sample_std": 1.7154126336615005,
+      "q1": 5.2,
+      "q3": 7.5,
+      "iqr": 2.3
+    },
+    "Evening_Cravings_Score": {
+      "observed": 29654,
+      "missing": 346,
+      "min": 0.4,
+      "max": 10.0,
+      "mean": 5.806886086194105,
+      "median": 5.8,
+      "sample_variance": 2.579463590908143,
+      "sample_std": 1.6060708548840996,
+      "q1": 4.7,
+      "q3": 6.9,
+      "iqr": 2.2
+    },
+    "Overall_Craving_Score": {
+      "observed": 29651,
+      "missing": 349,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 5.99490405045361,
+      "median": 6.0,
+      "sample_variance": 2.837220236155937,
+      "sample_std": 1.6844050095377705,
+      "q1": 4.8,
+      "q3": 7.2,
+      "iqr": 2.4000000000000004
+    },
+    "Craving_Intensity_Peak": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 6.336453333333334,
+      "median": 6.3,
+      "sample_variance": 3.048163426603109,
+      "sample_std": 1.7458990310447822,
+      "q1": 5.1,
+      "q3": 7.6,
+      "iqr": 2.5
+    },
+    "Craving_Duration_Minutes": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 3.0,
+      "max": 180.0,
+      "mean": 62.0987,
+      "median": 60.0,
+      "sample_variance": 406.67371410046997,
+      "sample_std": 20.16615268464637,
+      "q1": 48.0,
+      "q3": 73.0,
+      "iqr": 25.0
+    },
+    "Daily_Anxiety_Score": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 5.31187,
+      "median": 5.3,
+      "sample_variance": 3.940572122170739,
+      "sample_std": 1.9850874343894123,
+      "q1": 3.9,
+      "q3": 6.7,
+      "iqr": 2.8000000000000003
+    },
+    "Morning_Anxiety_Score": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 5.07922,
+      "median": 5.1,
+      "sample_variance": 3.685689047901597,
+      "sample_std": 1.9198148472968941,
+      "q1": 3.7,
+      "q3": 6.4,
+      "iqr": 2.7
+    },
+    "Evening_Anxiety_Score": {
+      "observed": 29653,
+      "missing": 347,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 5.3537888240650195,
+      "median": 5.3,
+      "sample_variance": 3.894421517119125,
+      "sample_std": 1.9734288730833764,
+      "q1": 4.0,
+      "q3": 6.7,
+      "iqr": 2.7
+    },
+    "Perceived_Stress_Score": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 3.1194466666666663,
+      "median": 2.7,
+      "sample_variance": 4.747844755314066,
+      "sample_std": 2.178954968629243,
+      "q1": 1.5,
+      "q3": 4.3,
+      "iqr": 2.8
+    },
+    "Mood_Score": {
+      "observed": 29658,
+      "missing": 342,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 5.684806797491402,
+      "median": 5.7,
+      "sample_variance": 2.746568228173775,
+      "sample_std": 1.6572773540279173,
+      "q1": 4.6,
+      "q3": 6.9,
+      "iqr": 2.3000000000000007
+    },
+    "Irritability_Score": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 1.0,
+      "max": 9.3,
+      "mean": 4.735713333333332,
+      "median": 4.7,
+      "sample_variance": 1.1555984111025923,
+      "sample_std": 1.0749876329998371,
+      "q1": 4.0,
+      "q3": 5.4,
+      "iqr": 1.4000000000000004
+    },
+    "Restlessness_Score": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 1.4,
+      "max": 9.0,
+      "mean": 5.058636666666667,
+      "median": 5.0,
+      "sample_variance": 1.0040822107292466,
+      "sample_std": 1.0020390265499874,
+      "q1": 4.4,
+      "q3": 5.7,
+      "iqr": 1.2999999999999998
+    },
+    "Sleep_Duration_Hours": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 3.5,
+      "max": 11.0,
+      "mean": 7.00284,
+      "median": 7.0,
+      "sample_variance": 1.4238127281576052,
+      "sample_std": 1.1932362415538698,
+      "q1": 6.2,
+      "q3": 7.8,
+      "iqr": 1.5999999999999996
+    },
+    "Sleep_Quality_Score": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 3.0,
+      "max": 10.0,
+      "mean": 6.919580000000001,
+      "median": 6.9,
+      "sample_variance": 1.065315467448915,
+      "sample_std": 1.032141205188958,
+      "q1": 6.2,
+      "q3": 7.6,
+      "iqr": 1.3999999999999995
+    },
+    "Caffeine_Intake_mg": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 600.0,
+      "mean": 160.49466666666666,
+      "median": 140.0,
+      "sample_variance": 13904.832132626643,
+      "sample_std": 117.91875225182228,
+      "q1": 70.0,
+      "q3": 220.0,
+      "iqr": 150.0
+    },
+    "Exercise_Minutes": {
+      "observed": 29630,
+      "missing": 370,
+      "min": 0.0,
+      "max": 180.0,
+      "mean": 30.047114411069863,
+      "median": 25.0,
+      "sample_variance": 449.4093701536382,
+      "sample_std": 21.199277585654617,
+      "q1": 15.0,
+      "q3": 41.0,
+      "iqr": 26.0
+    },
+    "Screen_Time_Hours": {
+      "observed": 29627,
+      "missing": 373,
+      "min": 1.0,
+      "max": 14.0,
+      "mean": 4.02537550207581,
+      "median": 3.4,
+      "sample_variance": 7.42532446828932,
+      "sample_std": 2.7249448560088916,
+      "q1": 1.9,
+      "q3": 5.4,
+      "iqr": 3.5000000000000004
+    },
+    "Work_Or_Study_Hours": {
+      "observed": 30000,
+      "missing": 0,
+      "min": 0.0,
+      "max": 18.0,
+      "mean": 7.101423333333334,
+      "median": 7.3,
+      "sample_variance": 11.312569393101992,
+      "sample_std": 3.3634163276499076,
+      "q1": 4.7,
+      "q3": 9.5,
+      "iqr": 4.8
+    },
+    "Social_Interaction_Hours": {
+      "observed": 29647,
+      "missing": 353,
+      "min": 0.0,
+      "max": 10.0,
+      "mean": 2.2499848213984555,
+      "median": 1.8,
+      "sample_variance": 3.2187619744036167,
+      "sample_std": 1.7940908489827423,
+      "q1": 0.9,
+      "q3": 3.1,
+      "iqr": 2.2
+    }
+  },
+  "missingness": {
+    "total_cells": 1050000,
+    "missing_cells": 4982,
+    "missing_cell_percent": 0.4744761904761905,
+    "rows_with_missing": 4630,
+    "rows_with_missing_percent": 15.433333333333332,
+    "complete_columns": 21,
+    "incomplete_columns": 14,
+    "incomplete_column_percent_min": 1.0766666666666667,
+    "incomplete_column_percent_max": 1.2666666666666666,
+    "by_column": {
+      "Participant_ID": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Day_Number": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Age_Group": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Gender": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Occupation_Status": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Nicotine_Use_Duration_Months": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Pouches_Per_Day": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Pouch_Strength_mg": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "First_Pouch_Time": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Time_Since_Last_Pouch_Minutes": {
+        "missing": 355,
+        "observed": 29645,
+        "percent_rows": 1.1833333333333333
+      },
+      "Longest_Nicotine_Free_Period_Hours": {
+        "missing": 380,
+        "observed": 29620,
+        "percent_rows": 1.2666666666666666
+      },
+      "Morning_Cravings_Score": {
+        "missing": 369,
+        "observed": 29631,
+        "percent_rows": 1.23
+      },
+      "Afternoon_Cravings_Score": {
+        "missing": 373,
+        "observed": 29627,
+        "percent_rows": 1.2433333333333334
+      },
+      "Evening_Cravings_Score": {
+        "missing": 346,
+        "observed": 29654,
+        "percent_rows": 1.1533333333333333
+      },
+      "Overall_Craving_Score": {
+        "missing": 349,
+        "observed": 29651,
+        "percent_rows": 1.1633333333333333
+      },
+      "Craving_Triggers": {
+        "missing": 323,
+        "observed": 29677,
+        "percent_rows": 1.0766666666666667
+      },
+      "Craving_Intensity_Peak": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Craving_Duration_Minutes": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Attempted_To_Resist_Craving": {
+        "missing": 345,
+        "observed": 29655,
+        "percent_rows": 1.15
+      },
+      "Successfully_Resisted": {
+        "missing": 357,
+        "observed": 29643,
+        "percent_rows": 1.19
+      },
+      "Daily_Anxiety_Score": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Morning_Anxiety_Score": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Evening_Anxiety_Score": {
+        "missing": 347,
+        "observed": 29653,
+        "percent_rows": 1.1566666666666667
+      },
+      "Perceived_Stress_Score": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Mood_Score": {
+        "missing": 342,
+        "observed": 29658,
+        "percent_rows": 1.14
+      },
+      "Irritability_Score": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Restlessness_Score": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Sleep_Duration_Hours": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Sleep_Quality_Score": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Caffeine_Intake_mg": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Exercise_Minutes": {
+        "missing": 370,
+        "observed": 29630,
+        "percent_rows": 1.2333333333333334
+      },
+      "Screen_Time_Hours": {
+        "missing": 373,
+        "observed": 29627,
+        "percent_rows": 1.2433333333333334
+      },
+      "Work_Or_Study_Hours": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Major_Stress_Event_Today": {
+        "missing": 0,
+        "observed": 30000,
+        "percent_rows": 0.0
+      },
+      "Social_Interaction_Hours": {
+        "missing": 353,
+        "observed": 29647,
+        "percent_rows": 1.1766666666666667
+      }
+    },
+    "rows_by_number_missing": {
+      "0": 25370,
+      "1": 4293,
+      "2": 323,
+      "3": 13,
+      "4": 1
+    }
+  },
+  "profile_frequencies_available": true,
+  "categorical_counts": {
+    "Age_Group": {
+      "18-24": 239,
+      "25-34": 353,
+      "35-44": 203,
+      "45-54": 122,
+      "55+": 83
+    },
+    "Attempted_To_Resist_Craving": {
+      "No": 8332,
+      "Yes": 21323
+    },
+    "Craving_Triggers": {
+      "After_Meal": 2955,
+      "Alcohol": 607,
+      "Boredom": 3505,
+      "Caffeine": 1182,
+      "Habit": 2390,
+      "Morning": 2960,
+      "Other": 870,
+      "Social_Situation": 2413,
+      "Stress": 6077,
+      "Study": 2363,
+      "Withdrawal": 1430,
+      "Work": 2925
+    },
+    "First_Pouch_Time": {
+      "05:00": 715,
+      "05:15": 706,
+      "05:30": 665,
+      "05:45": 676,
+      "06:00": 1224,
+      "06:15": 1130,
+      "06:30": 1219,
+      "06:45": 1165,
+      "07:00": 1902,
+      "07:15": 1813,
+      "07:30": 1853,
+      "07:45": 1836,
+      "08:00": 1921,
+      "08:15": 1814,
+      "08:30": 1878,
+      "08:45": 1879,
+      "09:00": 1211,
+      "09:15": 1227,
+      "09:30": 1265,
+      "09:45": 1255,
+      "10:00": 474,
+      "10:15": 459,
+      "10:30": 519,
+      "10:45": 509,
+      "11:00": 133,
+      "11:15": 158,
+      "11:30": 136,
+      "11:45": 151,
+      "12:00": 24,
+      "12:15": 24,
+      "12:30": 20,
+      "12:45": 27,
+      "13:00": 2,
+      "13:15": 2,
+      "13:30": 2,
+      "13:45": 5,
+      "14:00": 1
+    },
+    "Gender": {
+      "Female": 482,
+      "Male": 453,
+      "Non-binary": 41,
+      "Prefer_not_to_say": 24
+    },
+    "Major_Stress_Event_Today": {
+      "No": 28524,
+      "Yes": 1476
+    },
+    "Occupation_Status": {
+      "Employed": 488,
+      "Homemaker": 63,
+      "Retired": 82,
+      "Self_Employed": 123,
+      "Student": 156,
+      "Unemployed": 88
+    },
+    "Successfully_Resisted": {
+      "No": 19333,
+      "Yes": 10310
+    }
+  },
+  "target": {
+    "observed": 29651.0,
+    "missing": 349.0,
+    "min": 0.0,
+    "max": 10.0,
+    "mean": 5.99490405045361,
+    "median": 6.0,
+    "sample_variance": 2.837220236155937,
+    "sample_std": 1.6844050095377705,
+    "q1": 4.8,
+    "q3": 7.2,
+    "iqr": 2.4000000000000004,
+    "observed_percent": 98.83666666666666,
+    "missing_percent": 1.1633333333333333,
+    "histogram_counts": [
+      28,
+      163,
+      833,
+      2405,
+      4601,
+      6659,
+      6404,
+      4614,
+      2704,
+      1240
+    ],
+    "histogram_denominator": 29651,
+    "histogram_values_outside_0_to_10": 0
+  },
+  "longitudinal": {
+    "status": "computed",
+    "participants_with_variation": 1000,
+    "observations_per_person_min": 27,
+    "observations_per_person_max": 30,
+    "person_mean_min": 1.49,
+    "person_mean_max": 9.836666666666668,
+    "daily_mean_min": 5.956534954407295,
+    "daily_mean_max": 6.043983822042467,
+    "potential_adjacent_pairs": 29000,
+    "valid_adjacent_pairs": 28338,
+    "pairs_excluded_for_missing_values": 662,
+    "pooled_lag1_pearson": 0.8589268754048883,
+    "person_centered_lag1_pearson": -0.03508335736663302,
+    "centering_policy": "Subtract each participant's mean of all observed target values before selecting complete consecutive-day pairs.",
+    "sum_of_squares": {
+      "total": 84123.58000202353,
+      "within": 11485.76279939792,
+      "between": 72637.81720262562,
+      "decomposition_residual": -1.4551915228366852e-11,
+      "between_share": 0.863465596695699,
+      "interpretation": "Descriptive weighted sum-of-squares share, not an ICC or causal fraction."
+    }
+  },
+  "validity": {
+    "rules": [
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Morning_Cravings_Score",
+        "eligible": 29631,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Afternoon_Cravings_Score",
+        "eligible": 29627,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Evening_Cravings_Score",
+        "eligible": 29654,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Overall_Craving_Score",
+        "eligible": 29651,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Daily_Anxiety_Score",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Morning_Anxiety_Score",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Evening_Anxiety_Score",
+        "eligible": 29653,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Perceived_Stress_Score",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Mood_Score",
+        "eligible": 29658,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Irritability_Score",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Restlessness_Score",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Sleep_Quality_Score",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "score_in_0_to_10",
+        "column": "Craving_Intensity_Peak",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Day_Number",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Nicotine_Use_Duration_Months",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Pouches_Per_Day",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Pouch_Strength_mg",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Time_Since_Last_Pouch_Minutes",
+        "eligible": 29645,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Longest_Nicotine_Free_Period_Hours",
+        "eligible": 29620,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Craving_Duration_Minutes",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Sleep_Duration_Hours",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Caffeine_Intake_mg",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Exercise_Minutes",
+        "eligible": 29630,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Screen_Time_Hours",
+        "eligible": 29627,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Work_Or_Study_Hours",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "nonnegative",
+        "column": "Social_Interaction_Hours",
+        "eligible": 29647,
+        "flagged": 0
+      },
+      {
+        "rule": "HH:MM",
+        "column": "First_Pouch_Time",
+        "eligible": 30000,
+        "flagged": 0
+      },
+      {
+        "rule": "Yes_or_No",
+        "column": "Attempted_To_Resist_Craving",
+        "eligible": 29655,
+        "flagged": 0
+      },
+      {
+        "rule": "Yes_or_No",
+        "column": "Successfully_Resisted",
+        "eligible": 29643,
+        "flagged": 0
+      },
+      {
+        "rule": "Yes_or_No",
+        "column": "Major_Stress_Event_Today",
+        "eligible": 30000,
+        "flagged": 0
+      }
+    ],
+    "score_fields_checked": 13,
+    "nonnegative_fields_checked": 13,
+    "total_rule_violations": 0
+  },
+  "semantic": {
+    "zero_pouches_with_first_time": {
+      "count": 358,
+      "eligible": 358,
+      "percent_eligible": 100.0
+    },
+    "zero_pouches_with_time_since_last": {
+      "count": 355,
+      "eligible": 358,
+      "percent_eligible": 99.16201117318435
+    },
+    "overall_above_peak": {
+      "count": 7078,
+      "eligible": 29651,
+      "percent_eligible": 23.871033017436176
+    },
+    "success_without_attempt": {
+      "count": 0,
+      "eligible": 29299,
+      "percent_eligible": 0.0
+    },
+    "missing_overall_with_complete_components": {
+      "count": 339,
+      "eligible": 349,
+      "percent_eligible": 97.13467048710602
+    }
+  },
+  "reference_comparison": {
+    "claims_checked": 299,
+    "passed": 299,
+    "failed": 0,
+    "policy": "Exact counts and strings; half the last published decimal unit for rounded statistics."
+  }
+}

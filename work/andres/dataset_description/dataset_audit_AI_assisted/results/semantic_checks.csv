@@ -1,0 +1,6 @@
+check,count,eligible,percent_eligible
+zero_pouches_with_first_time,358,358,100.0
+zero_pouches_with_time_since_last,355,358,99.16201117318435
+overall_above_peak,7078,29651,23.871033017436176
+success_without_attempt,0,29299,0.0
+missing_overall_with_complete_components,339,349,97.13467048710602

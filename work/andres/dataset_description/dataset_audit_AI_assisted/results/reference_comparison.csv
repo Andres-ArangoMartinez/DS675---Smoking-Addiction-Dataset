@@ -1,0 +1,300 @@
+section,metric,expected,actual,absolute_tolerance,passed
+1.2,structure.rows,30000,30000,0.0,True
+1.2,structure.columns,35,35,0.0,True
+1.2,structure.participants,1000,1000,0.0,True
+1.2,structure.distinct_days,30,30,0.0,True
+1.2,structure.day_min,1,1,0.0,True
+1.2,structure.day_max,30,30,0.0,True
+1.2,structure.rows_per_person_min,30,30,0.0,True
+1.2,structure.rows_per_person_max,30,30,0.0,True
+1.2,structure.rows_per_day_min,1000,1000,0.0,True
+1.2,structure.rows_per_day_max,1000,1000,0.0,True
+1.2,structure.duplicate_keys_excess,0,0,0.0,True
+1.2,structure.duplicate_rows_excess,0,0,0.0,True
+1.2,structure.participants_with_profile_changes,0,0,0.0,True
+1.2,structure.balanced_keys_days_1_to_30,True,True,0.0,True
+1.2,csv_syntax.malformed_records,0,0,0.0,True
+1.3,structure.group_column_counts.Identification,2,2,0.0,True
+1.3,structure.group_column_counts.Demographics,3,3,0.0,True
+1.3,structure.group_column_counts.Nicotine and craving,15,15,0.0,True
+1.3,structure.group_column_counts.Psychology,7,7,0.0,True
+1.3,structure.group_column_counts.Habits and activities,8,8,0.0,True
+1.3,reading_policy.audit_dtype_counts.float64,20,20,0.0,True
+1.3,reading_policy.audit_dtype_counts.int64,6,6,0.0,True
+1.3,reading_policy.audit_dtype_counts.object,9,9,0.0,True
+1.4,categorical_counts.Age_Group.18-24,239,239,0.0,True
+1.4,categorical_counts.Age_Group.25-34,353,353,0.0,True
+1.4,categorical_counts.Age_Group.35-44,203,203,0.0,True
+1.4,categorical_counts.Age_Group.45-54,122,122,0.0,True
+1.4,categorical_counts.Age_Group.55+,83,83,0.0,True
+1.4,categorical_counts.Gender.Female,482,482,0.0,True
+1.4,categorical_counts.Gender.Male,453,453,0.0,True
+1.4,categorical_counts.Gender.Non-binary,41,41,0.0,True
+1.4,categorical_counts.Gender.Prefer_not_to_say,24,24,0.0,True
+1.4,categorical_counts.Occupation_Status.Employed,488,488,0.0,True
+1.4,categorical_counts.Occupation_Status.Student,156,156,0.0,True
+1.4,categorical_counts.Occupation_Status.Self_Employed,123,123,0.0,True
+1.4,categorical_counts.Occupation_Status.Unemployed,88,88,0.0,True
+1.4,categorical_counts.Occupation_Status.Retired,82,82,0.0,True
+1.4,categorical_counts.Occupation_Status.Homemaker,63,63,0.0,True
+1.5,numeric.Pouches_Per_Day.observed,30000,30000,0.0,True
+1.5,numeric.Pouches_Per_Day.min,0,0.0,0.0,True
+1.5,numeric.Pouches_Per_Day.max,24,24.0,0.0,True
+1.5,numeric.Pouches_Per_Day.mean,7.431,7.4309,0.0005,True
+1.5,numeric.Pouches_Per_Day.median,7,7.0,0.0,True
+1.5,numeric.Pouch_Strength_mg.observed,30000,30000,0.0,True
+1.5,numeric.Pouch_Strength_mg.min,4,4.0,0.0,True
+1.5,numeric.Pouch_Strength_mg.max,15,15.0,0.0,True
+1.5,numeric.Pouch_Strength_mg.mean,7.859,7.859366666666666,0.0005,True
+1.5,numeric.Pouch_Strength_mg.median,8,8.0,0.0,True
+1.5,numeric.Overall_Craving_Score.observed,29651,29651,0.0,True
+1.5,numeric.Overall_Craving_Score.min,0,0.0,0.0,True
+1.5,numeric.Overall_Craving_Score.max,10,10.0,0.0,True
+1.5,numeric.Overall_Craving_Score.mean,5.995,5.99490405045361,0.0005,True
+1.5,numeric.Overall_Craving_Score.median,6.0,6.0,0.0,True
+1.5,numeric.Daily_Anxiety_Score.observed,30000,30000,0.0,True
+1.5,numeric.Daily_Anxiety_Score.min,0,0.0,0.0,True
+1.5,numeric.Daily_Anxiety_Score.max,10,10.0,0.0,True
+1.5,numeric.Daily_Anxiety_Score.mean,5.312,5.31187,0.0005,True
+1.5,numeric.Daily_Anxiety_Score.median,5.3,5.3,0.0,True
+1.5,numeric.Perceived_Stress_Score.observed,30000,30000,0.0,True
+1.5,numeric.Perceived_Stress_Score.min,0,0.0,0.0,True
+1.5,numeric.Perceived_Stress_Score.max,10,10.0,0.0,True
+1.5,numeric.Perceived_Stress_Score.mean,3.119,3.1194466666666663,0.0005,True
+1.5,numeric.Perceived_Stress_Score.median,2.7,2.7,0.0,True
+1.5,numeric.Sleep_Duration_Hours.observed,30000,30000,0.0,True
+1.5,numeric.Sleep_Duration_Hours.min,3.5,3.5,0.0,True
+1.5,numeric.Sleep_Duration_Hours.max,11,11.0,0.0,True
+1.5,numeric.Sleep_Duration_Hours.mean,7.003,7.00284,0.0005,True
+1.5,numeric.Sleep_Duration_Hours.median,7.0,7.0,0.0,True
+1.5,numeric.Sleep_Quality_Score.observed,30000,30000,0.0,True
+1.5,numeric.Sleep_Quality_Score.min,3,3.0,0.0,True
+1.5,numeric.Sleep_Quality_Score.max,10,10.0,0.0,True
+1.5,numeric.Sleep_Quality_Score.mean,6.92,6.919580000000001,0.0005,True
+1.5,numeric.Sleep_Quality_Score.median,6.9,6.9,0.0,True
+1.5,numeric.Caffeine_Intake_mg.observed,30000,30000,0.0,True
+1.5,numeric.Caffeine_Intake_mg.min,0,0.0,0.0,True
+1.5,numeric.Caffeine_Intake_mg.max,600,600.0,0.0,True
+1.5,numeric.Caffeine_Intake_mg.mean,160.495,160.49466666666666,0.0005,True
+1.5,numeric.Caffeine_Intake_mg.median,140,140.0,0.0,True
+1.5,numeric.Exercise_Minutes.observed,29630,29630,0.0,True
+1.5,numeric.Exercise_Minutes.min,0,0.0,0.0,True
+1.5,numeric.Exercise_Minutes.max,180,180.0,0.0,True
+1.5,numeric.Exercise_Minutes.mean,30.047,30.047114411069863,0.0005,True
+1.5,numeric.Exercise_Minutes.median,25,25.0,0.0,True
+1.5,numeric.Screen_Time_Hours.observed,29627,29627,0.0,True
+1.5,numeric.Screen_Time_Hours.min,1,1.0,0.0,True
+1.5,numeric.Screen_Time_Hours.max,14,14.0,0.0,True
+1.5,numeric.Screen_Time_Hours.mean,4.025,4.02537550207581,0.0005,True
+1.5,numeric.Screen_Time_Hours.median,3.4,3.4,0.0,True
+1.5,numeric.Social_Interaction_Hours.observed,29647,29647,0.0,True
+1.5,numeric.Social_Interaction_Hours.min,0,0.0,0.0,True
+1.5,numeric.Social_Interaction_Hours.max,10,10.0,0.0,True
+1.5,numeric.Social_Interaction_Hours.mean,2.25,2.2499848213984555,0.0005,True
+1.5,numeric.Social_Interaction_Hours.median,1.8,1.8,0.0,True
+1.5,inventory.Craving_Triggers.unique_observed,12,12,0.0,True
+1.5,categorical_counts.Craving_Triggers.Stress,6077,6077,0.0,True
+1.5,categorical_counts.Craving_Triggers.Boredom,3505,3505,0.0,True
+1.5,categorical_counts.Major_Stress_Event_Today.Yes,1476,1476,0.0,True
+1.5,categorical_counts.Major_Stress_Event_Today.No,28524,28524,0.0,True
+1.6,target.observed,29651,29651.0,0.0,True
+1.6,target.missing,349,349.0,0.0,True
+1.6,target.min,0,0.0,0.0,True
+1.6,target.max,10,10.0,0.0,True
+1.6,target.median,6.0,6.0,0.0,True
+1.6,target.q1,4.8,4.8,0.0,True
+1.6,target.q3,7.2,7.2,0.0,True
+1.6,target.mean,5.994904,5.99490405045361,5e-07,True
+1.6,target.sample_std,1.684405,1.6844050095377705,5e-07,True
+1.6,target.observed_percent,98.84,98.83666666666666,0.005,True
+1.6,target.missing_percent,1.16,1.1633333333333333,0.005,True
+1.6,target.histogram_counts,"[28, 163, 833, 2405, 4601, 6659, 6404, 4614, 2704, 1240]","[28, 163, 833, 2405, 4601, 6659, 6404, 4614, 2704, 1240]",0.0,True
+1.6.1,longitudinal.participants_with_variation,1000,1000,0.0,True
+1.6.1,longitudinal.observations_per_person_min,27,27,0.0,True
+1.6.1,longitudinal.observations_per_person_max,30,30,0.0,True
+1.6.1,longitudinal.valid_adjacent_pairs,28338,28338,0.0,True
+1.6.1,longitudinal.person_mean_min,1.49,1.49,0.005,True
+1.6.1,longitudinal.person_mean_max,9.84,9.836666666666668,0.005,True
+1.6.1,longitudinal.daily_mean_min,5.957,5.956534954407295,0.0005,True
+1.6.1,longitudinal.daily_mean_max,6.044,6.043983822042467,0.0005,True
+1.6.1,longitudinal.pooled_lag1_pearson,0.859,0.8589268754048883,0.0005,True
+1.6.1,longitudinal.person_centered_lag1_pearson,-0.035,-0.03508335736663302,0.0005,True
+1.7,missingness.total_cells,1050000,1050000,0.0,True
+1.7,missingness.missing_cells,4982,4982,0.0,True
+1.7,missingness.rows_with_missing,4630,4630,0.0,True
+1.7,missingness.complete_columns,21,21,0.0,True
+1.7,missingness.incomplete_columns,14,14,0.0,True
+1.7,missingness.missing_cell_percent,0.47,0.4744761904761905,0.005,True
+1.7,missingness.rows_with_missing_percent,15.43,15.433333333333332,0.005,True
+1.7,missingness.incomplete_column_percent_min,1.08,1.0766666666666667,0.005,True
+1.7,missingness.incomplete_column_percent_max,1.27,1.2666666666666666,0.005,True
+1.7,missingness.by_column.Longest_Nicotine_Free_Period_Hours.missing,380,380,0.0,True
+1.7,missingness.by_column.Longest_Nicotine_Free_Period_Hours.percent_rows,1.27,1.2666666666666666,0.005,True
+1.7,missingness.by_column.Afternoon_Cravings_Score.missing,373,373,0.0,True
+1.7,missingness.by_column.Afternoon_Cravings_Score.percent_rows,1.24,1.2433333333333334,0.005,True
+1.7,missingness.by_column.Screen_Time_Hours.missing,373,373,0.0,True
+1.7,missingness.by_column.Screen_Time_Hours.percent_rows,1.24,1.2433333333333334,0.005,True
+1.7,missingness.by_column.Exercise_Minutes.missing,370,370,0.0,True
+1.7,missingness.by_column.Exercise_Minutes.percent_rows,1.23,1.2333333333333334,0.005,True
+1.7,missingness.by_column.Morning_Cravings_Score.missing,369,369,0.0,True
+1.7,missingness.by_column.Morning_Cravings_Score.percent_rows,1.23,1.23,0.005,True
+1.7,missingness.by_column.Successfully_Resisted.missing,357,357,0.0,True
+1.7,missingness.by_column.Successfully_Resisted.percent_rows,1.19,1.19,0.005,True
+1.7,missingness.by_column.Time_Since_Last_Pouch_Minutes.missing,355,355,0.0,True
+1.7,missingness.by_column.Time_Since_Last_Pouch_Minutes.percent_rows,1.18,1.1833333333333333,0.005,True
+1.7,missingness.by_column.Social_Interaction_Hours.missing,353,353,0.0,True
+1.7,missingness.by_column.Social_Interaction_Hours.percent_rows,1.18,1.1766666666666667,0.005,True
+1.7,missingness.by_column.Overall_Craving_Score.missing,349,349,0.0,True
+1.7,missingness.by_column.Overall_Craving_Score.percent_rows,1.16,1.1633333333333333,0.005,True
+1.7,missingness.by_column.Evening_Anxiety_Score.missing,347,347,0.0,True
+1.7,missingness.by_column.Evening_Anxiety_Score.percent_rows,1.16,1.1566666666666667,0.005,True
+1.7,missingness.by_column.Evening_Cravings_Score.missing,346,346,0.0,True
+1.7,missingness.by_column.Evening_Cravings_Score.percent_rows,1.15,1.1533333333333333,0.005,True
+1.7,missingness.by_column.Attempted_To_Resist_Craving.missing,345,345,0.0,True
+1.7,missingness.by_column.Attempted_To_Resist_Craving.percent_rows,1.15,1.15,0.005,True
+1.7,missingness.by_column.Mood_Score.missing,342,342,0.0,True
+1.7,missingness.by_column.Mood_Score.percent_rows,1.14,1.14,0.005,True
+1.7,missingness.by_column.Craving_Triggers.missing,323,323,0.0,True
+1.7,missingness.by_column.Craving_Triggers.percent_rows,1.08,1.0766666666666667,0.005,True
+1.7,validity.score_fields_checked,13,13,0.0,True
+1.7,validity.nonnegative_fields_checked,13,13,0.0,True
+1.7,validity.total_rule_violations,0,0,0.0,True
+1.7.1,semantic.zero_pouches_with_first_time.count,358,358,0.0,True
+1.7.1,semantic.zero_pouches_with_time_since_last.count,355,355,0.0,True
+1.7.1,semantic.overall_above_peak.count,7078,7078,0.0,True
+1.7.1,semantic.success_without_attempt.count,0,0,0.0,True
+1.7.1,semantic.missing_overall_with_complete_components.count,339,339,0.0,True
+1.9,provenance.size_bytes,4286125,4286125,0.0,True
+1.9,provenance.sha256,7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907,7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907,0.0,True
+1.9,provenance.git_blob_sha1,80bbba4a3289940698a2926618bf0f5f1525e69f,80bbba4a3289940698a2926618bf0f5f1525e69f,0.0,True
+Annex A,inventory.Participant_ID.dtype,object,object,0.0,True
+Annex A,inventory.Participant_ID.missing,0,0,0.0,True
+Annex A,inventory.Participant_ID.unique_observed,1000,1000,0.0,True
+Annex A,inventory.Day_Number.dtype,int64,int64,0.0,True
+Annex A,inventory.Day_Number.missing,0,0,0.0,True
+Annex A,inventory.Day_Number.min,1,1,0.0,True
+Annex A,inventory.Day_Number.max,30,30,0.0,True
+Annex A,inventory.Age_Group.dtype,object,object,0.0,True
+Annex A,inventory.Age_Group.missing,0,0,0.0,True
+Annex A,inventory.Age_Group.unique_observed,5,5,0.0,True
+Annex A,inventory.Gender.dtype,object,object,0.0,True
+Annex A,inventory.Gender.missing,0,0,0.0,True
+Annex A,inventory.Gender.unique_observed,4,4,0.0,True
+Annex A,inventory.Occupation_Status.dtype,object,object,0.0,True
+Annex A,inventory.Occupation_Status.missing,0,0,0.0,True
+Annex A,inventory.Occupation_Status.unique_observed,6,6,0.0,True
+Annex A,inventory.Nicotine_Use_Duration_Months.dtype,int64,int64,0.0,True
+Annex A,inventory.Nicotine_Use_Duration_Months.missing,0,0,0.0,True
+Annex A,inventory.Nicotine_Use_Duration_Months.min,3,3,0.0,True
+Annex A,inventory.Nicotine_Use_Duration_Months.max,120,120,0.0,True
+Annex A,inventory.Pouches_Per_Day.dtype,int64,int64,0.0,True
+Annex A,inventory.Pouches_Per_Day.missing,0,0,0.0,True
+Annex A,inventory.Pouches_Per_Day.min,0,0,0.0,True
+Annex A,inventory.Pouches_Per_Day.max,24,24,0.0,True
+Annex A,inventory.Pouch_Strength_mg.dtype,int64,int64,0.0,True
+Annex A,inventory.Pouch_Strength_mg.missing,0,0,0.0,True
+Annex A,inventory.Pouch_Strength_mg.min,4,4,0.0,True
+Annex A,inventory.Pouch_Strength_mg.max,15,15,0.0,True
+Annex A,inventory.First_Pouch_Time.dtype,object,object,0.0,True
+Annex A,inventory.First_Pouch_Time.missing,0,0,0.0,True
+Annex A,inventory.First_Pouch_Time.unique_observed,37,37,0.0,True
+Annex A,inventory.Time_Since_Last_Pouch_Minutes.dtype,float64,float64,0.0,True
+Annex A,inventory.Time_Since_Last_Pouch_Minutes.missing,355,355,0.0,True
+Annex A,inventory.Time_Since_Last_Pouch_Minutes.min,5,5.0,0.0,True
+Annex A,inventory.Time_Since_Last_Pouch_Minutes.max,716,716.0,0.0,True
+Annex A,inventory.Longest_Nicotine_Free_Period_Hours.dtype,float64,float64,0.0,True
+Annex A,inventory.Longest_Nicotine_Free_Period_Hours.missing,380,380,0.0,True
+Annex A,inventory.Longest_Nicotine_Free_Period_Hours.min,1,1.0,0.0,True
+Annex A,inventory.Longest_Nicotine_Free_Period_Hours.max,23.9,23.9,0.0,True
+Annex A,inventory.Morning_Cravings_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Morning_Cravings_Score.missing,369,369,0.0,True
+Annex A,inventory.Morning_Cravings_Score.min,0,0.0,0.0,True
+Annex A,inventory.Morning_Cravings_Score.max,10,10.0,0.0,True
+Annex A,inventory.Afternoon_Cravings_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Afternoon_Cravings_Score.missing,373,373,0.0,True
+Annex A,inventory.Afternoon_Cravings_Score.min,0,0.0,0.0,True
+Annex A,inventory.Afternoon_Cravings_Score.max,10,10.0,0.0,True
+Annex A,inventory.Evening_Cravings_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Evening_Cravings_Score.missing,346,346,0.0,True
+Annex A,inventory.Evening_Cravings_Score.min,0.4,0.4,0.0,True
+Annex A,inventory.Evening_Cravings_Score.max,10,10.0,0.0,True
+Annex A,inventory.Overall_Craving_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Overall_Craving_Score.missing,349,349,0.0,True
+Annex A,inventory.Overall_Craving_Score.min,0,0.0,0.0,True
+Annex A,inventory.Overall_Craving_Score.max,10,10.0,0.0,True
+Annex A,inventory.Craving_Triggers.dtype,object,object,0.0,True
+Annex A,inventory.Craving_Triggers.missing,323,323,0.0,True
+Annex A,inventory.Craving_Triggers.unique_observed,12,12,0.0,True
+Annex A,inventory.Craving_Intensity_Peak.dtype,float64,float64,0.0,True
+Annex A,inventory.Craving_Intensity_Peak.missing,0,0,0.0,True
+Annex A,inventory.Craving_Intensity_Peak.min,0,0.0,0.0,True
+Annex A,inventory.Craving_Intensity_Peak.max,10,10.0,0.0,True
+Annex A,inventory.Craving_Duration_Minutes.dtype,int64,int64,0.0,True
+Annex A,inventory.Craving_Duration_Minutes.missing,0,0,0.0,True
+Annex A,inventory.Craving_Duration_Minutes.min,3,3,0.0,True
+Annex A,inventory.Craving_Duration_Minutes.max,180,180,0.0,True
+Annex A,inventory.Attempted_To_Resist_Craving.dtype,object,object,0.0,True
+Annex A,inventory.Attempted_To_Resist_Craving.missing,345,345,0.0,True
+Annex A,inventory.Successfully_Resisted.dtype,object,object,0.0,True
+Annex A,inventory.Successfully_Resisted.missing,357,357,0.0,True
+Annex A,inventory.Daily_Anxiety_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Daily_Anxiety_Score.missing,0,0,0.0,True
+Annex A,inventory.Daily_Anxiety_Score.min,0,0.0,0.0,True
+Annex A,inventory.Daily_Anxiety_Score.max,10,10.0,0.0,True
+Annex A,inventory.Morning_Anxiety_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Morning_Anxiety_Score.missing,0,0,0.0,True
+Annex A,inventory.Morning_Anxiety_Score.min,0,0.0,0.0,True
+Annex A,inventory.Morning_Anxiety_Score.max,10,10.0,0.0,True
+Annex A,inventory.Evening_Anxiety_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Evening_Anxiety_Score.missing,347,347,0.0,True
+Annex A,inventory.Evening_Anxiety_Score.min,0,0.0,0.0,True
+Annex A,inventory.Evening_Anxiety_Score.max,10,10.0,0.0,True
+Annex A,inventory.Perceived_Stress_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Perceived_Stress_Score.missing,0,0,0.0,True
+Annex A,inventory.Perceived_Stress_Score.min,0,0.0,0.0,True
+Annex A,inventory.Perceived_Stress_Score.max,10,10.0,0.0,True
+Annex A,inventory.Mood_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Mood_Score.missing,342,342,0.0,True
+Annex A,inventory.Mood_Score.min,0,0.0,0.0,True
+Annex A,inventory.Mood_Score.max,10,10.0,0.0,True
+Annex A,inventory.Irritability_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Irritability_Score.missing,0,0,0.0,True
+Annex A,inventory.Irritability_Score.min,1,1.0,0.0,True
+Annex A,inventory.Irritability_Score.max,9.3,9.3,0.0,True
+Annex A,inventory.Restlessness_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Restlessness_Score.missing,0,0,0.0,True
+Annex A,inventory.Restlessness_Score.min,1.4,1.4,0.0,True
+Annex A,inventory.Restlessness_Score.max,9,9.0,0.0,True
+Annex A,inventory.Sleep_Duration_Hours.dtype,float64,float64,0.0,True
+Annex A,inventory.Sleep_Duration_Hours.missing,0,0,0.0,True
+Annex A,inventory.Sleep_Duration_Hours.min,3.5,3.5,0.0,True
+Annex A,inventory.Sleep_Duration_Hours.max,11,11.0,0.0,True
+Annex A,inventory.Sleep_Quality_Score.dtype,float64,float64,0.0,True
+Annex A,inventory.Sleep_Quality_Score.missing,0,0,0.0,True
+Annex A,inventory.Sleep_Quality_Score.min,3,3.0,0.0,True
+Annex A,inventory.Sleep_Quality_Score.max,10,10.0,0.0,True
+Annex A,inventory.Caffeine_Intake_mg.dtype,int64,int64,0.0,True
+Annex A,inventory.Caffeine_Intake_mg.missing,0,0,0.0,True
+Annex A,inventory.Caffeine_Intake_mg.min,0,0,0.0,True
+Annex A,inventory.Caffeine_Intake_mg.max,600,600,0.0,True
+Annex A,inventory.Exercise_Minutes.dtype,float64,float64,0.0,True
+Annex A,inventory.Exercise_Minutes.missing,370,370,0.0,True
+Annex A,inventory.Exercise_Minutes.min,0,0.0,0.0,True
+Annex A,inventory.Exercise_Minutes.max,180,180.0,0.0,True
+Annex A,inventory.Screen_Time_Hours.dtype,float64,float64,0.0,True
+Annex A,inventory.Screen_Time_Hours.missing,373,373,0.0,True
+Annex A,inventory.Screen_Time_Hours.min,1,1.0,0.0,True
+Annex A,inventory.Screen_Time_Hours.max,14,14.0,0.0,True
+Annex A,inventory.Work_Or_Study_Hours.dtype,float64,float64,0.0,True
+Annex A,inventory.Work_Or_Study_Hours.missing,0,0,0.0,True
+Annex A,inventory.Work_Or_Study_Hours.min,0,0.0,0.0,True
+Annex A,inventory.Work_Or_Study_Hours.max,18,18.0,0.0,True
+Annex A,inventory.Major_Stress_Event_Today.dtype,object,object,0.0,True
+Annex A,inventory.Major_Stress_Event_Today.missing,0,0,0.0,True
+Annex A,inventory.Social_Interaction_Hours.dtype,float64,float64,0.0,True
+Annex A,inventory.Social_Interaction_Hours.missing,353,353,0.0,True
+Annex A,inventory.Social_Interaction_Hours.min,0,0.0,0.0,True
+Annex A,inventory.Social_Interaction_Hours.max,10,10.0,0.0,True
+Annex A,inventory.Attempted_To_Resist_Craving.categories,"['No', 'Yes']","['No', 'Yes']",0.0,True
+Annex A,inventory.Successfully_Resisted.categories,"['No', 'Yes']","['No', 'Yes']",0.0,True
+Annex A,inventory.Major_Stress_Event_Today.categories,"['No', 'Yes']","['No', 'Yes']",0.0,True

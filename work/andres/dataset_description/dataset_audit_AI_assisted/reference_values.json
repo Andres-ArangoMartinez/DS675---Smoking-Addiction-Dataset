@@ -1,0 +1,2998 @@
+{
+  "source": "../dataset_description.md (original preserved)",
+  "construction": "Manually transcribed published values; independent of the calculated audit results.",
+  "comparison_policy": "Counts/strings/lists are exact. Rounded numeric statistics allow half one unit of the last published decimal.",
+  "scope_notes": [
+    "Native pandas text dtypes may differ. The historical object types are checked using an explicit documented text dtype policy.",
+    "The reference mentions 13 nonnegative quantity/duration checks without listing their names. This implementation uses all 13 nonscore numeric fields, including Day_Number.",
+    "Published source, license, clinical interpretation, and synthetic generation statements cannot be verified from CSV measurements alone."
+  ],
+  "claims": [
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "rows"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "columns"
+      ],
+      "expected": 35,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "participants"
+      ],
+      "expected": 1000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "distinct_days"
+      ],
+      "expected": 30,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "day_min"
+      ],
+      "expected": 1,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "day_max"
+      ],
+      "expected": 30,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "rows_per_person_min"
+      ],
+      "expected": 30,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "rows_per_person_max"
+      ],
+      "expected": 30,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "rows_per_day_min"
+      ],
+      "expected": 1000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "rows_per_day_max"
+      ],
+      "expected": 1000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "duplicate_keys_excess"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "duplicate_rows_excess"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "participants_with_profile_changes"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "structure",
+        "balanced_keys_days_1_to_30"
+      ],
+      "expected": true,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.2",
+      "path": [
+        "csv_syntax",
+        "malformed_records"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "structure",
+        "group_column_counts",
+        "Identification"
+      ],
+      "expected": 2,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "structure",
+        "group_column_counts",
+        "Demographics"
+      ],
+      "expected": 3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "structure",
+        "group_column_counts",
+        "Nicotine and craving"
+      ],
+      "expected": 15,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "structure",
+        "group_column_counts",
+        "Psychology"
+      ],
+      "expected": 7,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "structure",
+        "group_column_counts",
+        "Habits and activities"
+      ],
+      "expected": 8,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "reading_policy",
+        "audit_dtype_counts",
+        "float64"
+      ],
+      "expected": 20,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "reading_policy",
+        "audit_dtype_counts",
+        "int64"
+      ],
+      "expected": 6,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.3",
+      "path": [
+        "reading_policy",
+        "audit_dtype_counts",
+        "object"
+      ],
+      "expected": 9,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Age_Group",
+        "18-24"
+      ],
+      "expected": 239,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Age_Group",
+        "25-34"
+      ],
+      "expected": 353,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Age_Group",
+        "35-44"
+      ],
+      "expected": 203,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Age_Group",
+        "45-54"
+      ],
+      "expected": 122,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Age_Group",
+        "55+"
+      ],
+      "expected": 83,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Gender",
+        "Female"
+      ],
+      "expected": 482,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Gender",
+        "Male"
+      ],
+      "expected": 453,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Gender",
+        "Non-binary"
+      ],
+      "expected": 41,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Gender",
+        "Prefer_not_to_say"
+      ],
+      "expected": 24,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Occupation_Status",
+        "Employed"
+      ],
+      "expected": 488,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Occupation_Status",
+        "Student"
+      ],
+      "expected": 156,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Occupation_Status",
+        "Self_Employed"
+      ],
+      "expected": 123,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Occupation_Status",
+        "Unemployed"
+      ],
+      "expected": 88,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Occupation_Status",
+        "Retired"
+      ],
+      "expected": 82,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.4",
+      "path": [
+        "categorical_counts",
+        "Occupation_Status",
+        "Homemaker"
+      ],
+      "expected": 63,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouches_Per_Day",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouches_Per_Day",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouches_Per_Day",
+        "max"
+      ],
+      "expected": 24,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouches_Per_Day",
+        "mean"
+      ],
+      "expected": 7.431,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouches_Per_Day",
+        "median"
+      ],
+      "expected": 7,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouch_Strength_mg",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouch_Strength_mg",
+        "min"
+      ],
+      "expected": 4,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouch_Strength_mg",
+        "max"
+      ],
+      "expected": 15,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouch_Strength_mg",
+        "mean"
+      ],
+      "expected": 7.859,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Pouch_Strength_mg",
+        "median"
+      ],
+      "expected": 8,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Overall_Craving_Score",
+        "observed"
+      ],
+      "expected": 29651,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Overall_Craving_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Overall_Craving_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Overall_Craving_Score",
+        "mean"
+      ],
+      "expected": 5.995,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Overall_Craving_Score",
+        "median"
+      ],
+      "expected": 6.0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Daily_Anxiety_Score",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Daily_Anxiety_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Daily_Anxiety_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Daily_Anxiety_Score",
+        "mean"
+      ],
+      "expected": 5.312,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Daily_Anxiety_Score",
+        "median"
+      ],
+      "expected": 5.3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Perceived_Stress_Score",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Perceived_Stress_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Perceived_Stress_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Perceived_Stress_Score",
+        "mean"
+      ],
+      "expected": 3.119,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Perceived_Stress_Score",
+        "median"
+      ],
+      "expected": 2.7,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Duration_Hours",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Duration_Hours",
+        "min"
+      ],
+      "expected": 3.5,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Duration_Hours",
+        "max"
+      ],
+      "expected": 11,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Duration_Hours",
+        "mean"
+      ],
+      "expected": 7.003,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Duration_Hours",
+        "median"
+      ],
+      "expected": 7.0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Quality_Score",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Quality_Score",
+        "min"
+      ],
+      "expected": 3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Quality_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Quality_Score",
+        "mean"
+      ],
+      "expected": 6.92,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Sleep_Quality_Score",
+        "median"
+      ],
+      "expected": 6.9,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Caffeine_Intake_mg",
+        "observed"
+      ],
+      "expected": 30000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Caffeine_Intake_mg",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Caffeine_Intake_mg",
+        "max"
+      ],
+      "expected": 600,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Caffeine_Intake_mg",
+        "mean"
+      ],
+      "expected": 160.495,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Caffeine_Intake_mg",
+        "median"
+      ],
+      "expected": 140,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Exercise_Minutes",
+        "observed"
+      ],
+      "expected": 29630,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Exercise_Minutes",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Exercise_Minutes",
+        "max"
+      ],
+      "expected": 180,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Exercise_Minutes",
+        "mean"
+      ],
+      "expected": 30.047,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Exercise_Minutes",
+        "median"
+      ],
+      "expected": 25,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Screen_Time_Hours",
+        "observed"
+      ],
+      "expected": 29627,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Screen_Time_Hours",
+        "min"
+      ],
+      "expected": 1,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Screen_Time_Hours",
+        "max"
+      ],
+      "expected": 14,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Screen_Time_Hours",
+        "mean"
+      ],
+      "expected": 4.025,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Screen_Time_Hours",
+        "median"
+      ],
+      "expected": 3.4,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Social_Interaction_Hours",
+        "observed"
+      ],
+      "expected": 29647,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Social_Interaction_Hours",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Social_Interaction_Hours",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Social_Interaction_Hours",
+        "mean"
+      ],
+      "expected": 2.25,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "numeric",
+        "Social_Interaction_Hours",
+        "median"
+      ],
+      "expected": 1.8,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "inventory",
+        "Craving_Triggers",
+        "unique_observed"
+      ],
+      "expected": 12,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "categorical_counts",
+        "Craving_Triggers",
+        "Stress"
+      ],
+      "expected": 6077,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "categorical_counts",
+        "Craving_Triggers",
+        "Boredom"
+      ],
+      "expected": 3505,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "categorical_counts",
+        "Major_Stress_Event_Today",
+        "Yes"
+      ],
+      "expected": 1476,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.5",
+      "path": [
+        "categorical_counts",
+        "Major_Stress_Event_Today",
+        "No"
+      ],
+      "expected": 28524,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "observed"
+      ],
+      "expected": 29651,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "missing"
+      ],
+      "expected": 349,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "median"
+      ],
+      "expected": 6.0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "q1"
+      ],
+      "expected": 4.8,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "q3"
+      ],
+      "expected": 7.2,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "mean"
+      ],
+      "expected": 5.994904,
+      "absolute_tolerance": 5e-07
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "sample_std"
+      ],
+      "expected": 1.684405,
+      "absolute_tolerance": 5e-07
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "observed_percent"
+      ],
+      "expected": 98.84,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "missing_percent"
+      ],
+      "expected": 1.16,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.6",
+      "path": [
+        "target",
+        "histogram_counts"
+      ],
+      "expected": [
+        28,
+        163,
+        833,
+        2405,
+        4601,
+        6659,
+        6404,
+        4614,
+        2704,
+        1240
+      ],
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "participants_with_variation"
+      ],
+      "expected": 1000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "observations_per_person_min"
+      ],
+      "expected": 27,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "observations_per_person_max"
+      ],
+      "expected": 30,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "valid_adjacent_pairs"
+      ],
+      "expected": 28338,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "person_mean_min"
+      ],
+      "expected": 1.49,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "person_mean_max"
+      ],
+      "expected": 9.84,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "daily_mean_min"
+      ],
+      "expected": 5.957,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "daily_mean_max"
+      ],
+      "expected": 6.044,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "pooled_lag1_pearson"
+      ],
+      "expected": 0.859,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.6.1",
+      "path": [
+        "longitudinal",
+        "person_centered_lag1_pearson"
+      ],
+      "expected": -0.035,
+      "absolute_tolerance": 0.0005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "total_cells"
+      ],
+      "expected": 1050000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "missing_cells"
+      ],
+      "expected": 4982,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "rows_with_missing"
+      ],
+      "expected": 4630,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "complete_columns"
+      ],
+      "expected": 21,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "incomplete_columns"
+      ],
+      "expected": 14,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "missing_cell_percent"
+      ],
+      "expected": 0.47,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "rows_with_missing_percent"
+      ],
+      "expected": 15.43,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "incomplete_column_percent_min"
+      ],
+      "expected": 1.08,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "incomplete_column_percent_max"
+      ],
+      "expected": 1.27,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Longest_Nicotine_Free_Period_Hours",
+        "missing"
+      ],
+      "expected": 380,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Longest_Nicotine_Free_Period_Hours",
+        "percent_rows"
+      ],
+      "expected": 1.27,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Afternoon_Cravings_Score",
+        "missing"
+      ],
+      "expected": 373,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Afternoon_Cravings_Score",
+        "percent_rows"
+      ],
+      "expected": 1.24,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Screen_Time_Hours",
+        "missing"
+      ],
+      "expected": 373,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Screen_Time_Hours",
+        "percent_rows"
+      ],
+      "expected": 1.24,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Exercise_Minutes",
+        "missing"
+      ],
+      "expected": 370,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Exercise_Minutes",
+        "percent_rows"
+      ],
+      "expected": 1.23,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Morning_Cravings_Score",
+        "missing"
+      ],
+      "expected": 369,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Morning_Cravings_Score",
+        "percent_rows"
+      ],
+      "expected": 1.23,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Successfully_Resisted",
+        "missing"
+      ],
+      "expected": 357,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Successfully_Resisted",
+        "percent_rows"
+      ],
+      "expected": 1.19,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Time_Since_Last_Pouch_Minutes",
+        "missing"
+      ],
+      "expected": 355,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Time_Since_Last_Pouch_Minutes",
+        "percent_rows"
+      ],
+      "expected": 1.18,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Social_Interaction_Hours",
+        "missing"
+      ],
+      "expected": 353,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Social_Interaction_Hours",
+        "percent_rows"
+      ],
+      "expected": 1.18,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Overall_Craving_Score",
+        "missing"
+      ],
+      "expected": 349,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Overall_Craving_Score",
+        "percent_rows"
+      ],
+      "expected": 1.16,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Evening_Anxiety_Score",
+        "missing"
+      ],
+      "expected": 347,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Evening_Anxiety_Score",
+        "percent_rows"
+      ],
+      "expected": 1.16,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Evening_Cravings_Score",
+        "missing"
+      ],
+      "expected": 346,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Evening_Cravings_Score",
+        "percent_rows"
+      ],
+      "expected": 1.15,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Attempted_To_Resist_Craving",
+        "missing"
+      ],
+      "expected": 345,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Attempted_To_Resist_Craving",
+        "percent_rows"
+      ],
+      "expected": 1.15,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Mood_Score",
+        "missing"
+      ],
+      "expected": 342,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Mood_Score",
+        "percent_rows"
+      ],
+      "expected": 1.14,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Craving_Triggers",
+        "missing"
+      ],
+      "expected": 323,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "missingness",
+        "by_column",
+        "Craving_Triggers",
+        "percent_rows"
+      ],
+      "expected": 1.08,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "validity",
+        "score_fields_checked"
+      ],
+      "expected": 13,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "validity",
+        "nonnegative_fields_checked"
+      ],
+      "expected": 13,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7",
+      "path": [
+        "validity",
+        "total_rule_violations"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7.1",
+      "path": [
+        "semantic",
+        "zero_pouches_with_first_time",
+        "count"
+      ],
+      "expected": 358,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7.1",
+      "path": [
+        "semantic",
+        "zero_pouches_with_time_since_last",
+        "count"
+      ],
+      "expected": 355,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7.1",
+      "path": [
+        "semantic",
+        "overall_above_peak",
+        "count"
+      ],
+      "expected": 7078,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7.1",
+      "path": [
+        "semantic",
+        "success_without_attempt",
+        "count"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.7.1",
+      "path": [
+        "semantic",
+        "missing_overall_with_complete_components",
+        "count"
+      ],
+      "expected": 339,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.9",
+      "path": [
+        "provenance",
+        "size_bytes"
+      ],
+      "expected": 4286125,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.9",
+      "path": [
+        "provenance",
+        "sha256"
+      ],
+      "expected": "7218b9c5925d3c4b69ef7dc0153861778f8a9e4deb67dfa5a7242c7a0d13b907",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "1.9",
+      "path": [
+        "provenance",
+        "git_blob_sha1"
+      ],
+      "expected": "80bbba4a3289940698a2926618bf0f5f1525e69f",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Participant_ID",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Participant_ID",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Participant_ID",
+        "unique_observed"
+      ],
+      "expected": 1000,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Day_Number",
+        "dtype"
+      ],
+      "expected": "int64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Day_Number",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Day_Number",
+        "min"
+      ],
+      "expected": 1,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Day_Number",
+        "max"
+      ],
+      "expected": 30,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Age_Group",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Age_Group",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Age_Group",
+        "unique_observed"
+      ],
+      "expected": 5,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Gender",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Gender",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Gender",
+        "unique_observed"
+      ],
+      "expected": 4,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Occupation_Status",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Occupation_Status",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Occupation_Status",
+        "unique_observed"
+      ],
+      "expected": 6,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Nicotine_Use_Duration_Months",
+        "dtype"
+      ],
+      "expected": "int64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Nicotine_Use_Duration_Months",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Nicotine_Use_Duration_Months",
+        "min"
+      ],
+      "expected": 3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Nicotine_Use_Duration_Months",
+        "max"
+      ],
+      "expected": 120,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouches_Per_Day",
+        "dtype"
+      ],
+      "expected": "int64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouches_Per_Day",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouches_Per_Day",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouches_Per_Day",
+        "max"
+      ],
+      "expected": 24,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouch_Strength_mg",
+        "dtype"
+      ],
+      "expected": "int64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouch_Strength_mg",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouch_Strength_mg",
+        "min"
+      ],
+      "expected": 4,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Pouch_Strength_mg",
+        "max"
+      ],
+      "expected": 15,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "First_Pouch_Time",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "First_Pouch_Time",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "First_Pouch_Time",
+        "unique_observed"
+      ],
+      "expected": 37,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Time_Since_Last_Pouch_Minutes",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Time_Since_Last_Pouch_Minutes",
+        "missing"
+      ],
+      "expected": 355,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Time_Since_Last_Pouch_Minutes",
+        "min"
+      ],
+      "expected": 5,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Time_Since_Last_Pouch_Minutes",
+        "max"
+      ],
+      "expected": 716,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Longest_Nicotine_Free_Period_Hours",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Longest_Nicotine_Free_Period_Hours",
+        "missing"
+      ],
+      "expected": 380,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Longest_Nicotine_Free_Period_Hours",
+        "min"
+      ],
+      "expected": 1,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Longest_Nicotine_Free_Period_Hours",
+        "max"
+      ],
+      "expected": 23.9,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Cravings_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Cravings_Score",
+        "missing"
+      ],
+      "expected": 369,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Cravings_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Cravings_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Afternoon_Cravings_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Afternoon_Cravings_Score",
+        "missing"
+      ],
+      "expected": 373,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Afternoon_Cravings_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Afternoon_Cravings_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Cravings_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Cravings_Score",
+        "missing"
+      ],
+      "expected": 346,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Cravings_Score",
+        "min"
+      ],
+      "expected": 0.4,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Cravings_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Overall_Craving_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Overall_Craving_Score",
+        "missing"
+      ],
+      "expected": 349,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Overall_Craving_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Overall_Craving_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Triggers",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Triggers",
+        "missing"
+      ],
+      "expected": 323,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Triggers",
+        "unique_observed"
+      ],
+      "expected": 12,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Intensity_Peak",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Intensity_Peak",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Intensity_Peak",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Intensity_Peak",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Duration_Minutes",
+        "dtype"
+      ],
+      "expected": "int64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Duration_Minutes",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Duration_Minutes",
+        "min"
+      ],
+      "expected": 3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Craving_Duration_Minutes",
+        "max"
+      ],
+      "expected": 180,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Attempted_To_Resist_Craving",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Attempted_To_Resist_Craving",
+        "missing"
+      ],
+      "expected": 345,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Successfully_Resisted",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Successfully_Resisted",
+        "missing"
+      ],
+      "expected": 357,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Daily_Anxiety_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Daily_Anxiety_Score",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Daily_Anxiety_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Daily_Anxiety_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Anxiety_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Anxiety_Score",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Anxiety_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Morning_Anxiety_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Anxiety_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Anxiety_Score",
+        "missing"
+      ],
+      "expected": 347,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Anxiety_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Evening_Anxiety_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Perceived_Stress_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Perceived_Stress_Score",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Perceived_Stress_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Perceived_Stress_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Mood_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Mood_Score",
+        "missing"
+      ],
+      "expected": 342,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Mood_Score",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Mood_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Irritability_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Irritability_Score",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Irritability_Score",
+        "min"
+      ],
+      "expected": 1,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Irritability_Score",
+        "max"
+      ],
+      "expected": 9.3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Restlessness_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Restlessness_Score",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Restlessness_Score",
+        "min"
+      ],
+      "expected": 1.4,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Restlessness_Score",
+        "max"
+      ],
+      "expected": 9,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Duration_Hours",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Duration_Hours",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Duration_Hours",
+        "min"
+      ],
+      "expected": 3.5,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Duration_Hours",
+        "max"
+      ],
+      "expected": 11,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Quality_Score",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Quality_Score",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Quality_Score",
+        "min"
+      ],
+      "expected": 3,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Sleep_Quality_Score",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Caffeine_Intake_mg",
+        "dtype"
+      ],
+      "expected": "int64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Caffeine_Intake_mg",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Caffeine_Intake_mg",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Caffeine_Intake_mg",
+        "max"
+      ],
+      "expected": 600,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Exercise_Minutes",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Exercise_Minutes",
+        "missing"
+      ],
+      "expected": 370,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Exercise_Minutes",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Exercise_Minutes",
+        "max"
+      ],
+      "expected": 180,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Screen_Time_Hours",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Screen_Time_Hours",
+        "missing"
+      ],
+      "expected": 373,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Screen_Time_Hours",
+        "min"
+      ],
+      "expected": 1,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Screen_Time_Hours",
+        "max"
+      ],
+      "expected": 14,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Work_Or_Study_Hours",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Work_Or_Study_Hours",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Work_Or_Study_Hours",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Work_Or_Study_Hours",
+        "max"
+      ],
+      "expected": 18,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Major_Stress_Event_Today",
+        "dtype"
+      ],
+      "expected": "object",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Major_Stress_Event_Today",
+        "missing"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Social_Interaction_Hours",
+        "dtype"
+      ],
+      "expected": "float64",
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Social_Interaction_Hours",
+        "missing"
+      ],
+      "expected": 353,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Social_Interaction_Hours",
+        "min"
+      ],
+      "expected": 0,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Social_Interaction_Hours",
+        "max"
+      ],
+      "expected": 10,
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Attempted_To_Resist_Craving",
+        "categories"
+      ],
+      "expected": [
+        "No",
+        "Yes"
+      ],
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Successfully_Resisted",
+        "categories"
+      ],
+      "expected": [
+        "No",
+        "Yes"
+      ],
+      "absolute_tolerance": 0
+    },
+    {
+      "section": "Annex A",
+      "path": [
+        "inventory",
+        "Major_Stress_Event_Today",
+        "categories"
+      ],
+      "expected": [
+        "No",
+        "Yes"
+      ],
+      "absolute_tolerance": 0
+    }
+  ]
+}
